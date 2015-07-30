@@ -1,0 +1,38 @@
+.main_color {
+	background-size:100%;
+	background-attachment:fixed !important;
+}
+.main_color a {color:#ff0000;}
+	.main_color a:hover {color:#000000;}
+.avia-menu-fx,
+div.tribe-events-notices {background: #ff0000 !important;}
+	div.tribe-events-notices  {color:#fff;}	
+
+strong {color:#fff !important;}
+
+.html_header_top .header_color .main_menu ul:first-child >li > ul,
+.html_header_top #top .header_color .avia_mega_div > .sub-menu {border-top-color: #ff0000;}
+
+.nested_nav {display:none !important;}
+
+.widget {
+	padding-top:0 !important;
+	margin-top:-5px;
+}
+
+#header .logo {margin-top:11px;}
+	#header .header-scrolled .logo a img {max-height:25px !important;}
+	
+
+table.wcs3-schedule-normal-layout {background:none !important;}
+.wcs3-schedule-normal-layout tbody tr th {color:#000000 !important;}
+
+.wcs3-cell {background:none !important;}
+ul.sub-menu {min-width:250px;}
+
+dl.gallery-item {
+	margin:13px !important;
+	border:1px solid #ccc;
+	overflow:hidden;
+}
+	.gallery a img {height:80px;}
