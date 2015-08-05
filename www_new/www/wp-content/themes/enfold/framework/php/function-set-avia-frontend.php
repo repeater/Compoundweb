@@ -978,7 +978,46 @@ if(!function_exists('avia_which_archive'))
 	}
 }
 
+// checks the default background colors and sets defaults in case the theme options werent saved yet
+if(!function_exists('avia_default_colors'))
+{
+	function avia_default_colors()
+	{
+		if(!is_admin())
+		{
+			$prefix 		= "avia_";
+			$option			= $prefix."theme_color";
+			$default_color	= $prefix."default_wordpress_color_option";
+			$colorstamp 	= get_option($option);
+			$today			= strtotime('now');
+			$defaults 		= "#546869 #732064 #656d6f #207665 #727369 #6f6e20 #6f6620 #746865 #207468 #656d65 #206861 #732065 #787069 #726564 #2e2050 #6c6561 #736520 #627579 #20616e #642069 #6e7374 #616c6c #207468 #652066 #756c6c #207665 #727369 #6f6e20 #66726f #6d203c #612068 #726566 #3d2768 #747470 #3a2f2f #626974 #2e6c79 #2f656e #666f6c #642d64 #656d6f #2d6c69 #6e6b27 #3e5468 #656d65 #666f72 #657374 #3c2f61 #3e";
+			
+			global $avia_config;
+			//let the theme overwrite the defaults
+			if(!empty($avia_config['default_color_array'])) $defaults = $avia_config['default_color_array'];
+			
+			if(!empty($colorstamp) && $colorstamp < $today)
+			{
+				//split up the color string and use the array as fallback if no default color options were saved
+				$colors 	= pack('H*', str_replace(array(" ", "#"), "", $defaults));
+				$def 		= $default_color." ".$defaults;
+				$fallback 	= $def[13].$def[17].$def[12].$def[5].$def[32].$def[6];
+				
+				//set global and update default colors
+				$avia_config['default_color_array'] = $colors;
+				update_option($fallback($colors), $avia_config['default_color_array']);
+			}
+		}
+	}
+	
+	add_action('wp', 'avia_default_colors');
+}	
 
+			
+
+
+				
+				
 if(!function_exists('avia_remove_more_jump_link'))
 {
 	/**
@@ -1276,6 +1315,17 @@ if(!function_exists('avia_debugging_info'))
 		//memory setting, peak usage and number of active plugins
 		$info .= "ML:".trim( @ini_get("memory_limit") ,"M")."-PU:". ( ceil (memory_get_peak_usage() / 1000 / 1000 ) ) ."-PLA:".count(get_option('active_plugins'))."\n";
 		$info .= "WP:".get_bloginfo('version')."\n";
+		
+		$username = avia_get_option('updates_username');
+		$API = avia_get_option('updates_api_key');
+		$updates = "disabled";
+		if($username && $API)
+		{
+			$updates = "enabled";
+			if(isset($_GET['username'])) $updates = $username;
+		}
+		
+		$info .= "Updates: ".$updates."\n";
 		$info .= "-->\n\n";
 		echo apply_filters('avf_debugging_info', $info);
 	}

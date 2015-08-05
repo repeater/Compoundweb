@@ -170,7 +170,7 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 			//set maxcolumns
 			if(!isset($args->max_columns)) $args->max_columns = 6;
 
-
+			$item = apply_filters( 'avf_menu_items' , $item  );
 			$item_output = $li_text_block_class = $column_class = "";
 
 			if($depth === 0)
@@ -205,10 +205,10 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 
 				$title = apply_filters( 'the_title', $item->title, $item->ID );
 
-
-				if($title != "-" && $title != '"-"') //fallback for people who copy the description o_O
+				if($title != "&#8211;" && trim($title) != "-" && $title != '"-"' ) //fallback for people who copy the description o_O
 				{
 					$heading_title = do_shortcode($title);
+					
 					if(!empty($item->url) && $item->url != "#" && $item->url != 'http://')
 					{
 						$heading_title = "<a href='".$item->url."'>{$title}</a>";
@@ -239,6 +239,12 @@ if( !class_exists( 'avia_responsive_mega_menu' ) )
 				$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 				$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 				$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+				
+				if('inactive' != avia_get_option('markup') )
+				{
+					$attributes .= ' itemprop="url"';
+				}
+				
 
 				$item_output .= $args->before;
 				$item_output .= '<a'. $attributes .'><span class="avia-bullet"></span>';

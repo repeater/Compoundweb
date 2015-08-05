@@ -41,11 +41,11 @@ if(!function_exists('avia_woo_dynamic_css'))
 			color: $meta;
 			}
 			
-			$key div.product .woocommerce-tabs ul.tabs li.active a, $key .cart_dropdown .dropdown_widget .widget_shopping_cart_content,  $key .cart_dropdown_link, $key .inner_product_header, $key .avia-arrow, #top $key .variations select, #top $key .variations input, #top $key #reviews input[type='text'], $key #reviews .comment-text, $key #reviews #comment, $key .single-product-main-image .images a, #top $key .shop_table.cart .input-text, #top $key form.login .input-text, #top $key form.register .input-text, $key .chosen-container-single .chosen-search, $key .products .product-category h3:before{
+			$key div.product .woocommerce-tabs ul.tabs li.active a, $key .cart_dropdown .dropdown_widget .widget_shopping_cart_content,  $key .cart_dropdown_link, $key .inner_product_header, $key .avia-arrow, #top $key .variations select, #top $key .variations input, #top $key #reviews input[type='text'], $key #reviews .comment-text, $key #reviews #comment, $key .single-product-main-image .images a, #top $key .shop_table.cart .input-text, #top $key form.login .input-text, #top $key form.register .input-text, $key .chosen-container-single .chosen-search, $key .products .product-category h3:before, #top $key .quantity input.qty{
 			background-color: $bg;
 			}
 			
-			$key .woocommerce-tabs .tabs .active, $key div.product .woocommerce-tabs .panel, $key .activeslideThumb, $key #payment li, $key .widget_price_filter .ui-slider-horizontal .ui-slider-range,  $key .avia_cart, $key form.login, $key form.register, $key .col-1, $key .col-2, $key .variations_form,  $key .dynamic-title, $key .single-product-main-image .thumbnails a , $key .quantity input.qty, $key .avia_cart_buttons,  #top  $key .dropdown_widget .buttons, div .dropdown_widget .cart_list li:hover, $key .woocommerce-info, #top $key .chosen-container-single .chosen-single, #top $key .chosen-search input[type='text'], $key .chosen-results, $key .chosen-container .chosen-drop, #top $key .select2-container .select2-choice{
+			$key .woocommerce-tabs .tabs .active, $key div.product .woocommerce-tabs .panel, $key .activeslideThumb, $key #payment li, $key .widget_price_filter .ui-slider-horizontal .ui-slider-range,  $key .avia_cart, $key form.login, $key form.register, $key .col-1, $key .col-2, $key .variations_form,  $key .dynamic-title, $key .single-product-main-image .thumbnails a , $key .quantity input.qty, $key .avia_cart_buttons,  #top  $key .dropdown_widget .buttons, div .dropdown_widget .cart_list li:hover, $key .woocommerce-info, #top $key .chosen-container-single .chosen-single, #top $key .chosen-search input[type='text'], $key .chosen-results, $key .chosen-container .chosen-drop, #top $key .select2-container .select2-choice, $key .widget_layered_nav_filters .chosen a:hover,  $key .widget_layered_nav .chosen a:hover {
 			background-color: $bg2;
 			}
 			
@@ -57,7 +57,7 @@ if(!function_exists('avia_woo_dynamic_css'))
 			border-color: $bg2;
 			}
 			
-			$key .widget_layered_nav ul li.chosen, $key .widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle, #top $key a.remove, #top $key .onsale{
+			$key .widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle, #top $key a.remove, #top $key .onsale{
 			background-color: $primary;
 			}
 			
@@ -66,11 +66,11 @@ if(!function_exists('avia_woo_dynamic_css'))
 			color: $constant_font;
 			}
 			
-			$key #shop_header a:hover, #top  $key .widget_layered_nav ul li.chosen a, #top $key .widget_layered_nav ul li.chosen small{
+			$key #shop_header a:hover{
 			color: #fff;
 			}
 			
-			#top $key .price, $key .stock, #top #wrap_all $key ins, $key .products .product-category h3 .count{
+			#top $key .price, $key .stock, #top #wrap_all $key ins, $key .products .product-category h3 .count, $key .widget_layered_nav_filters .chosen a:before, $key .widget_layered_nav .chosen a:before{
 			color:$primary;
 			}
 			
@@ -139,6 +139,18 @@ if(!function_exists('avia_woo_dynamic_css'))
 			}
 			
 			";
+			
+			
+			if($key == '.header_color')
+			{
+				$output .= "
+			
+				#top .av-cart-counter{background-color:$primary; color: $constant_font;}
+				
+				";
+				
+			}
+			
 			
 			if($key == '.main_color')
 			{

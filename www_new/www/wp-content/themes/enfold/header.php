@@ -5,9 +5,11 @@
 	$responsive	= avia_get_option('responsive_active') != "disabled" ? "responsive" : "fixed_layout";
 	$blank 		= isset($avia_config['template']) ? $avia_config['template'] : "";	
 	$av_lightbox= avia_get_option('lightbox_active') != "disabled" ? 'av-default-lightbox' : 'av-custom-lightbox';
+	$preloader	= avia_get_option('preloader') == "preloader" ? 'av-preloader-active av-preloader-enabled' : 'av-preloader-disabled';
+
 	
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="<?php echo " html_{$style} ".$responsive." ".$av_lightbox." ".avia_header_class_string();?> ">
+<html <?php language_attributes(); ?> class="<?php echo " html_{$style} ".$responsive." ".$preloader." ".$av_lightbox." ".avia_header_class_string();?> ">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
@@ -47,13 +49,22 @@ if( strpos($responsive, 'responsive') !== false ) echo '<meta name="viewport" co
 wp_head();
 
 ?>
-<link rel='stylesheet' id='compound-custom-css'  href='http://thecompoundmma.com/wp-content/themes/enfold/css/compound.css' type='text/css' media='all' />
+
 </head>
 
 
 
 
 <body id="top" <?php body_class($style." ".$avia_config['font_stack']." ".$blank); avia_markup_helper(array('context' => 'body')); ?>>
+
+	<?php 
+		
+	if("av-preloader-active av-preloader-enabled" === $preloader)
+	{
+		echo avia_preload_screen(); 
+	}
+		
+	?>
 
 	<div id='wrap_all'>
 
@@ -64,7 +75,7 @@ wp_head();
          get_template_part( 'includes/helper', 'main-menu' );
 
 	} ?>
-	
+		
 	<div id='main' data-scroll-offset='<?php echo avia_header_setting('header_scroll_offset'); ?>'>
 
 	<?php do_action('ava_after_main_container'); ?>

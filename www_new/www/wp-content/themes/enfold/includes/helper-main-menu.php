@@ -103,8 +103,10 @@ if($headerS['header_topbar'] == true)
 						}
 						
 						echo avia_logo(AVIA_BASE_URL.'images/layout/logo.png', $addition, 'strong', true);
-					
+						
+							if(!empty($headerS['bottom_menu'])) do_action('ava_before_bottom_main_menu');
 						    if($headerS['header_social'] == 'icon_active_main' && !empty($headerS['bottom_menu'])) echo $icons;
+						    
 						
 						/*
 						*	display the main navigation menu
@@ -130,12 +132,15 @@ if($headerS['header_topbar'] == true)
 						
 						        wp_nav_menu($args);
 						        
-						     if($icon_beside) echo $icons;    
+						        
 						      
 						    /*
 						    * Hook that can be used for plugins and theme extensions
 						    */
 						    do_action('ava_inside_main_menu');
+						    
+						    if($icon_beside) echo $icons; 
+						    
 						        
 						    echo '</nav>';
 						

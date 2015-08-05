@@ -162,28 +162,10 @@ add_filter('avf_builder_elements','avia_woocommerce_product_elements');
 
 function avia_woocommerce_product_elements($elements)
 {
-	global $post, $typenow, $current_screen;
-	//we have a post so we can just get the post type from that
-	if ($post && $post->post_type)
-	{
-		$posttype = $post->post_type;
-	}//check the global $typenow - set in admin.php
-	elseif($typenow)
-	{
-		$posttype = $typenow;
-	}//check the global $current_screen object - set in sceen.php
-	elseif($current_screen && $current_screen->post_type)
-	{
-		$posttype = $current_screen->post_type;
-	}//lastly check the post_type querystring
-	elseif(isset($_REQUEST['post_type']))
-	{
-		$posttype = sanitize_key($_REQUEST['post_type']);
-	}
+	$posttype = avia_backend_get_post_type();
 
     if(!empty($posttype) && $posttype == 'product')
     {
-    	
         $elements[] = array("slug"	=> "avia_product_hover",
             "name" 	=> "Hover effect on <strong>Overview Pages</strong>",
             "desc" 	=> "Do you want to display a hover effect on overview pages and replace the default thumbnail with the first image of the gallery?",
@@ -197,10 +179,180 @@ function avia_woocommerce_product_elements($elements)
         foreach($elements as $element)
         {
             if($element['id'] == 'sidebar') $elements[$counter]['required'] = '';
-            if($element['id'] == 'layout') unset($elements[$counter]);
+            if($element['id'] == 'layout') 
+            {
+	            $elements[$counter]['builder_active'] = true;
+	           // unset($elements[$counter]);
+            }
             $counter++;
         }
     }
 
 	return $elements;
 }
+
+
+
+######################################################################
+# add extra fields to product category
+######################################################################
+
+add_action( 'created_term', 'avia_woo_save_category_fields' , 10 );
+add_action( 'edit_term', 'avia_woo_save_category_fields' , 10 );
+add_action( 'product_cat_add_form_fields', 'avia_woo_add_category_fields', 1000 );
+add_action( 'product_cat_edit_form_fields', 'avia_woo_edit_category_fields' , 1000 );
+
+
+function avia_woo_save_category_fields( $term_id ) 
+{
+	if ( isset( $_POST['av_cat_styling'] ) ) {
+		update_woocommerce_term_meta( $term_id, 'av_cat_styling', esc_attr( $_POST['av_cat_styling'] ) );
+	}
+	
+	if ( isset( $_POST['av-banner-font'] ) ) {
+		update_woocommerce_term_meta( $term_id, 'av-banner-font', esc_attr( $_POST['av-banner-font'] ) );
+	}
+	
+	if ( isset( $_POST['av-banner-overlay'] ) ) {
+		update_woocommerce_term_meta( $term_id, 'av-banner-overlay', esc_attr( $_POST['av-banner-overlay'] ) );
+	}
+	
+	if ( isset( $_POST['av_cat_styling'] ) ) {
+		update_woocommerce_term_meta( $term_id, 'av-banner-overlay-opacity', esc_attr( $_POST['av-banner-overlay-opacity'] ) );
+	}
+}
+ 
+
+add_action( 'admin_enqueue_scripts', 'av_woo_enqueue_color_picker' );
+function av_woo_enqueue_color_picker( $hook_suffix ) {
+    // first check that $hook_suffix is appropriate for your admin page
+    if($hook_suffix == 'edit-tags.php' && isset($_GET['taxonomy']) && $_GET['taxonomy'] == 'product_cat'){
+    
+    	wp_enqueue_style(  'wp-color-picker' );
+		wp_enqueue_script( 'wp-color-picker' );
+
+	}
+}
+
+function avia_woo_styling_select($term)
+{
+	$styling = is_object($term) ? get_woocommerce_term_meta( $term->term_id, 'av_cat_styling', true ) : "";
+	
+	
+	
+	?>
+	<select id="av_cat_styling" name="av_cat_styling" class="postform" style="max-width: 100%; " >
+			<option value=""><?php _e( 'Default', 'avia_framework' ); ?></option>
+			<option value="header_dark" <?php selected( 'header_dark', $styling ); ?>><?php _e( 'Display product image and description as fullwidth page banner', 'avia_framework' ); ?></option>
+	</select>
+	<script type="text/javascript">
+
+			var target_id = "av_cat_styling";
+			
+			jQuery(document).ready(function($){
+			    jQuery('.av-woo-colorpicker').wpColorPicker();
+			});
+			
+			jQuery( document ).on( 'change', '#'+target_id, function( event ) {
+				
+				var dependent = jQuery(".dependant_on_"+target_id),
+				 	display_val = dependent.is('tr') ? "table-row" : "block";
+				
+				if(this.value == "")
+				{
+					dependent.css({display:'none'});
+				}
+				else
+				{
+					dependent.css({display:display_val});
+				}
+			});
+	</script>
+
+	<?php
+}
+
+function avia_woo_banner_options($term)
+{
+	$font 		= is_object($term) ? get_woocommerce_term_meta( $term->term_id, 'av-banner-font', true ) : "";
+	$overlay 	= is_object($term) ? get_woocommerce_term_meta( $term->term_id, 'av-banner-overlay', true ) : "";
+	$opacity 	= is_object($term) ? get_woocommerce_term_meta( $term->term_id, 'av-banner-overlay-opacity', true ) : "";
+	
+	if(empty($opacity)) $opacity = "0.5";
+	?>
+	<div class="av-woo-wp-picker-container" > 
+		<label><strong><?php _e( 'Description Font Color', 'avia_framework' ); ?></strong></label>
+        <div><input type="text" name="av-banner-font" id="av-banner-font" class='av-woo-colorpicker' value='<?php echo $font; ?>' /></div>
+    </div>
+    
+    <div class="av-woo-wp-picker-container" > 
+	    <label><strong><?php _e( 'Banner Color Overlay (leave empty for no overlay)', 'avia_framework' ); ?></strong></label>
+        <div><input type="text" name="av-banner-overlay" id="av-banner-overlay" class='av-woo-colorpicker' value='<?php echo $overlay; ?>' /></div>
+    </div>
+    
+    <div class="av-woo-wp-picker-container" > 
+    <label><strong><?php _e( 'Set opacity for color Overlay', 'avia_framework' ); ?></strong></label>
+    <div>
+    <select id="av-banner-overlay-opacity" name="av-banner-overlay-opacity" class="postform">
+	    
+		<option value="0.1" <?php selected( '0.1', $opacity ); ?>>0.1</option>
+		<option value="0.2" <?php selected( '0.2', $opacity ); ?>>0.2</option>
+		<option value="0.3" <?php selected( '0.3', $opacity ); ?>>0.3</option>
+		<option value="0.4" <?php selected( '0.4', $opacity ); ?>>0.4</option>
+		<option value="0.5" <?php selected( '0.5', $opacity ); ?>>0.5</option>
+		<option value="0.6" <?php selected( '0.6', $opacity ); ?>>0.6</option>
+		<option value="0.7" <?php selected( '0.7', $opacity ); ?>>0.7</option>
+		<option value="0.8" <?php selected( '0.8', $opacity ); ?>>0.8</option>
+		<option value="0.9" <?php selected( '0.9', $opacity ); ?>>0.9</option>
+		<option value="1" <?php selected( '1', $opacity ); ?>>1</option>
+	</select>
+    </div>
+    </div>
+	<?php
+}
+
+
+function avia_woo_add_category_fields($term)
+{
+	
+	?>
+	<div class="form-field" >
+		<label for="av_cat_styling"> <?php echo THEMENAME." "; _e( 'Category Styling', 'avia_framework' ); ?></label>
+		<?php avia_woo_styling_select($term); ?>
+	</div>
+	
+	<div class="form-field dependant_on_av_cat_styling hidden" >
+		<h3> <?php _e( 'Banner Options', 'avia_framework' ); ?></h3>
+		<?php avia_woo_banner_options($term); ?>
+	</div>
+	
+	<?php
+}
+
+function avia_woo_edit_category_fields($term)
+{		
+			$styling = is_object($term) ? get_woocommerce_term_meta( $term->term_id, 'av_cat_styling', true ) : "";
+			$hidden  = empty($styling) ?  "dependant_on_av_cat_styling hidden" : "dependant_on_av_cat_styling";
+?>
+		<tr class="form-field">
+			<th scope="row" valign="top"><label><?php echo THEMENAME." "; _e( 'Category Styling', 'avia_framework' ); ?></label></th>
+			<td>
+				<?php avia_woo_styling_select($term); ?>
+			</td>
+		</tr>
+		
+		<tr class="form-field <?php echo $hidden; ?> ">
+			<th scope="row" valign="top"><label><?php _e( 'Banner Options', 'avia_framework' ); ?></label></th>
+			<td>
+			<?php avia_woo_banner_options($term); ?>	
+			</td>
+		</tr>
+		 
+		
+		
+		<?php
+}
+
+
+
+

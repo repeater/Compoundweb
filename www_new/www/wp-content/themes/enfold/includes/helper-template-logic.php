@@ -42,9 +42,9 @@ if(!function_exists('avia_search_query_filter'))
 	{
 		//don't check query on admin page - otherwise we'll break the sort/filter options on the Pages > All Pages screen, etc.
 		if(is_admin()) return;
-		        
+		
 	   	// If 's' request variable is set but empty
-		if (isset($_GET['s']) && empty($_GET['s']) && empty($_GET['adv_search']) && $query->is_main_query())
+		if (isset($_GET['s']) && empty($_GET['s']) && empty($_GET['adv_search']) && $query->is_main_query() && empty($query->queried_object))
 		{
 			//set all query conditional to false to prevent php notices
 			foreach($query as $key => &$query_attr)
@@ -269,8 +269,7 @@ if(!function_exists('avia_set_layout_array'))
 		{
             $result = 'sidebar_right';
 		}
-
-
+		
 		if($result)
 		{
 			$avia_config['layout']['current'] = $avia_config['layout'][$result];

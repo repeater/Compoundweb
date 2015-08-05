@@ -361,10 +361,24 @@ if ( !class_exists( 'avia_post_slider' ) )
 					}
 
 					if($loop_counter == 1) $output .= "<div class='slide-entry-wrap'>";
-
+					
+					$post_format = get_post_format($the_id) ? get_post_format($the_id) : 'standard';
+					
                     $markup = avia_markup_helper(array('context' => 'entry','echo'=>false, 'id'=>$the_id, 'custom_markup'=>$custom_markup));
 					$output .= "<article class='slide-entry flex_column {$style} {$post_class} {$grid} {$extraClass} {$thumb_class}' $markup>";
 					$output .= $thumbnail ? "<a href='{$link}' data-rel='slide-".avia_post_slider::$slide."' class='slide-image' title=''>{$thumbnail}</a>" : "";
+					
+					if($post_format == "audio")
+					{	
+						$current_post = array();
+			            $current_post['content'] = $entry->post_content;
+			            $current_post['title'] =  $entry->post_title;
+						
+						$current_post = apply_filters( 'post-format-'.$post_format, $current_post );
+						
+						if(!empty( $current_post['before_content'] )) $output .= '<div class="big-preview single-big audio-preview">'.$current_post['before_content'].'</div>';
+					}
+					
 					$output .= "<div class='slide-content'>";
 
                     $markup = avia_markup_helper(array('context' => 'entry_title','echo'=>false, 'id'=>$the_id, 'custom_markup'=>$custom_markup));
@@ -387,7 +401,8 @@ if ( !class_exists( 'avia_post_slider' ) )
 						$output .= "</div>";
 					}
                     $markup = avia_markup_helper(array('context' => 'entry_content','echo'=>false, 'id'=>$the_id, 'custom_markup'=>$custom_markup));
-					$output .= !empty($excerpt) ? "<div class='slide-entry-excerpt entry-content' $markup>".$excerpt."</div>" : "";
+		 	$excerpt = apply_filters( 'avf_post_slider_entry_excerpt', $excerpt, $prepare_excerpt, $permalink, $entry );
+			$output .= !empty($excerpt) ? "<div class='slide-entry-excerpt entry-content' $markup>".$excerpt."</div>" : "";
 
                     $output .= "</div>";
                     $output .= '<footer class="entry-footer"></footer>';

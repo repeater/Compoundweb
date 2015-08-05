@@ -148,6 +148,7 @@ if ( !class_exists( 'avia_sc_section' ) )
 											  __('Small Padding','avia_framework' )	=>'small',
 						                      __('Default Padding','avia_framework' )	=>'default',
 						                      __('Large Padding','avia_framework' )	=>'large',
+						                      __('Huge Padding','avia_framework' )	=>'huge',
 						                  )
 				    ),
 
@@ -177,6 +178,13 @@ if ( !class_exists( 'avia_sc_section' ) )
 											__('Display a small arrow that points down to the next section','avia_framework' )	=>'border-extra-arrow-down',
 						                  )
 				    ),
+				    
+				    array(	
+						"name" 	=> __("Display a scroll down arrow", 'avia_framework' ),
+						"desc" 	=> __("Check if you want to show a button at the bottom of the section that takes the user to the next section by scrolling down", 'avia_framework' ) ,
+						"id" 	=> "scroll_down",
+						"std" 	=> "",
+						"type" 	=> "checkbox"),
 
 
 				  array(	"name" 	=> __("For Developers: Section ID", 'avia_framework' ),
@@ -307,7 +315,7 @@ if ( !class_exists( 'avia_sc_section' ) )
 						),
 					
 
-					/*
+					
 array(
 							"type" 	=> "tab",
 							"name"  => __("Section Background Overlay" , 'avia_framework'),
@@ -381,7 +389,7 @@ array(
 							"type" 	=> "close_div",
 							'nodescription' => true
 						),
-*/
+
 
 							
 					array(
@@ -427,6 +435,7 @@ array(
 			    								'overlay_color' => '',
 			    								'overlay_pattern' => '',
 			    								'overlay_custom_pattern' => '',
+			    								'scroll_down' => ''
 			    								
 			    								), 
 			    							$atts, $this->config['shortcode']);
@@ -434,7 +443,7 @@ array(
 			    							
 				extract($atts);
 			    $output      = "";
-			    $class       = "avia-section ".$color." avia-section-".$padding." avia-".$shadow." avia-bg-style-".$attach;
+			    $class       = "avia-section ".$color." avia-section-".$padding." avia-".$shadow;
 			    $background  = "";
 				
 				
@@ -495,6 +504,13 @@ array(
 					$params['data'] = "data-section-bg-repeat='{$repeat}'";
 					
 				}
+				else
+				{
+					$attach = "scroll";
+				}
+				
+				
+				
 
 			    if($custom_bg != "")
 			    {
@@ -506,7 +522,8 @@ array(
 			    
 			    
 			    /*check/create overlay*/
-				$overlay = "";
+				$overlay 	= "";
+				$pre_wrap 	= "<div class='av-section-color-overlay-wrap'>" ;
 				if(!empty($overlay_enable))
 				{
 					$overlay_src = "";
@@ -528,13 +545,25 @@ array(
 					$overlay = "<div class='av-section-color-overlay' style='{$overlay}'></div>";
 					$class .= " av-section-color-overlay-active";
 					
-					$params['attach'] .= "<div class='av-section-color-overlay-wrap'>" . $overlay;
+					$params['attach'] .= $pre_wrap . $overlay;
 					
+				}
+				
+				
+				
+				
+				if(!empty($scroll_down))
+				{	
+					if(!$overlay)
+					{
+					$params['attach'] .= $pre_wrap;	
+					}
+					$params['attach'] .= "<a href='#next-section' title='' class='scroll-down-link' ". av_icon_string( 'scrolldown' ). "></a>";
 				}
 			    
 			    
 			    
-
+				$class .= " avia-bg-style-".$attach;
 			    $params['class'] = $class." ".$meta['el_class'];
 			    $params['bg']    = $background;
 				$params['min_height'] = $min_height;
@@ -579,7 +608,7 @@ array(
 				
 				
 				//next section needs an extra closing tag if overlay with wrapper was added:
-				if($overlay) 
+				if($overlay || !empty($scroll_down)) 
 				{ 
 					avia_sc_section::$close_overlay = "</div>";
 				}

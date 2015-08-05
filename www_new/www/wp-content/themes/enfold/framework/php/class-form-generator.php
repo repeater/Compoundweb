@@ -88,6 +88,12 @@ if( ! class_exists( 'avia_form' ) )
         var $width = 1;
         
         /**
+         * Show the element names either as label or as placeholder attribute
+         * @var int
+         */
+        var $placeholder = false;
+        
+        /**
          * array that translates the passed width to a numeric value
          * @var int
          */
@@ -107,12 +113,14 @@ if( ! class_exists( 'avia_form' ) )
 			$this->formID 		= avia_form::$form_id ++;
 			$this->form_params['avia_formID'] = $this->formID;
 			$this->id_sufix		= isset($params['multiform']) ? "_".$this->formID : "";
+			$this->placeholder	= !empty($params['placeholder']) ? true : false;
 
-			$extraClass = isset($params['form_class']) ? $params['form_class'] : "";
-			$redirect   = isset($params['redirect']) ? "data-avia-redirect='".$params['redirect']."'" : "";
-
-			$form_class = apply_filters('avf_ajax_form_class', 'ajax_form', $this->formID, $this->form_params);
-
+			$extraClass  = isset($params['form_class']) ? $params['form_class'] : "";
+			$redirect    = isset($params['redirect']) ? "data-avia-redirect='".$params['redirect']."'" : "";
+			
+			$form_class  = apply_filters('avf_ajax_form_class', 'ajax_form', $this->formID, $this->form_params);
+			$form_class .= $this->placeholder ? " av-form-labels-hidden " : " av-form-labels-visible ";
+			
 			$this->output  = '<form action="'.$params['action'].'" method="post" class="'.$form_class.' '.$extraClass.'" data-avia-form-id="'.$this->formID.'" '.$redirect.'><fieldset>';
 			$this->output .=  $params['heading'];
 
@@ -273,6 +281,7 @@ if( ! class_exists( 'avia_form' ) )
 			
 			if(!empty($element['check']))
 			{
+				$extra = "*";
 				$required = ' <abbr class="required" title="required">*</abbr>';
 				$element_class = $element['check'];
 				$p_class = $this->check_element($id, $element);
@@ -281,8 +290,17 @@ if( ! class_exists( 'avia_form' ) )
 			if(!empty($_POST[$id])) $value = esc_html(urldecode($_POST[$id]));
 
 			$this->elements_html .= "<p class='".$p_class.$element['class']."' id='element_$id'>";
-			$form_el = ' <input name="'.$id.'" class="text_input '.$element_class.'" type="'.$type.'" id="'.$id.'" value="'.$value.'"/>';
 			$label = '<label for="'.$id.'">'.$element['label'].$required.'</label>';
+			$placeholder = "";
+			
+			if($this->placeholder)
+			{
+				$label = "";
+				$placeholder = " placeholder='".$element['label'].$extra."'" ;
+			}
+			
+			$form_el = ' <input name="'.$id.'" class="text_input '.$element_class.'" type="'.$type.'" id="'.$id.'" value="'.$value.'" '.$placeholder.'/>';
+			
 
 			if(isset($this->form_params['label_first']))
 			{
@@ -308,9 +326,10 @@ if( ! class_exists( 'avia_form' ) )
         {
             global $wp_locale;
 
-            $p_class = $required = $element_class = $value = "";
+            $p_class = $required = $element_class = $value = $extra = "";
 			$date_format = apply_filters('avf_datepicker_dateformat', 'dd / mm / yy');
-			$placeholder =  apply_filters('avf_datepicker_date_placeholder', 'DD / MM / YY');
+			
+			$placeholder_text = 'DD / MM / YY';
 
             if(!empty($element['check']))
             {
@@ -321,10 +340,25 @@ if( ! class_exists( 'avia_form' ) )
 
             if(!empty($_POST[$id])) $value = esc_html(urldecode($_POST[$id]));
 
+			if($this->placeholder)
+			{
+				$placeholder_text = $element['label'];
+				$extra = "*";
+			}
+
+			$placeholder = apply_filters('avf_datepicker_date_placeholder', $placeholder_text.$extra);
+
+
+
             $this->elements_html .= "<p class='".$p_class.$element['class']."' id='element_$id'>";
             $form_el = ' <input name="'.$id.'" class="avia_datepicker text_input '.$element_class.'" type="text" id="'.$id.'" value="'.$value.'" placeholder="'.$placeholder.'" />';
             $label = '<label for="'.$id.'">'.$element['label'].$required.'</label>';
-
+			
+			if($this->placeholder)
+			{
+				$label = "";
+			}
+			
             if(isset($this->form_params['label_first']))
             {
                 $this->elements_html .= $label.$form_el;
@@ -468,10 +502,19 @@ if( ! class_exists( 'avia_form' ) )
 				$select .= "<option $active value ='$key'>$value</option>";
 			}
 
+			$multi = "";
+			if(!empty($element['multi_select']))
+			{
+				$multi = "multiple";
+				$element_class .= " av-multi-select";
+			}
+
 
 			$this->elements_html .= "<p class='".$p_class.$element['class']."' id='element_$id'>";
-			$form_el = ' <select name="'.$id.'" class="select '.$element_class.'" id="'.$id.'">'.$select.'</select>';
+			$form_el = ' <select '.$multi.' name="'.$id.'" class="select '.$element_class.'" id="'.$id.'">'.$select.'</select>';
 			$label = '<label for="'.$id.'">'.$element['label'].$required.'</label>';
+
+			if($this->placeholder) $label = "";
 
 			if(isset($this->form_params['label_first']))
 			{
@@ -496,20 +539,31 @@ if( ! class_exists( 'avia_form' ) )
          */
 		function textarea($id, $element)
 		{
-			$p_class = $required = $element_class = $value = "";
+			$p_class = $required = $element_class = $value = $extra = "";
 
 			if(!empty($element['check']))
 			{
+				$extra = "*";
 				$required = ' <abbr class="required" title="required">*</abbr>';
 				$element_class = $element['check'];
 				$p_class = $this->check_element($id, $element);
 			}
 
 			if(!empty($_POST[$id])) $value = esc_html(urldecode($_POST[$id]));
+			
+			$label = '	 <label for="'.$id.'" class="textare_label hidden textare_label_'.$id.'">'.$element['label'].$required.'</label>';
+			$placeholder = "";
+			
+			if($this->placeholder)
+			{
+				$label = "";
+				$placeholder = " placeholder='".$element['label'].$extra."'" ;
+			}
+			
 
 			$this->elements_html .= "<p class='".$p_class.$element['class']."' id='element_$id'>";
-			$this->elements_html .= '	 <label for="'.$id.'" class="textare_label hidden textare_label_'.$id.'">'.$element['label'].$required.'</label>';
-			$this->elements_html .= '	 <textarea name="'.$id.'" class="text_area '.$element_class.'" cols="40" rows="7" id="'.$id.'" >'.$value.'</textarea>';
+			$this->elements_html .= $label;
+			$this->elements_html .= '	 <textarea '.$placeholder.' name="'.$id.'" class="text_area '.$element_class.'" cols="40" rows="7" id="'.$id.'" >'.$value.'</textarea>';
 			$this->elements_html .= "</p>";
 		}
 
@@ -558,7 +612,7 @@ if( ! class_exists( 'avia_form' ) )
 			$p_class = $this-> auto_width();
 
 			if(!empty($_POST[$id])) $value = esc_html(urldecode($_POST[$id]));
-			if(!empty($_POST[$id.'_verifier'])) $valueVer = urldecode($_POST[$id.'_verifier']);
+			if(!empty($_POST[$id.'_verifier'])) $valueVer = esc_html(urldecode($_POST[$id.'_verifier']));
 
 			if(!$valueVer) $valueVer	= str_replace('0','4', str_replace('9','7', rand(123456789, 999999999)));
 			$reverse 	= strrev( $valueVer );
@@ -622,9 +676,9 @@ if( ! class_exists( 'avia_form' ) )
 
 
 			//hook to stop execution here and do something different with the data
-			$proceed = apply_filters('avf_form_send', true, $new_post, $this->form_params);
+			$proceed = apply_filters( 'avf_form_send', true, $new_post, $this->form_params, $this );
 
-			if(!$proceed) return true;
+			if( ! $proceed ) return true;
 
 			//set the email adress
 			$from = "no-reply@wp-message.com";
@@ -696,7 +750,7 @@ if( ! class_exists( 'avia_form' ) )
 					if($element['type'] != 'hidden' && $element['type'] != 'decoy')
 					{
 						if($element['type'] == 'textarea') $message .= " <br/>";
-						$field_value = apply_filters("avf_form_mail_field_values", nl2br(urldecode($new_post[$key])), $new_post, $this->form_elements, $this->form_params);
+						$field_value = apply_filters( "avf_form_mail_field_values", nl2br(urldecode($new_post[$key])), $new_post, $this->form_elements, $this->form_params, $element, $key );
 						$message .= $element['label'].": ".$field_value." <br/>";
 						if($element['type'] == 'textarea') $message .= " <br/>";
 					}

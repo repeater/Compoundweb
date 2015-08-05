@@ -164,6 +164,8 @@ if( ! class_exists( 'avia_sidebar' ) )
 				'before_title'  => '<h3 class="widgettitle">', 
 				'after_title'   => '</h3>'
 				);
+			
+			
 				
 			$args = apply_filters('avia_custom_widget_args', $args);
             
@@ -171,8 +173,10 @@ if( ! class_exists( 'avia_sidebar' ) )
             {
 	            foreach ($this->sidebars as $sidebar)
 				{	
-				    $args['name']  = $sidebar;
-				    $args['class'] = 'avia-custom';
+				    $args['name']  	= $sidebar;
+
+				    $args['id']  	= avia_backend_safe_string($sidebar,'-'); 				    
+				    $args['class'] 	= 'avia-custom';
 					register_sidebar($args);
 				}
 			}

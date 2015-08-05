@@ -350,7 +350,7 @@ array(
 				if(avia_sc_testimonial::$counter == avia_sc_testimonial::$columns) $class .= "avia-last-testimonial";
 				if($link && !$linktext) $linktext = $link;
 				if($link == 'http://') $link = "";
-                
+                $linktext = htmlentities($linktext);
 
 				if(avia_sc_testimonial::$counter == 1)
                 {

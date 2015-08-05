@@ -151,6 +151,36 @@ class avia_wp_import extends WP_Import
 		}
 	}
 	
+	/*rename existung menus so that newly added menu items are not appended*/
+	function rename_existing_menus()
+	{
+		$menus  = wp_get_nav_menus();
+		
+		if(!empty($menus))
+		{	
+			//wp_delete_nav_menu($menu->slug);
+			
+			foreach($menus as $menu)
+			{
+				$updated = false;
+				$i = 0;
+				
+				while(!is_numeric($updated)) //try to update the menu name. if it exists increment the number and thereby change the name
+				{
+					$i++;
+					$args['menu-name'] 		= __("Previously used menu",'avia_framework')." ".$i;
+					$args['description'] 	= $menu->description;
+					$args['parent'] 		= $menu->parent;
+					
+					$updated = wp_update_nav_menu_object($menu->term_id, $args); //return a number on success or wp_error object if menu name exists
+					
+					//fallback, prevents infinite loop if something weird happens
+					if($i > 100) $updated = 1;
+				}
+			}
+		}
+	}
+	
 	function set_menus()
 	{
 		global $avia_config;
@@ -179,13 +209,18 @@ class avia_wp_import extends WP_Import
 			foreach($avia_menus as $avia_menu)
 			{
 				//check if we got a menu that corresponds to the Menu name array ($avia_config['nav_menus']) we have set in functions.php
-				if(is_object($avia_menu) && in_array($avia_menu->name, $avia_navs) )
+				// a partial match like "Main Menu" "Main", or "Secondary" is enough
+				if( is_object($avia_menu) )
 				{
-					$key = array_search($avia_menu->name, $avia_navs);
-					if($key)
+					foreach($avia_navs as $key => $value)
 					{
-						//if we have found a menu with the correct menu name apply the id to the menu location
-						$locations[$key] = $avia_menu->term_id;
+						$value = strtolower($value);
+						$name = strtolower($avia_menu->name);
+				
+						if(strpos($value, $name) !== false)
+						{
+							$locations[$key] = $avia_menu->term_id;
+						}
 					}
 				}
 			}
@@ -286,7 +321,7 @@ class avia_wp_import extends WP_Import
 			{
 				$key = str_replace('_', '-', ltrim($meta['key'], "_"));
 				
-				/*do a check: only add keys that to not exist - parent menu item is a special case that must be checked as well*/
+				/*do a check: only add keys that do not exist - parent menu item is a special case that must be checked as well*/
 				if( !array_key_exists($key, $args) && $key != "menu-item-menu-item-parent")
 				{
 					if(!empty($meta['value']))

@@ -81,6 +81,7 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 			//on ajax call load the functions that are usually only loaded on new post and edit post screen
 			if(AviaHelper::is_ajax()) 
 			{
+				if(empty( $_POST['avia_request'] )) return;
                 $this->admin_init();
 	 	    } 
 	 	}
@@ -143,6 +144,7 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 		protected function addAdminFilters() 
 		{
 			// add_filter('tiny_mce_before_init', array($this, 'tiny_mce_helper')); // remove span tags from tinymce - currently disabled, doesnt seem to be necessary
+			add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
 		}
 		
 		/**
@@ -305,7 +307,19 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 			return $array->config;
 		}
         
-        
+        /**
+		 *class that adds an extra class to the body if the builder is active	
+		 **/
+        public function admin_body_class($classes)
+        {
+	        global $post_ID;
+	        
+	        if(!empty($post_ID) && AviaHelper::builder_status($post_ID))
+	        {
+	        	$classes .= ' avia-advanced-editor-enabled ';
+	        }
+	        return $classes;
+        }
         
 
 	 	
@@ -421,6 +435,8 @@ if ( !class_exists( 'AviaBuilder' ) ) {
     	
     	   	$post_id = @get_the_ID();
     	   	
+    	   	if(is_feed()) return;
+    	   	
     	   	if(($post_id && is_singular()) || isset($avia_config['builder_redirect_id']))
     	   	{
 			   if(!empty($avia_config['builder_redirect_id'])) $post_id = $avia_config['builder_redirect_id'];
@@ -496,6 +512,7 @@ if ( !class_exists( 'AviaBuilder' ) ) {
             $params 		= apply_filters('avf_builder_button_params', 
             			    	array(	'disabled'		=>false, 
            				    			'note' 			=> "", 
+           				    			'noteclass'		=> "",
                			    			'button_class'	=>'',
                			    			'visual_label'  => __( 'Advanced Layout Editor', 'avia_framework' ),
                			    			'default_label' => __( 'Default Editor', 'avia_framework' )
@@ -513,7 +530,7 @@ if ( !class_exists( 'AviaBuilder' ) ) {
             echo "<div id='postdivrich_wrap' {$editor_class}>";
             echo '<a id="avia-builder-button" href="#" class="avia-builder-button button-primary '.$button_class.' '.$params['button_class'].'" data-active-button="'.$params['default_label'].'" data-inactive-button="'.$params['visual_label'].'">'.$active_builder.'</a>';
             
-            if($params['note']) echo "<div class='av-builder-note'>".$params['note']."</div>";
+            if($params['note']) echo "<div class='av-builder-note ".$params['noteclass']."'>".$params['note']."</div>";
             
 		}
 		
@@ -606,12 +623,23 @@ if ( !class_exists( 'AviaBuilder' ) ) {
 	    /*create a shortcode button*/
 		protected function create_shortcode_button($shortcode)
 		{
+			$class  = "";
+			
+			if(!empty($shortcode['posttype']) && $shortcode['posttype'][0] != AviaHelper::backend_post_type())
+			{
+				$shortcode['tooltip'] = $shortcode['posttype'][1];
+				$class .= "av-shortcode-disabled ";
+			}
+			
+			
 			$icon   = isset($shortcode['icon']) ? '<img src="'.$shortcode['icon'].'" alt="'.$shortcode['name'].'" />' : "";
 			$data   = !empty($shortcode['tooltip']) ? " data-avia-tooltip='".$shortcode['tooltip']."' " : "";
 			$data  .= !empty($shortcode['drag-level']) ? " data-dragdrop-level='".$shortcode['drag-level']."' " : "";
-			$class  = isset($shortcode['class']) ? $shortcode['class'] : "";
+			$class .= isset($shortcode['class']) ? $shortcode['class'] : "";
             $class .= !empty($shortcode['target']) ? " ".$shortcode['target'] : "";
 
+			
+			
 			
 			
 			$link   = "";

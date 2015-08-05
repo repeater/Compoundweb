@@ -51,7 +51,16 @@ if ( !class_exists( 'avia_sc_table' ) )
 			{
 			
 				$this->elements = array(
-				
+						
+						array(
+							"type" 	=> "tab_container", 'nodescription' => true
+						),
+						
+						array(
+							"type" 	=> "tab",
+							"name"  => __("Edit Table" , 'avia_framework'),
+							'nodescription' => true
+						),
 						
 						
 						array(	
@@ -75,6 +84,16 @@ if ( !class_exists( 'avia_sc_table' ) )
 						
 						),
 						
+						array(
+							"type" 	=> "close_div", 'nodescription' => true
+						),
+						
+					array(
+							"type" 	=> "tab",
+							"name"  => __("Table Options" , 'avia_framework'),
+							'nodescription' => true
+						),
+						
 						array(	
 							"name" 	=> __("Table Purpose", 'avia_framework' ),
 							"desc" 	=> __("Choose if the table should be used to display tabular data or to display pricing options. (Difference: Pricing tables are flashier and try to stand out)", 'avia_framework' ),
@@ -84,6 +103,32 @@ if ( !class_exists( 'avia_sc_table' ) )
 							"subtype" => array(
 								__('Use the table as a Pricing Table',  'avia_framework' ) =>'pricing',
 								__('Use the table to display tabular data',  'avia_framework' ) =>'tabular')),	
+						array(
+							"name" 	=> __("Table Design", 'avia_framework' ),
+							"desc" 	=> __("Use either the default or minimal design", 'avia_framework' ),
+							"id" 	=> "pricing_table_design",
+							"type" 	=> "select",
+							"std" 	=> "avia_pricing_default",
+							"required" => array("purpose","equals","pricing"),
+							"subtype" => array(
+								__('Default', 'avia_framework') => 'avia_pricing_default',
+								__('Minimal', 'avia_framework') => 'avia_pricing_minimal')
+							),
+							
+						array(
+							"name" 	=> __("Empty Cells", 'avia_framework' ),
+							"desc" 	=> __("Empty Cells are by default hidden. If you want to force equal height across all columns set them to display", 'avia_framework' ),
+							"id" 	=> "pricing_hidden_cells",
+							"type" 	=> "select",
+							"std" 	=> "",
+							"required" => array("purpose","equals","pricing"),
+							"subtype" => array(
+								__('Hide empty Cells', 'avia_framework') => '',
+								__('Show empty Cells', 'avia_framework') => 'avia_show_empty_cells')
+							),
+								
+						
+						
 								
 						array(	
 							"name" 	=> __("Table Caption", 'avia_framework' ),
@@ -103,7 +148,16 @@ if ( !class_exists( 'avia_sc_table' ) )
 							"required" => array("purpose","equals","tabular"),
 							"subtype" => array(
 								__('Adjust table to screen size', 'avia_framework') => 'avia_responsive_table',
-								__('Make entire table scrollable', 'avia_framework') => 'avia_scrollable_table'))
+								__('Make entire table scrollable', 'avia_framework') => 'avia_scrollable_table')),
+								
+					
+						array(
+							"type" 	=> "close_div", 'nodescription' => true
+						),
+						
+						array(
+							"type" 	=> "close_div", 'nodescription' => true
+						),
 								
 					);
 			}
@@ -156,7 +210,7 @@ if ( !class_exists( 'avia_sc_table' ) )
 			 */
 			function shortcode_handler($atts, $content = "", $shortcodename = "", $meta = "")
 			{
-				$atts 		= shortcode_atts(array('purpose' => 'pricing', 'caption' => '', 'responsive_styling' => 'avia_responsive_table'), $atts, $this->config['shortcode']);
+				$atts 		= shortcode_atts(array('purpose' => 'pricing', 'caption' => '', 'responsive_styling' => 'avia_responsive_table', 'pricing_hidden_cells' => '', 'pricing_table_design' => 'avia_pricing_default'), $atts, $this->config['shortcode']);
 				$depth		= 2;
 				$table_rows = ShortcodeHelper::shortcode2array($content, $depth);
 				$output 	= "";
@@ -198,10 +252,11 @@ if ( !class_exists( 'avia_sc_table' ) )
 			*/
 			function pricing_table($table_rows, $atts, $meta)
 			{
+				$class = $atts['pricing_hidden_cells']." ".$atts['pricing_table_design'];
 				$sorted_rows = $this->list_sort_array($table_rows);
                 $markup = avia_markup_helper(array('context' => 'table','echo'=>false, 'custom_markup'=>$meta['custom_markup']));
 				$output  =	"";		
-				$output .= "<div class='avia-table main_color avia-pricing-table-container avia-table-".self::$table_count." ".$meta['el_class']."' $markup>";
+				$output .= "<div class='avia-table main_color avia-pricing-table-container {$class} avia-table-".self::$table_count." ".$meta['el_class']."' $markup>";
 
 				$fallback_values = array();
 				$empty_cells = false;

@@ -19,7 +19,7 @@ if ( !class_exists( 'avia_sc_countdown' ) )
 				$this->config['order']		= 14;
 				$this->config['target']		= 'avia-target-insert';
 				$this->config['shortcode'] 	= 'av_countdown';
-				$this->config['tooltip'] 	= __('Display an countdown to a specific date', 'avia_framework' );
+				$this->config['tooltip'] 	= __('Display a countdown to a specific date', 'avia_framework' );
 				
 				$this->time_array = array(
 								__('Second',  	'avia_framework' ) 	=>'1',
@@ -179,6 +179,8 @@ if ( !class_exists( 'avia_sc_countdown' ) )
 											 	'align'		=> 'center',
 											 	'size'		=> '', 
 											 	'style'		=> 'av-default-style', 
+											 	'link'		=> '', 
+											 	'title'		=> ''
 											 	)
 											 , $atts));
 				
@@ -212,10 +214,19 @@ if ( !class_exists( 'avia_sc_countdown' ) )
 					$final_time .= " data-minute='".$minute."'";
 					
 					if(!empty($size)) $digit_style = "font-size:{$size}px; ";
+					$tags = !empty($link) ? array( "a href='{$link}' ", "a") : array('span', 'span');
+					
 					
 					
 					$output .= "<div class='av-countdown-timer {$align} {$style} {$el}' {$final_time} data-interval='{$interval}' data-maximum='{$max}' >";
-					$output .= 		"<div class='av-countdown-timer-inner'>";
+					
+					if( is_array( $title ) && isset( $title['top'] ) )
+					{
+						$output .= "<h3><{$tags[0]} class='av-countdown-timer-title av-countdown-timer-title-top'>".$title['top']."</{$tags[1]}></h3>";
+					}
+					
+					
+					$output .= 		"<{$tags[0]} class='av-countdown-timer-inner'>";
 					
 					foreach(array_reverse($this->time_array) as $key => $number)
 					{
@@ -225,18 +236,25 @@ if ( !class_exists( 'avia_sc_countdown' ) )
 							$single  = $this->full_time_array[$number]['label'];
 							$multi   = $this->full_time_array[$number]['label_multi'];
 							
-							$output .= "<div class='av-countdown-cell av-countdown-". $class ."'>";
-								$output .= "<div class='av-countdown-cell-inner'>";
+							$output .= "<span class='av-countdown-cell av-countdown-". $class ."'>";
+								$output .= "<span class='av-countdown-cell-inner'>";
 								
-									$output .= "<div class='av-countdown-time' data-upate-width='{$class}' style='{$digit_style}'>0</div>";
-									$output .= "<div class='av-countdown-time-label' data-label='{$single}' data-label-multi='{$multi}'>".$multi."</div>";
+									$output .= "<span class='av-countdown-time' data-upate-width='{$class}' style='{$digit_style}'>0</span>";
+									$output .= "<span class='av-countdown-time-label' data-label='{$single}' data-label-multi='{$multi}'>".$multi."</span>";
 									
-								$output .= "</div>";
-							$output .= "</div>";
+								$output .= "</span>";
+							$output .= "</span>";
 						}
 					}
 					
-					$output .= 		"</div>";
+					$output .= 		"</{$tags[1]}>";
+					
+					if( is_array( $title ) && isset( $title['bottom'] ) )
+					{
+						$output .= "<h3><{$tags[0]} class='av-countdown-timer-title av-countdown-timer-title-bottom'>".$title['bottom']."</{$tags[1]}></h3>";
+					}
+					
+					
 					$output .= "</div>";
         		}
         		

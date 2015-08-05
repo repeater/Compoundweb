@@ -10,6 +10,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 	{
 			static $gallery = 0;
 			var $extra_style = "";
+			var $non_ajax_style = "";
 
 			/**
 			 * Create the config array for the shortcode button
@@ -56,6 +57,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 							"subtype" => array(
 												__('Small Thumbnails',  'avia_framework' ) =>'thumbnails',
 												__('Big image with thumbnails below', 'avia_framework' ) =>'big_thumb',
+												__('Big image only, other images can be accessed via lightbox', 'avia_framework' ) =>'big_thumb lightbox_gallery',
 												)
 							),
 
@@ -65,7 +67,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 							"id" 	=> "preview_size",
 							"type" 	=> "select",
 							"std" 	=> "portfolio",
-							"required" 	=> array('style','equals','big_thumb'),
+							"required" 	=> array('style','contains','big_thumb'),
 							"subtype" =>  AviaHelper::get_registered_image_sizes(array('logo'))
 							),
 
@@ -84,6 +86,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
                         "id" 	=> "thumb_size",
                         "type" 	=> "select",
                         "std" 	=> "portfolio",
+							"required" 	=> array('style','not','big_thumb lightbox_gallery'),
                         "subtype" =>  AviaHelper::get_registered_image_sizes(array('logo'))
                     ),
 
@@ -93,6 +96,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 							"id" 	=> "columns",
 							"type" 	=> "select",
 							"std" 	=> "5",
+							"required" 	=> array('style','not','big_thumb lightbox_gallery'),
 							"subtype" => AviaHtmlHelper::number_array(1,12,1)
 							),
 
@@ -102,6 +106,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 	                        "id" 	=> "imagelink",
 	                        "type" 	=> "select",
 	                        "std" 	=> "5",
+							"required" 	=> array('style','not','big_thumb lightbox_gallery'),
 	                        "subtype" => array(
 	                            __('Yes',  'avia_framework' ) =>'lightbox',
 	                            __('No, open the images in the browser window', 'avia_framework' ) =>'aviaopeninbrowser noLightbox',
@@ -115,6 +120,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 		                        "id" 	=> "lazyload",
 		                        "type" 	=> "select",
 		                        "std" 	=> "avia_lazyload",
+							"required" 	=> array('style','not','big_thumb lightbox_gallery'),
 		                        "subtype" => array(
 		                            __('Show the animation when user scrolls to the gallery',  'avia_framework' ) =>'avia_lazyload',
 		                            __('Activate animation on page load (might be preferable on large galleries)', 'avia_framework' ) =>'deactivate_avia_lazyload')
@@ -163,6 +169,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 				extract(shortcode_atts(array(
 				'order'      	=> 'ASC',
 				'thumb_size' 	=> 'thumbnail',
+				'size' 			=> '',
 				'lightbox_size' => 'large',
 				'preview_size'	=> 'portfolio',
 				'ids'    	 	=> '',
@@ -173,7 +180,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
                 'lazyload'      => 'avia_lazyload',
                 'crop_big_preview_thumbnail' => 'avia-gallery-big-crop-thumb'
 				), $atts, $this->config['shortcode']));
-
+					
 
 				$attachments = get_posts(array(
 				'include' => $ids,
@@ -183,7 +190,20 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 				'order' => $order,
 				'orderby' => 'post__in')
 				);
-
+				
+				
+				//compatibility mode for default wp galleries
+				if(!empty($size)) $thumb_size = $size;
+				
+				
+				if('big_thumb lightbox_gallery' == $style)
+				{
+					$imagelink = 'lightbox';
+					$lazyload  = 'deactivate_avia_lazyload';
+					$meta['el_class'] .= " av-hide-gallery-thumbs";
+				}
+				
+				
 
 				if(!empty($attachments) && is_array($attachments))
 				{
@@ -213,7 +233,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 
                         $markup_url = avia_markup_helper(array('context' => 'image_url','echo'=>false, 'id'=>$attachment->ID, 'custom_markup'=>$meta['custom_markup']));
 
-						if($style == "big_thumb" && $first)
+						if( strpos($style, "big_thumb") !== false && $first)
 						{
 							$output .= "<a class='avia-gallery-big fakeLightbox $imagelink $crop_big_preview_thumbnail $custom_link_class' href='".$link[0]."'  data-onclick='1' title='".$description."' ><span class='avia-gallery-big-inner' $markup_url>";
 							$output .= "	<img width='".$prev[1]."' height='".$prev[2]."' src='".$prev[0]."' title='".$title."' alt='".$alt."' />";
@@ -227,12 +247,14 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 
 					$output .= "<div class='avia-gallery-thumb'>{$thumbs}</div>";
 					$output .= "</div>";
-
+					
+					$selector = !empty($atts['ajax_request']) ? ".ajax_slide" : "";
+					
 					//generate thumb width based on columns
 					$this->extra_style .= "<style type='text/css'>";
-					$this->extra_style .= "#top #wrap_all .avia-gallery-".self::$gallery." .avia-gallery-thumb a{width:{$thumb_width}%;}";
+					$this->extra_style .= "#top #wrap_all {$selector} .avia-gallery-".self::$gallery." .avia-gallery-thumb a{width:{$thumb_width}%;}";
 					$this->extra_style .= "</style>";
-
+					
 					if(!empty($this->extra_style))
 					{
 						if(!empty($atts['ajax_request']))
@@ -242,6 +264,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 						}
 						else
 						{
+							$this->non_ajax_style = $this->extra_style;
 							add_action('wp_footer', array($this, 'print_extra_style'));
 						}
 					}
@@ -254,7 +277,7 @@ if ( !class_exists( 'avia_sc_gallery' ) )
 
 			function print_extra_style()
 			{
-				echo $this->extra_style;
+				echo $this->non_ajax_style;
 			}
 
 	}

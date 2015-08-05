@@ -19,7 +19,7 @@ if ( !class_exists( 'avia_sc_image' ) )
 				$this->config['order']			= 100;
 				$this->config['target']			= 'avia-target-insert';
 				$this->config['shortcode'] 		= 'av_image';
-				$this->config['modal_data']     = array('modal_class' => 'mediumscreen');
+				//$this->config['modal_data']     = array('modal_class' => 'mediumscreen');
 				$this->config['tooltip'] 	    = __('Inserts an image of your choice', 'avia_framework' );
 			}
 
@@ -34,7 +34,17 @@ if ( !class_exists( 'avia_sc_image' ) )
 			function popup_elements()
 			{
 				$this->elements = array(
-
+					
+					array(
+							"type" 	=> "tab_container", 'nodescription' => true
+						),
+						
+					array(
+							"type" 	=> "tab",
+							"name"  => __("Image Settings" , 'avia_framework'),
+							'nodescription' => true
+						),
+					
 					array(
 							"name" 	=> __("Choose Image",'avia_framework' ),
 							"desc" 	=> __("Either upload a new, or choose an existing image from your media library",'avia_framework' ),
@@ -75,7 +85,43 @@ if ( !class_exists( 'avia_sc_image' ) )
 												__('Right to Left',  'avia_framework' ) =>'right-to-left',
 												)
 							),
-
+					
+					array(
+							"name" 	=> __("Image Styling", 'avia_framework' ),
+							"desc" 	=> __("Chose a styling variaton", 'avia_framework' ),
+							"id" 	=> "styling",
+							"type" 	=> "select",
+							"std" 	=> "",
+							"subtype" => array(
+												__('Default',  'avia_framework' ) 	=>'',
+												__('Circle (image height and width must be equal)',  'avia_framework' ) 	=>'circle',
+												__('No Styling (no border, no border radius etc)',  'avia_framework' ) =>'no-styling',
+												)
+							),
+					
+					array(
+							"name" 	=> __("Image Hover effect", 'avia_framework' ),
+							"desc" 	=> __("Add a mouse hover effect to the image", 'avia_framework' ),
+							"id" 	=> "hover",
+							"type" 	=> "select",
+							"std" 	=> "",
+							"subtype" => array(
+												__('No',  'avia_framework' ) 	=>'',
+												__('Yes, slightly increase the image size',  'avia_framework' ) 	=>'av-hover-grow',
+												)
+							),
+							
+					array(
+							"type" 	=> "close_div",
+							'nodescription' => true
+						),
+					
+					array(
+							"type" 	=> "tab",
+							"name"	=> __("Link Settings",'avia_framework' ),
+							'nodescription' => true
+						),
+					
 					 array(
 							"name" 	=> __("Image Link?", 'avia_framework' ),
 							"desc" 	=> __("Where should your image link to?", 'avia_framework' ),
@@ -102,18 +148,18 @@ if ( !class_exists( 'avia_sc_image' ) )
                         ),
 						
 						
+					
+					
 					array(
-							"name" 	=> __("Image Styling", 'avia_framework' ),
-							"desc" 	=> __("Chose a styling variaton", 'avia_framework' ),
-							"id" 	=> "styling",
-							"type" 	=> "select",
-							"std" 	=> "",
-							"subtype" => array(
-												__('Default',  'avia_framework' ) 	=>'',
-												__('Circle (image height and width must be equal)',  'avia_framework' ) 	=>'circle',
-												__('No Styling (no border, no border radius etc)',  'avia_framework' ) =>'no-styling',
-												)
-							),
+							"type" 	=> "close_div",
+							'nodescription' => true
+						),
+					
+					array(
+							"type" 	=> "tab",
+							"name"	=> __("Caption",'avia_framework' ),
+							'nodescription' => true
+						),
 							
 					array(
 						"name" 	=> __("Image Caption", 'avia_framework' ),
@@ -150,13 +196,70 @@ if ( !class_exists( 'avia_sc_image' ) )
 						"id" 	=> "appearance",
 						"type" 	=> "select",
 						"std" 	=> "",
+						"container_class" => 'av_half av_half_first',
                         "required"	=> array('caption','equals','yes'),
 						"subtype" => array(
 											__('Always display caption',  'avia_framework' ) 	=>'',
 											__('Only display on hover',  'avia_framework' ) 	=>'on-hover',
 											)
+						),
+						
+					array(
+						"name" 	=> __("Caption Overlay Opacity",'avia_framework' ),
+						"desc" 	=> __("Set the opacity of your overlay: 0.1 is barely visible, 1.0 is opaque ", 'avia_framework' ),
+						"id" 	=> "overlay_opacity",
+						"type" 	=> "select",
+						"std" 	=> "0.4",
+						"container_class" => 'av_half',
+                        "required"	=> array('caption','equals','yes'),
+						"subtype" => array(   __('0.1','avia_framework' )=>'0.1',
+						                      __('0.2','avia_framework' )=>'0.2',
+						                      __('0.3','avia_framework' )=>'0.3',
+						                      __('0.4','avia_framework' )=>'0.4',
+						                      __('0.5','avia_framework' )=>'0.5',
+						                      __('0.6','avia_framework' )=>'0.6',
+						                      __('0.7','avia_framework' )=>'0.7',
+						                      __('0.8','avia_framework' )=>'0.8',
+						                      __('0.9','avia_framework' )=>'0.9',
+						                      __('1.0','avia_framework' )=>'1',
+						                      )
+				  		),
+				  		
+				  	array(
+							"name" 	=> __("Caption Overlay Background Color", 'avia_framework' ),
+							"desc" 	=> __("Select a background color for your overlay here.", 'avia_framework' ),
+							"id" 	=> "overlay_color",
+							"type" 	=> "colorpicker",
+							"container_class" => 'av_half av_half_first',
+							"required"	=> array('caption','equals','yes'),
+							"std" 	=> "#000000",
 						),	
-						);
+					
+					array(	
+							"name" 	=> __("Caption Font Color", 'avia_framework' ),
+							"desc" 	=> __("Select a font color for your overlay here.", 'avia_framework' ),
+							"id" 	=> "overlay_text_color",
+							"type" 	=> "colorpicker",
+							"std" 	=> "#ffffff",
+							"container_class" => 'av_half',
+							"required"	=> array('caption','equals','yes'),
+						),		
+						
+						
+						
+						
+				array(
+							"type" 	=> "close_div",
+							'nodescription' => true
+						),
+					
+				array(
+							"type" 	=> "close_div",
+							'nodescription' => true
+						),	
+				
+						
+				);
 						
 						
 						
@@ -216,8 +319,27 @@ if ( !class_exists( 'avia_sc_image' ) )
 				$alt 	= "";
 				$title 	= "";
 
-				extract(shortcode_atts(array('src'=>'', 'animation'=>'no-animation', 'link'=>'', 'attachment'=>'', 'attachment_size'=>'', 'target'=>'no', 'styling' =>'', 'caption'=>'', 'font_size'=>'', 'appearance'=>'' ), $atts, $this->config['shortcode']));
-
+				$atts = shortcode_atts(
+						array(	'src'=>'', 
+								'animation'=>'no-animation', 
+								'link'=>'', 
+								'attachment'=>'', 
+								'attachment_size'=>'', 
+								'target'=>'no', 
+								'styling' =>'', 
+								'caption'=>'', 
+								'font_size'=>'', 
+								'appearance'=>'', 
+								'hover'=>'',
+								'align' => 'center',
+								'overlay_opacity'=>'0.4', 
+								'overlay_color'=>'#444444', 
+								'overlay_text_color'=>'#ffffff'
+							), $atts, $this->config['shortcode']);
+				
+				extract($atts);
+				
+			
 				if(!empty($attachment))
 				{
 					$attachment_entry = get_post( $attachment );
@@ -245,7 +367,7 @@ if ( !class_exists( 'avia_sc_image' ) )
 				if(!empty($src))
 				{
 					$class  = $animation == "no-animation" ? "" :"avia_animated_image avia_animate_when_almost_visible ".$animation;
-					$class .= " av-styling-".$styling;
+					$class .= " av-styling-".$styling." ".$hover;
 					
 					if(is_numeric($src))
 					{
@@ -261,18 +383,29 @@ if ( !class_exists( 'avia_sc_image' ) )
 						
 						$overlay = "";
 						$style = "";
-						
+						$style .= AviaHelper::style_string($atts, 'overlay_text_color', 'color');
 						if($font_size)
 						{
-							$style = "style='font-size: {$font_size}px;'";
+							// $style = "style='font-size: {$font_size}px;'";
+							$style .= AviaHelper::style_string($atts, 'font_size', 'font-size', 'px');
 						}
+						$style  = AviaHelper::style_string($style);
+						
 						
 						if($caption == "yes")
 						{	
+							
+							$caption_style = "";
+							$caption_style .= AviaHelper::style_string($atts, 'overlay_opacity', 'opacity');
+							$caption_style .= AviaHelper::style_string($atts, 'overlay_color', 'background-color');
+							$caption_style  = AviaHelper::style_string($caption_style);
+							$overlay_bg = "<div class='av-caption-image-overlay-bg' $caption_style></div>";
+							
 							$content = ShortcodeHelper::avia_apply_autop(ShortcodeHelper::avia_remove_autop($content));
-							$overlay = "<div class='av-image-caption-overlay'><div class='av-image-caption-overlay-position'><div class='av-image-caption-overlay-center' {$style}>{$content}</div></div></div>";
+							$overlay = "<div class='av-image-caption-overlay'>{$overlay_bg}<div class='av-image-caption-overlay-position'><div class='av-image-caption-overlay-center' {$style}>{$content}</div></div></div>";
 							$class .= " noHover ";
 							
+							if(empty($appearance)) $appearance = "hover-deactivate";
 							if($appearance) $class .= " av-overlay-".$appearance;
 						}
 

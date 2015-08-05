@@ -29,7 +29,7 @@ function avia_inc_custom_comments($comment, $args, $depth)
                     $author = '<cite class="comment_author_name"'.avia_markup_helper(array('context' => 'author_name','echo'=>false)).'>'.get_comment_author().'</cite>';
                     $link = get_comment_author_url();
                     if(!empty($link))
-                        $author = '<a href="'.$link.'" '.avia_markup_helper(array('context' => 'comment_author_url','echo'=>false)).'>'.$author.'</a>';
+                        $author = '<a rel="nofollow" href="'.$link.'" '.avia_markup_helper(array('context' => 'comment_author_url','echo'=>false)).'>'.$author.'</a>';
 
                     printf('<cite class="author_name heading"'.avia_markup_helper(array('context' => 'comment_author','echo'=>false)).'>%s</cite> <span class="says">%s</span>', $author, __('says:','avia_framework')) ?>
                     <?php edit_comment_link(__('(Edit)','avia_framework'),'  ','') ?>

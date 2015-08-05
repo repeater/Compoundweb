@@ -352,7 +352,7 @@ if( !class_exists( 'avia_style_generator' ) )
 			if(!in_array($font_family.$font_weight, $this->used_fonts))
 			{
 				$this->used_fonts[] = $font_family.$font_weight;
-				if(!empty($this->google_fontlist)) $this->google_fontlist .= "|";
+				if(!empty($this->google_fontlist)) $this->google_fontlist .= "%7C";
 				if(!empty($font_weight)) $font_weight = ":".$font_weight;
 				
 				$this->google_fontlist .= str_replace(' ','+',$font_family).$font_weight;

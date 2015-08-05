@@ -6,6 +6,58 @@
  */
  
 
+/* wrap embeds into a proportion containing div */
+if(!function_exists('avia_preload_screen'))
+{
+	function avia_preload_screen()
+	{
+		$class = avia_get_option('preloader_transitions') != "disabled" ? 'av-transition-enabled' : "";
+		$label = __('Loading','avia_framework');
+		$logo  = avia_get_option('preloader_logo');
+		if(is_numeric($logo)){ $logo = wp_get_attachment_image_src($logo, 'full'); $logo = $logo[0]; }
+		
+		if($logo) 
+		{
+			$class .= " av-transition-with-logo";
+			$logo = "<img class='av-preloading-logo' src='{$logo}' alt='{$label}' title='{$label}' />";
+		}
+		
+		$output  = "";
+		$output .= 	"<div class='av-siteloader-wrap {$class}'>";
+		$output .= 		"<div class='av-siteloader-inner'>";
+		$output .= 			"<div class='av-siteloader-cell'>";
+		$output .= 			$logo;
+		$output .= 			"<div class='av-siteloader'><div class='av-siteloader-extra'></div>";
+		$output .= 			"</div>";
+		$output .= 		"</div>";
+		$output .= 	"</div>";
+		$output .= "</div>";
+		
+		return $output;
+	}
+}
+
+
+
+/* filter menu item urls */
+if(!function_exists('avia_menu_item_filter'))
+{
+	add_filter( 'avf_menu_items', 'avia_menu_item_filter', 10 );
+
+	function avia_menu_item_filter ( $item  )
+	{
+		
+		if(isset( $item->url ) && strpos($item->url, '#DOMAIN') === 0)
+		{
+			$item->url = str_replace("#DOMAIN", get_site_url(), $item->url);
+		}
+		
+	    return $item;
+	}
+}
+
+
+
 
 /* wrap embeds into a proportion containing div */
 if(!function_exists('avia_iframe_proportion_wrap'))
@@ -174,7 +226,7 @@ if(!function_exists('avia_ajax_search'))
 	            }
 	            else
 	            {
-	                 $excerpt = get_the_time($search_messages['time_format'], $post->ID);
+	                 $excerpt = apply_filters( 'avf_ajax_search_no_excerpt', get_the_time( $search_messages['time_format'], $post->ID ), $post );
 	            }
 
 	            $link = apply_filters('av_custom_url', get_permalink($post->ID), $post);
@@ -294,19 +346,24 @@ if(!function_exists('avia_title'))
 			$defaults['link'] = "";
 		}
 		
-		//disable breadcrumb if requested
-		if($header_settings['header_title_bar'] == 'title_bar') $defaults['breadcrumb'] = false;
-
+		
 		// Parse incomming $args into an array and merge it with $defaults
 		$args = wp_parse_args( $args, $defaults );
 		$args = apply_filters('avf_title_args', $args, $id);
+
+		//disable breadcrumb if requested
+		if($header_settings['header_title_bar'] == 'title_bar') $args['breadcrumb'] = false;
+		
+		//disable title if requested
+		if($header_settings['header_title_bar'] == 'breadcrumbs_only') $args['title'] = '';
+
 
 		// OPTIONAL: Declare each item in $args as its own variable i.e. $type, $before.
 		extract( $args, EXTR_SKIP );
 
 		if(empty($title)) $class .= " empty_title ";
         $markup = avia_markup_helper(array('context' => 'avia_title','echo'=>false));
-		if(!empty($link)) $title = "<a href='".$link."' rel='bookmark' title='".__('Permanent Link:','avia_framework')." ".esc_attr( $title )."' $markup>".$title."</a>";
+		if(!empty($link) && !empty($title)) $title = "<a href='".$link."' rel='bookmark' title='".__('Permanent Link:','avia_framework')." ".esc_attr( $title )."' $markup>".$title."</a>";
 		if(!empty($subtitle)) $additions .= "<div class='title_meta meta-color'>".wpautop($subtitle)."</div>";
 		if($breadcrumb) $additions .= avia_breadcrumbs(array('separator' => '/', 'richsnippet' => true));
 
@@ -328,6 +385,8 @@ if(!function_exists('avia_title'))
 		}
 	}
 }
+
+
 
 
 
@@ -607,7 +666,8 @@ if(!function_exists('avia_header_setting'))
 							'header_sticky'=>'header_sticky', 
 							'header_shrinking'=>'header_shrinking', 
 							'header_title_bar'=>'',
-							'header_social'=>'', 
+							'header_social'=>'',
+							'header_unstick_top' =>'',
 							'header_secondary_menu'=>'', 
 							'header_stretch'=>'',
 							'header_custom_size'=>'',
@@ -621,7 +681,9 @@ if(!function_exists('avia_header_setting'))
 							'sidebarmenu_sticky' => 'conditional_sticky',
 							'layout_align_content' => 'content_align_center',
 							'sidebarmenu_widgets' => '',
-							'sidebarmenu_social' => 'disabled'
+							'sidebarmenu_social' => 'disabled',
+							'header_menu_border' => '',
+							'header_style'	=> ''
 						  );
 							
 		$settings = avia_get_option();
@@ -671,7 +733,20 @@ if(!function_exists('avia_header_setting'))
 		if($header['header_size'] == 'custom' && (int) $header['header_custom_size'] < 65) $header['header_shrinking'] = 'disabled';
 		
 		//create a header class so we can style properly
-		$header_class_var = array('header_position', 'header_layout', 'header_size', 'header_sticky', 'header_shrinking', 'header_stretch', 'header_mobile_activation', 'header_transparency', 'header_searchicon');
+		$header_class_var = array(	'header_position', 
+									'header_layout', 
+									'header_size', 
+									'header_sticky', 
+									'header_shrinking', 
+									'header_stretch', 
+									'header_mobile_activation', 
+									'header_transparency', 
+									'header_searchicon', 
+									'header_unstick_top',
+									'header_menu_border',
+									'header_style'
+								);
+								
 		$header['header_class'] = "";
 		
 		foreach($header_class_var as $class_name)
@@ -689,7 +764,14 @@ if(!function_exists('avia_header_setting'))
 		
 		//set manual flag if the menu is at the bottom
 		$header['bottom_menu'] = false;
-		if(strpos($header['header_layout'],'bottom_nav_header') !== false) $header['bottom_menu'] = 'header_bottom_menu_active';
+		if(strpos($header['header_layout'],'bottom_nav_header') !== false) 
+		{
+			$header['bottom_menu'] = 'header_bottom_menu_active'; 
+		}
+		else
+		{
+			$header['header_class'] .= " av_bottom_nav_disabled ";
+		} 
 		
 		
 		
@@ -704,6 +786,13 @@ if(!function_exists('avia_header_setting'))
 			}
 		
 		}
+		
+		//header class that tells us to use the alternate logo
+		if(empty($header['header_menu_border']))
+		{
+			$header['header_class'] .= " av_header_border_disabled"; 
+		}
+		
 		
 		$header = apply_filters('avf_header_setting_filter', $header);
 
@@ -736,8 +825,10 @@ if(!function_exists('avia_header_setting_sidebar'))
 								'header_mobile_behavior' => '',
 								'header_mobile_activation' => 'mobile_menu_phone',
 								'phone'=>'',
+								'header_menu_border' => '',
 								'header_topbar'=> false,
-								'bottom_menu'=> false
+								'bottom_menu'=> false,
+								'header_style' => ''
 							  );
 		
 		$header = array_merge($header, $overwrite);
@@ -763,18 +854,22 @@ if(!function_exists('avia_get_header_scroll_offset'))
 	function avia_get_header_scroll_offset($header = array())
 	{
 			//#main data attribute used to calculate scroll offset
+			$modifier = 0;
 			
 			if(empty($header)) 
 			{
 				$header['header_position'] = avia_get_option('header_position','header_top');
 				$header['header_size'] = avia_get_option('header_size');
 				$header['header_custom_size'] = avia_get_option('header_custom_size');
+				$header['header_style'] = avia_get_option('header_style');
 			}
+			
+			if("minimal_header" == $header['header_style']) $modifier = 2;
 			
 			switch($header['header_size'])
 			{
 				case 'large': 	$header['header_scroll_offset'] = 116; break;
-				case 'custom': 	$header['header_scroll_offset'] = $header['header_custom_size']; break;
+				case 'custom': 	$header['header_scroll_offset'] = $header['header_custom_size'] - $modifier; break;
 				default : 		$header['header_scroll_offset'] = 88; break;
 			}
 			
@@ -798,7 +893,10 @@ if(!function_exists('avia_header_class_string'))
 													'header_mobile_activation',
 													'header_mobile_behavior',
 													'header_searchicon',
-													'layout_align_content'
+													'layout_align_content',
+													'header_unstick_top',
+													'header_stretch',
+													'header_style'
 												);
 
 		$settings  	= avia_header_setting();
@@ -815,6 +913,8 @@ if(!function_exists('avia_header_class_string'))
 		}
 		
 		if($post_id) $class[] = "entry_id_".$post_id;
+		
+		$class = apply_filters('avf_header_classes', $class, $necessary, $prefix);
 		
 		if(!empty($class))
 		{
@@ -877,14 +977,19 @@ if(!function_exists('avia_header_html_custom_height'))
 		
 		if($settings['header_size'] == "custom")
 		{
+			$modifier = 0;
 			$size = $settings['header_custom_size'];
 			$bottom_bar = $settings['bottom_menu'] == true ? 36 : 0;
 			$top_bar	= $settings['header_topbar'] == true ? 30 : 0;
 			
+			if(!empty($settings['header_style']) && "minimal_header" == $settings['header_style'] ){ $modifier = 2;}
+			
+			
 			$html =  "";
 			$html .= "\n<style type='text/css' media='screen'>\n";
-			$html .= "	#header_main .container, .main_menu ul:first-child > li a{ height:{$size}px; line-height: {$size}px; }\n";
-			$html .= "	.html_header_top.html_header_sticky #top #wrap_all #main{ padding-top:".((int)$size + $bottom_bar + $top_bar)."px; } \n";
+			$html .= " #top #header_main > .container, #top #header_main > .container .main_menu ul:first-child > li > a,";
+			$html .= " #top #header_main #menu-item-shop .cart_dropdown_link{ height:{$size}px; line-height: {$size}px; }\n";
+			$html .= " .html_header_top.html_header_sticky #top #wrap_all #main{ padding-top:".((int)$size + $bottom_bar + $top_bar - $modifier)."px; } \n";
 			$html .= "</style>\n";
 			echo $html;
 		}
@@ -1130,6 +1235,19 @@ if(!function_exists('avia_add_feature_image_checkbox'))
 	}
 }
 
+if(!function_exists('avia_active_caching'))
+{
+	function avia_active_caching()
+	{
+		if(defined('W3TC') || defined('WPCACHEHOME') || class_exists('HyperCache') || class_exists('\\quick_cache\\plugin'))
+		{
+			return true;
+		}
+		return false;
+	}
+}
+
+
 
 
 
@@ -1190,7 +1308,8 @@ if(!function_exists('avia_generate_grid_dimension'))
 			'key'	=>	'direct_input',
 			'value'	=> ".container {width:".$combined_width."%;} .container .av-content-small.units {width:".$content_width."%; }
 			
-			  .responsive .boxed#top , .responsive.html_boxed.html_header_sticky #header{ width: ".$responsive_size."; max-width:90%; }
+			  .responsive .boxed#top , .responsive.html_boxed.html_header_sticky #header, 
+			  .responsive.html_boxed.html_header_transparency #header{ width: ".$responsive_size."; max-width:90%; }
 			  .responsive .container{ max-width: ".$responsive_size."; }
 			"
 			);
@@ -1215,6 +1334,7 @@ if(!function_exists('avia_generate_stylesheet'))
 	{
 		global $avia;
 		$safe_name = avia_backend_safe_string($avia->base_data['prefix']);
+		$safe_name = apply_filters('avf_dynamic_stylesheet_filename', $safe_name);
 
 	    if( defined('AVIA_CSSFILE') && AVIA_CSSFILE === FALSE )
 	    {

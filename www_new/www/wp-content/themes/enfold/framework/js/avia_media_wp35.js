@@ -92,7 +92,15 @@
 				if(fetch_val == 'url')
 				{
 					var display = state.display( attachment ).toJSON();
-					return element.sizes[display.size].url;
+					
+					if(element.sizes && element.sizes[display.size] && element.sizes[display.size].url)
+					{
+						return element.sizes[display.size].url;
+					}
+					else if (element.url)
+					{
+						return element.url;
+					}
 				}
 			});
 		}	
@@ -150,6 +158,7 @@ EXTRA FUNCTIONS, NOT NECESSARY FOR THE DEFAULT UPLOAD
 			{
 				action: 'avia_ajax_add_zipped_font',
 				values: selection,
+				avia_request: true,
 				_wpnonce: $('input[name=avia-nonce]').val()
 			},
 			beforeSend: function()
@@ -218,6 +227,7 @@ EXTRA FUNCTIONS, NOT NECESSARY FOR THE DEFAULT UPLOAD
 			{
 				action: 'avia_ajax_remove_zipped_font',
 				del_font: del_font,
+				avia_request: true,
 				_wpnonce: $('input[name=avia-nonce]').val()
 			},
 			beforeSend: function()
@@ -284,6 +294,7 @@ EXTRA FUNCTIONS, NOT NECESSARY FOR THE DEFAULT UPLOAD
             {
                 action: 'avia_ajax_import_config_file',
                 values: selection,
+                avia_request: true,
                 _wpnonce: $('input[name=avia-nonce]').val()
             },
             beforeSend: function()

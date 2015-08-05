@@ -67,13 +67,14 @@ else
 			do_action('avia_import_hook');
 			
 			$wp_import = new avia_wp_import();
+			$wp_import->rename_existing_menus();
 			$wp_import->fetch_attachments = true;
 			$wp_import->import($import_filepath.'.xml');
 			$wp_import->saveOptions($import_filepath.'.php');
 			$wp_import->set_menus();
 			
 			
-			do_action('avia_after_import_hook');
+			do_action('avia_after_import_hook'); // todo: rename. make sure to update hook name of our woocommerce import script
 		}
 		else
 		{

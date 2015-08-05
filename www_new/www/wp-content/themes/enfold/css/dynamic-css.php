@@ -23,6 +23,7 @@ $attach 			=> scroll
 $heading 			=> #eeeeee
 $meta 				=> #888888
 $background_image	=> #222222 url(/wp-content/themes/skylink/images/background-images/dashed-cross-dark.png) top left no-repeat scroll
+$default_font_size  => empty or a px size
 */
 
 
@@ -64,7 +65,10 @@ html.html_boxed {background: $body_background;}
 
 ";
 
-
+if($default_font_size)
+{
+	$output .= "body, body .avia-tooltip {font-size: $default_font_size; }";
+}
 
 
 /*color sets*/
@@ -91,7 +95,7 @@ $key .av-default-color, #top $key .av-force-default-color, $key .av-catalogue-it
 color: $color;
 }
 
-$key , $key .site-background, $key .first-quote,  $key .related_image_wrap, $key .gravatar img  $key .hr_content, $key .news-thumb, $key .post-format-icon, $key .ajax_controlls a, $key .tweet-text.avatar_no, $key .toggler, $key .toggler.activeTitle:hover, $key #js_sort_items, $key.inner-entry, $key .grid-entry-title, $key .related-format-icon,  .grid-entry $key .avia-arrow, $key .avia-gallery-big, $key .avia-gallery-big, $key .avia-gallery img, $key .grid-content, $key .av-share-box ul, #top $key .av-related-style-full .related-format-icon, $key .related_posts.av-related-style-full a:hover, $key.avia-fullwidth-portfolio .pagination .current,  $key.avia-fullwidth-portfolio .pagination a{
+$key , $key .site-background, $key .first-quote,  $key .related_image_wrap, $key .gravatar img  $key .hr_content, $key .news-thumb, $key .post-format-icon, $key .ajax_controlls a, $key .tweet-text.avatar_no, $key .toggler, $key .toggler.activeTitle:hover, $key #js_sort_items, $key.inner-entry, $key .grid-entry-title, $key .related-format-icon,  .grid-entry $key .avia-arrow, $key .avia-gallery-big, $key .avia-gallery-big, $key .avia-gallery img, $key .grid-content, $key .av-share-box ul, #top $key .av-related-style-full .related-format-icon, $key .related_posts.av-related-style-full a:hover, $key.avia-fullwidth-portfolio .pagination .current,  $key.avia-fullwidth-portfolio .pagination a, $key .av-hotspot-fallback-tooltip-inner, $key .av-hotspot-fallback-tooltip-count{
 background-color:$bg;
 color: $color;
 }
@@ -659,15 +663,23 @@ background-color:$bg2;
 			.html_header_sidebar #header .av-main-nav li.current-menu-item > a .avia-menu-text
 			{color:$primary;}
 			
+			#top #wrap_all .av_seperator_big_border#header .av-menu-button-colored > a{background-color: $primary; }
+			#top #wrap_all .av_seperator_big_border#header .av-menu-button-bordered > a{background-color: $bg2; }
+			
+			
+			html.html_header_sidebar #wrap_all{
+			background-color:$bg;
+			}
+			
+			
 			";
 			
-		if(isset($avia_config['backend_colors']['menu_transparent']))
+		if(!empty($avia_config['backend_colors']['menu_transparent']))
 		{
 			$output .= "#top {$key}.av_header_transparency, #top {$key}.av_header_transparency .phone-info.with_nav span{
 			color: ".$avia_config['backend_colors']['menu_transparent']."
 			}
 			#top {$key}.av_header_transparency .avia-menu-fx {background:".$avia_config['backend_colors']['menu_transparent'].";}
-			
 			";
 		}
 
@@ -677,7 +689,9 @@ background-color:$bg2;
 
 			$constant_font = avia_backend_calc_preceived_brightness($primary, 230) ?  '#ffffff' : $bg;
 			$output .= "
-
+			
+			#main{ border-color: $border;  }
+			
 			#scroll-top-link:hover{ background-color: $bg2; color: $primary; border:1px solid $border; }
 
 
@@ -698,9 +712,14 @@ background-color:$bg2;
 			.avia-datepicker-div .ui-datepicker-buttonpane button{ background-color: $primary; color: $constant_font; border-color: $primary; }
 
 			";
-
-
-
+			
+			/*site loader*/
+			$output .= "
+			#top .av-siteloader{ border-color: $border; border-left-color:$primary; }
+			.av-preloader-reactive #top .av-siteloader{border-color: $border; }
+			#top .av-siteloader-wrap{background-color: $bg; }
+			.av-preloader-reactive #top .av-siteloader:before{ background-color: $border;  }
+			";
 		break;
 
 
@@ -709,7 +728,7 @@ background-color:$bg2;
 
 			$output .= "
 
-			#footer  .widgettitle{ color: $meta;  }
+			
 
 			";
 
@@ -764,7 +783,7 @@ $output .= "
 $output .= "
 #top .avia-layerslider .ls-nav-prev:before{  ".av_icon_css_string('prev_big')." }
 #top .avia-layerslider .ls-nav-next:before{  ".av_icon_css_string('next_big')." }
-#top .avia-layerslider .ls-nav-start:before, #top .avia_playpause_icon.av-play:before{ ".av_icon_css_string('play')." }
+#top .avia-layerslider .ls-nav-start:before, #top .avia_playpause_icon:before{ ".av_icon_css_string('play')." }
 #top .avia-layerslider .ls-nav-stop:before, #top .avia_playpause_icon.av-pause:before{ ".av_icon_css_string('pause')." }
 ";
 

@@ -123,7 +123,16 @@ if ( !class_exists( 'avia_sc_layerslider' ))
 				
 				
 				$output .=  avia_new_section($params);
-				$output .= (function_exists('layerslider_init')) ? layerslider_init($atts) : ''; //fix for search results page
+				
+				if(class_exists('LS_Shortcode') && method_exists('LS_Shortcode', 'handleShortcode')) //fix for search results page - only works with latest LayerSlider versions
+				{
+					$output .= LS_Shortcode::handleShortcode($atts);
+				}
+				else if(function_exists('layerslider_init')) //fix for search results page - only works with older LayerSlider versions
+				{
+					$output .= layerslider_init($atts);
+				}
+				
 				$output .= "</div>"; //close section
 				
 				

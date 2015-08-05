@@ -33,7 +33,7 @@ if ( !class_exists( 'avia_sc_contact' ) )
 			 */
 			function popup_elements()
 			{
-				$this->elements = array(
+				$this->elements = apply_filters( 'avf_sc_contact_popup_elements',  array(
 						
 						array(
 								"type" 	=> "tab_container", 'nodescription' => true
@@ -114,6 +114,16 @@ if ( !class_exists( 'avia_sc_contact' ) )
 										"required" => array('type','equals','select'),
 										"std" 	=> "",
 										"type" 	=> "input"),
+										
+									
+										 array(	
+										"name" 	=> __("Multiple answers", 'avia_framework' ),
+										"desc" 	=> __("Check if you want to enable multiple answers", 'avia_framework' ) ,
+										"id" 	=> "multi_select",
+										"required" => array('type','equals','select'),
+										"std" 	=> "",
+										"type" 	=> "checkbox"),	
+										
 									
 									array(
 										"name" 	=> __("Add Description", 'avia_framework' ) ,
@@ -220,6 +230,25 @@ if ( !class_exists( 'avia_sc_contact' ) )
 							"subtype" => array(__("Don't display Captcha", 'avia_framework' ) => '', __('Display Captcha', 'avia_framework' ) =>'active')
 						),
 						
+						array(	
+							"name" 	=> __("Hide Form Labels", 'avia_framework' ),
+							"desc" 	=> __("Check if you want to hide form labels above the form elements. The form will instead try to use an inline label (not supported on old browsers)", 'avia_framework' ) ,
+							"id" 	=> "hide_labels",
+							"std" 	=> "",
+							"type" 	=> "checkbox"),
+							
+						array(
+	                    "name" 	=> __("Label/Send Button alignment", 'avia_framework' ),
+	                    "desc" 	=> __("Select how to align the form labels and the send button", 'avia_framework' ),
+	                    "id" 	=> "form_align",
+	                    "type" 	=> "select",
+	                    "std"	=> "",
+	                    "subtype" => array(
+	                        __('Default', 'avia_framework' ) 		=>'',
+	                        __('Centered', 'avia_framework' ) 	=> 'centered'
+	                    ),
+	                    "std" 	=> ""),
+						
 						array(
 							"type" 	=> "close_div",
 							'nodescription' => true
@@ -255,7 +284,7 @@ if ( !class_exists( 'avia_sc_contact' ) )
 						),
 
 
-				);
+				));
 
 
 			}
@@ -288,7 +317,9 @@ if ( !class_exists( 'avia_sc_contact' ) )
 			 */
 			function shortcode_handler($atts, $content = "", $shortcodename = "", $meta = "")
 			{
-				$atts =  shortcode_atts(array('email' 		=> get_option('admin_email'),
+				$atts =  shortcode_atts(
+							apply_filters( 'avf_sc_contact_default_atts', 
+										array('email' 		=> get_option('admin_email'),
 			                                 'button' 		=> __("Submit", 'avia_framework' ),
 			                                 'autorespond' 	=> '',
 			                                 'captcha' 		=> '',
@@ -297,13 +328,17 @@ if ( !class_exists( 'avia_sc_contact' ) )
 			                                 'link'			=> '',
 			                                 'sent'			=> __("Your message has been sent!", 'avia_framework' ),
 			                                 'title'		=> __("Send us mail", 'avia_framework' ),
-			                                 'color'		=> ""
+			                                 'color'		=> "",
+			                                 'hide_labels'	=> "",
+			                                 'form_align'	=> ""
 
-			                                 ), $atts, $this->config['shortcode']);
+			                                 )), $atts, $this->config['shortcode']);
 				extract($atts);
 
 				$post_id  = function_exists('avia_get_the_id') ? avia_get_the_id() : get_the_ID();
 				$redirect = !empty($on_send) ? AviaHelper::get_url($link) : "";
+				
+				if(!empty($form_align)) $meta['el_class'] .= " av-centered-form ";
 				
 				$form_args = array(
 					"heading" 				=> $title ? "<h3>".$title."</h3>" : "",
@@ -320,6 +355,7 @@ if ( !class_exists( 'avia_sc_contact' ) )
 					"multiform"  			=> true, //allows creation of multiple forms without id collision
 					"label_first"  			=> true,
 					"redirect"				=> $redirect,
+					"placeholder"			=> $hide_labels
 				);
 				
 				if(trim($form_args['myemail']) == '') $form_args['myemail'] = get_option('admin_email');
@@ -339,6 +375,7 @@ if ( !class_exists( 'avia_sc_contact' ) )
 
 				//merge all fields
 				$form_fields = apply_filters('avia_contact_form_elements', array_merge($form_fields, $elements));
+				$form_fields = apply_filters('avf_sc_contact_form_elements', $form_fields, $atts );
 				$form_args   = apply_filters('avia_contact_form_args', $form_args, $post_id);
 
 				$contact_form = new avia_form($form_args);

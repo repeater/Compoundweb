@@ -5,7 +5,7 @@ global $avia_config, $post_loop_count;
 if(empty($post_loop_count)) $post_loop_count = 1;
 $blog_style = !empty($avia_config['blog_style']) ? $avia_config['blog_style'] : avia_get_option('blog_style','multi-big');
 if(is_single()) $blog_style = avia_get_option('single_post_style','single-big');
-$blog_content = !empty($avia_config['blog_content']) ? $avia_config['blog_content'] : "content";
+
 $initial_id = avia_get_the_ID();
 
 // check if we got posts to display:
@@ -27,7 +27,16 @@ if (have_posts()) :
 	$current_post['post_class']	.= ($current_post['post_type'] == "post") ? '' : ' post';
 	$current_post['post_format'] 	= get_post_format() ? get_post_format() : 'standard';
 	$current_post['post_layout']	= avia_layout_class('main', false);
-
+	$blog_content = !empty($avia_config['blog_content']) ? $avia_config['blog_content'] : "content";
+	
+	/*If post uses builder change content to exerpt on overview pages*/
+    if(AviaHelper::builder_status($current_post['the_id']) && !is_singular($current_post['the_id']) && $current_post['post_type'] == 'post')
+    {
+	   $current_post['post_format'] = 'standard';
+	   $blog_content = "excerpt_read_more";
+    }
+	
+	
 	/*
      * retrieve slider, title and content for this post,...
      */
@@ -52,6 +61,8 @@ if (have_posts()) :
 	/*
      * ... last apply the default wordpress filters to the content
      */
+     
+    
 	$current_post['content'] = str_replace(']]>', ']]&gt;', apply_filters('the_content', $current_post['content'] ));
 
 	/*
@@ -76,8 +87,9 @@ if (have_posts()) :
         $link = !empty($url) ? $url : get_permalink();
         
         //preview image description
-        $desc = get_post( get_post_thumbnail_id() ) -> post_excerpt;
-	$featured_img_desc = ( $desc != null ) ? $desc : the_title_attribute( 'echo=0' );
+        $desc = get_post( get_post_thumbnail_id() );
+        if(is_object($desc))  $desc = $desc -> post_excerpt;
+		$featured_img_desc = ( $desc != "" ) ? $desc : the_title_attribute( 'echo=0' );
 
         //on single page replace the link with a fullscreen image
         if(is_singular())
@@ -108,11 +120,11 @@ if (have_posts()) :
                 if($post_format == 'standard')
                 {
                 	$author_name = apply_filters('avf_author_name', get_the_author_meta('display_name', $post->post_author), $post->post_author);
-			$author_email = apply_filters('avf_author_email', get_the_author_meta('email', $post->post_author), $post->post_author);
+					$author_email = apply_filters('avf_author_email', get_the_author_meta('email', $post->post_author), $post->post_author);
                 	
-			$gravatar_alt = esc_html($author_name);
-			$gravatar = get_avatar($author_email, '81', "blank", $gravatar_alt);
-			$link = get_author_posts_url($post->post_author);
+					$gravatar_alt = esc_html($author_name);
+					$gravatar = get_avatar($author_email, '81', "blank", $gravatar_alt);
+					$link = get_author_posts_url($post->post_author);
                 }
 
                 $blog_meta_output = "<a href='{$link}' class='post-author-format-type'><span class='rounded-container'>".$gravatar.$icon."</span></a>";

@@ -17,6 +17,8 @@ global $avia_config, $post;
 
 	 //check if we want to display breadcumb and title
 	 if( get_post_meta(get_the_ID(), 'header', true) != 'no') echo avia_title();
+	 
+	 do_action( 'ava_after_main_title' );
 
 	 //filter the content for content builder elements
 	 $content = apply_filters('avia_builder_precompile', get_post_meta(get_the_ID(), '_aviaLayoutBuilderCleanData', true));
@@ -61,16 +63,21 @@ global $avia_config, $post;
 		echo "</div>$cm <!-- section close by builder template -->";
 
 		//get the sidebar
-		$avia_config['currently_viewing'] = 'page';
+		if (is_singular('post')) {
+		    $avia_config['currently_viewing'] = 'blog';
+		}else{
+		    $avia_config['currently_viewing'] = 'page';
+		}
 		get_sidebar();
 	}
 	else
 	{
 		echo "<div><div>";
+		
 	}
 
 
-
+echo avia_sc_section::$close_overlay;
 echo '		</div><!--end builder template-->';
 echo '</div><!-- close default .container_wrap element -->';
 

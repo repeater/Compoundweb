@@ -50,14 +50,17 @@ jQuery(document).ready(function($) {
 //updates the shopping cart in the sidebar, hooks into the added_to_cart event whcih is triggered by woocommerce
 function update_cart_dropdown(event)
 {
-	var menu_cart 		= jQuery('.cart_dropdown'),
+	var the_html		= jQuery('html'),
+		menu_cart 		= jQuery('.cart_dropdown'),
+		cart_counter	= jQuery('.cart_dropdown#menu-item-shop .av-cart-counter'),
 		empty 			= menu_cart.find('.empty'),
 		msg_success		= menu_cart.data('success'),
-		product 		= jQuery.extend({name:"Product", price:"", image:""}, avia_clicked_product);
+		product 		= jQuery.extend({name:"Product", price:"", image:""}, avia_clicked_product),
+		counter			= 0;
 		
 		if(!empty.length)
 		{
-			menu_cart.addClass('visible_cart');
+			the_html.addClass('html_visible_cart');
 		}
 		
 		if(typeof event != 'undefined')
@@ -66,8 +69,8 @@ function update_cart_dropdown(event)
 				oldTemplates = jQuery('.added_to_cart_notification').trigger('avia_hide'),
 				template 	 = jQuery("<div class='added_to_cart_notification'><span class='avia-arrow'></span><div class='added-product-text'><strong>\"" + product.name +"\"</strong> "+ msg_success+ "</div> " + product.image +"</div>").css( 'opacity', 0 );
 			
-			if(!header.length) header = 'body';
-				
+			if(!header.length) header = 'body';			
+			
 			template.bind('mouseenter avia_hide', function()
 			{
 				template.animate({opacity:0, top: parseInt(template.css('top'), 10) + 15 }, function()
@@ -78,6 +81,16 @@ function update_cart_dropdown(event)
 			}).appendTo(header).animate({opacity:1},500);
 			
 			setTimeout(function(){ template.trigger('avia_hide'); }, 2500);
+		}
+		
+		menu_cart.find('.cart_list li .quantity').each(function(){
+			counter += parseInt(jQuery(this).text(),10);
+		});
+		
+		if(cart_counter.length && counter > 0)
+		{
+			cart_counter.removeClass('av-active-counter');
+			setTimeout(function(){ cart_counter.addClass('av-active-counter').text(counter); }, 10); 
 		}
 }
 
@@ -140,6 +153,14 @@ function first_load_amount()
 		};
 		
 		check();
+		
+		//display the cart for a short moment on page load if a product was added but no notice was delivered (eg template builder page)
+		if (jQuery('.av-display-cart-on-load').length && jQuery('.woocommerce-message').length == 0)
+		{
+			var dropdown = jQuery('.cart_dropdown');
+			setTimeout( function(){dropdown.trigger('mouseenter'); }, 500);
+			setTimeout( function(){dropdown.trigger('mouseleave'); }, 2500);
+		}
 }
 
 

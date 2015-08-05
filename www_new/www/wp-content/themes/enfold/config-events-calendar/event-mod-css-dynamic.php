@@ -60,7 +60,7 @@ if(!function_exists('avia_events_dynamic_css'))
 					border-bottom-color:$bg;
 				}
 				
-				$key .vevent.tribe-events-photo-event .tribe-events-photo-event-wrap{
+				$key .vevent.tribe-events-photo-event .tribe-events-photo-event-wrap, $key .av-tribe-events-content-wrap, $key .av-single-event-meta-bar-inner{
 					background: $bg2;
 				}
 				

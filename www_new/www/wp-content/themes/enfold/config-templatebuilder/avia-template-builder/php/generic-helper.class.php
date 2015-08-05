@@ -379,12 +379,71 @@ if ( !class_exists( 'AviaHelper' ) ) {
 			return $status;
 		}
 		
-    	
-		
+    	/**
+		 * Helper function that builds css styling strings which are applied to html elements
+		 *
+		 */
+		static function style_string($atts, $key = false, $new_key = false, $append_value = "")
+		{
+			$style_string = "";
+			
+			//finish the style string by wrapping the arguments into a style string
+			if((is_string($atts) || ! $atts ) && false == $key)
+			{
+				if(!empty($atts))
+				{
+					$style_string = "style='".$atts."'";
+				}
+			}
+			else //otherwise build only the styling argument
+			{
+				if(empty($new_key)) $new_key = $key;
+				
+				if(isset($atts[$key]) && $atts[$key] !== "")
+				{
+					switch($new_key)
+					{
+						case "background-image": $style_string = $new_key.":url(".$atts[$key].$append_value."); "; break;
+						case "background-repeat": if($atts[$key] == "stretch") $atts[$key] = "no-repeat"; $style_string = $new_key.":".$atts[$key].$append_value."; "; break;
+						default: $style_string = $new_key.":".$atts[$key].$append_value."; "; break;
+					}
+				}
+			}
+			
+			return $style_string;
+		}
 	
 		
+
+	static function backend_post_type()
+	{
+		global $post, $typenow, $current_screen;
 		
+		$posttype = "";
 		
+		//we have a post so we can just get the post type from that
+		if ($post && $post->post_type)
+		{
+			$posttype = $post->post_type;
+		}
+		//check the global $typenow - set in admin.php
+		elseif($typenow)
+		{
+			$posttype = $typenow;
+		}
+		//check the global $current_screen object - set in sceen.php
+		elseif($current_screen && $current_screen->post_type)
+		{
+			$posttype = $current_screen->post_type;
+		}
+		//lastly check the post_type querystring
+		elseif(isset($_REQUEST['post_type']))
+		{
+			$posttype = sanitize_key($_REQUEST['post_type']);
+		}
+		
+		return $posttype;	
+	}
 		
 		
 		

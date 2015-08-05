@@ -219,7 +219,7 @@ if(!function_exists('avia_link_content_filter'))
 	{
 		//retrieve the link for the post
 		$link 		= "";
-
+		$newlink    = false;
 		$pattern1 	= '$^\b(https?|ftp|file)://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|]$i';
 		$pattern2 	= "!^\<a.+?<\/a>!";
 		$pattern3 	= "!\<a.+?<\/a>!";
@@ -241,6 +241,8 @@ if(!function_exists('avia_link_content_filter'))
 				$link = $link[0];
 				$current_post['title'] = $link;
 				$current_post['content'] = preg_replace("!".str_replace("?", "\?", $link)."!", "", $current_post['content'], 1);
+				
+				$newlink = get_url_in_content( $link );
 			}
 			else
 			{
@@ -248,6 +250,9 @@ if(!function_exists('avia_link_content_filter'))
 				if(!empty($link[0]))
 				{
 					$current_post['title'] = $link[0];
+					
+					$newlink = get_url_in_content( $link[0] );
+					
 				}
 			}
 		}
@@ -255,7 +260,8 @@ if(!function_exists('avia_link_content_filter'))
 		if($link)
 		{
 			if(is_array($link)) $link = $link[0];
-		
+			if($newlink) $link = $newlink;
+			
 			$heading = is_singular() ? "h1" : "h2";
 
 			//$current_post['title'] = "<{$heading} class='post-title entry-title ". avia_offset_class('meta', false). "'>".$current_post['title']."</{$heading}>";

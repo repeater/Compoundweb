@@ -319,6 +319,7 @@ if(defined('ICL_SITEPRESS_VERSION') && defined('ICL_LANGUAGE_CODE'))
 	{
 		if (!is_admin()) {
 
+			add_filter ('home_url', 'avia_wpml_correct_domain_in_url');
 			add_filter ('site_url', 'avia_wpml_correct_domain_in_url');
 			add_filter ('get_option_siteurl', 'avia_wpml_correct_domain_in_url');
 			add_filter ('stylesheet_directory_uri', 'avia_wpml_correct_domain_in_url');
@@ -349,7 +350,7 @@ if(defined('ICL_SITEPRESS_VERSION') && defined('ICL_LANGUAGE_CODE'))
 		        {
 					if(!avia_wpml_is_default_language())
 					{
-		            	return str_replace(untrailingslashit(home_url()), untrailingslashit(icl_get_home_url()), $url);
+		            	return str_replace(untrailingslashit( get_option('home') ), untrailingslashit(icl_get_home_url()), $url);
 		    		}
 		    	}
 		    }
@@ -657,9 +658,24 @@ if(defined('ICL_SITEPRESS_VERSION') && defined('ICL_LANGUAGE_CODE'))
 	            foreach($value as $key => $data)
 	            {
 	                $orig_term = get_term_by('slug', $data, 'post_tag');
-	                if($orig_term) $translated_id = icl_object_id($orig_term->term_id,'post_tag',true);
-	                if($translated_id) $translated_term = icl_object_id($translated_id->term_id,'post_tag',true);
-	                if($translated_term) $value[$key] = $translated_term->slug;
+	                
+	                if( false === $orig_term ) 
+					{
+						continue;
+					}
+						
+					$translated_id = icl_object_id( $orig_term->term_id, 'post_tag', true );
+					if( is_null( $translated_id ) || ( false === $translated_id ) )
+					{
+						continue;
+					}
+					
+					$translated_term = icl_object_id( $translated_id->term_id, 'post_tag', true );
+					if( is_null( $translated_term ) || ( false === $translated_term ) )
+					{
+						continue;
+					}
+					$value[$key] = $translated_term->slug;	                
 	            }
 	        }
 	        return $value;

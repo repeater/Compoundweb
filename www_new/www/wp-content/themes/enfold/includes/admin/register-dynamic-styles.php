@@ -49,6 +49,7 @@ function avia_prepare_dynamic_styles($options = false)
 		if(empty($styles['body_repeat'])) $styles['body_repeat'] = "no-repeat";
 		if(empty($styles['body_attach'])) $styles['body_attach'] = "fixed";
 		if(empty($styles['body_pos'])) $styles['body_pos'] = "top left";
+		if(empty($styles['default_font_size'])) $styles['default_font_size'] = "";
 
 
 
@@ -61,7 +62,10 @@ function avia_prepare_dynamic_styles($options = false)
 		if($styles['body_repeat']  == 'fullscreen')
 		{
 			$styles['body_img'] = trim($styles['body_img']);
-			if(!empty($styles['body_img'])) $avia_config['fullscreen_image'] = $styles['body_img'];
+			if(!empty($styles['body_img'])) 
+			{
+				$avia_config['fullscreen_image'] = str_replace('{{AVIA_BASE_URL}}', AVIA_BASE_URL, $styles['body_img']);
+			}
 			unset($styles['body_img']);
 			$styles['body_background'] = "";
 		}
@@ -116,17 +120,18 @@ function avia_prepare_dynamic_styles($options = false)
 
 		if(isset($color_set[$key]['customimage'])) unset($color_set[$key]['customimage']);
 
-		//checks if we have a dark or light background and then creates a stronger version of the main font color for headings
-		$shade = avia_backend_calc_preceived_brightness($color_set[$key]['bg'], 100) ? 'lighter' : 'darker';
-
-		$color_set[$key]['heading'] = avia_backend_calculate_similar_color($color_set[$key]['color'], $shade, 4);
-
-		// creates a new color from the background color and the heading color (results in a lighter color)
-		$color_set[$key]['meta'] 	= avia_backend_merge_colors($color_set[$key]['heading'], $color_set[$key]['bg']);
-
-
-
-
+		if(empty($color_set[$key]['heading']))
+		{
+			//checks if we have a dark or light background and then creates a stronger version of the main font color for headings
+			$shade = avia_backend_calc_preceived_brightness($color_set[$key]['bg'], 100) ? 'lighter' : 'darker';
+			$color_set[$key]['heading'] = avia_backend_calculate_similar_color($color_set[$key]['color'], $shade, 4);
+		}
+		
+		if(empty($color_set[$key]['meta']))
+		{
+			// creates a new color from the background color and the heading color (results in a lighter color)
+			$color_set[$key]['meta'] 	= avia_backend_merge_colors($color_set[$key]['heading'], $color_set[$key]['bg']);
+		}
 	}
 
 

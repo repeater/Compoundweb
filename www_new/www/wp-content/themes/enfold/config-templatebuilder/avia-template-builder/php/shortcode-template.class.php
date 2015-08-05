@@ -531,7 +531,7 @@ if ( !class_exists( 'aviaShortcodeTemplate' ) ) {
 			{
 				//will extract the shortcode into $_POST['extracted_shortcode']
 				$this->builder->text_to_interface($shortcode);
-
+				
 				//the main shortcode (which is always the last array item) will be stored in $extracted_shortcode
 				$extracted_shortcode = end($_POST['extracted_shortcode']);
 

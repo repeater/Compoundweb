@@ -173,8 +173,8 @@ if ( !class_exists( 'avia_sc_slider' ) )
 									),
 									
 									array(	
-									"name" 	=> __("Apply a link or buttons to the slide?", 'avia_framework' ),
-									"desc" 	=> __("You can choose to apply the link to the whole image or to add 'Call to Action Buttons' that get appended to the caption", 'avia_framework' ),
+									"name" 	=> __("Apply a link to the slide?", 'avia_framework' ),
+									"desc" 	=> __("You can choose to apply the link to the whole image", 'avia_framework' ),
 									"id" 	=> "link_apply",
 									"type" 	=> "select",
 									"std" 	=> "",
@@ -508,6 +508,13 @@ if ( !class_exists( 'avia_slideshow' ) )
 			
 			if(!empty($this->config['control_layout'])) $extraClass .= " ".$this->config['control_layout'];
 			
+			$style = "";
+			if(!empty($this->config['default-height']))
+			{
+				$style = "style='padding-bottom: {{av-default-heightvar}}%;'";
+				$extraClass .= " av-default-height-applied";
+			}
+			
 			
             $markup = avia_markup_helper(array('context' => 'image','echo'=>false, 'custom_markup'=>$this->config['custom_markup']));
 
@@ -515,7 +522,6 @@ if ( !class_exists( 'avia_slideshow' ) )
 
 			$html .= "<div {$data} class='avia-slideshow avia-slideshow-".avia_slideshow::$slider." {$extraClass} avia-slideshow-".$this->config['size']." ".$this->config['handle']." ".$this->config['class']." avia-".$this->config['animation']."-slider ' $markup>";
 			
-			$style = !empty($this->config['default-height']) ? "style='padding-bottom: ".$this->config['default-height']."%;'" : "";
 			
 			$html .= "<ul class='avia-slideshow-inner' {$style}>";
 
@@ -534,7 +540,12 @@ if ( !class_exists( 'avia_slideshow' ) )
 			
 
 			$html .= "</div>";
-
+			
+			if(!empty($this->config['default-height']))
+			{
+				$html = str_replace('{{av-default-heightvar}}', $this->config['default-height'], $html);
+			}
+			
 			return $html;
 		}
 
@@ -623,6 +634,11 @@ if ( !class_exists( 'avia_slideshow' ) )
 											'font_color'	=>'',
 											'custom_title' 	=> '',
 											'custom_content' => '',
+											'overlay_enable' => '',
+			    							'overlay_opacity' => '',
+			    							'overlay_color' => '',
+			    							'overlay_pattern' => '',
+			    							'overlay_custom_pattern' => '',
 
 
 										), $this->subslides[$key]['attr']);
@@ -825,6 +841,11 @@ if ( !class_exists( 'avia_slideshow' ) )
 							$this->ie8_fallback .= "\n } \n";
 						}
 					}
+					
+					
+					
+					
+					// $img[0] = 'http://www.kriesi.at/themes/enfold-photography/files/2014/08/darkened_girl.jpg';
 
 
 					$html .= "<li {$slider_data} class='{$extra_class} slide-{$counter} ' >";
@@ -834,8 +855,18 @@ if ( !class_exists( 'avia_slideshow' ) )
 						$html .= "<img src='".$img[0]."' width='".$img[1]."' height='".$img[2]."' title='".$linktitle."' alt='".$linkalt."' $markup_url />";
 					}
 					$html .= $video;
+					$html .= $this->create_overlay($meta);
 					$html .= "</".$tags[1].">";
 					$html .= "</li>";
+					
+					if($counter === 1 && !empty($this->config['default-height']))
+					{
+						if(!empty($img[1]) && !empty($img[2]))
+						{
+							$this->config['default-height'] = (100/$img[1]) * $img[2];
+						}
+					}
+					
 			}
 			else
 			{
@@ -923,6 +954,36 @@ if ( !class_exists( 'avia_slideshow' ) )
 			unset($this->config['content']);
 		}
 		
+		protected function create_overlay($meta)
+		{
+			extract($meta);
+			
+			/*check/create overlay*/
+			$overlay = "";
+			if(!empty($overlay_enable))
+			{
+				$overlay_src = "";
+				$overlay = "opacity: {$overlay_opacity}; ";
+				if(!empty($overlay_color)) $overlay .= "background-color: {$overlay_color}; ";
+				if(!empty($overlay_pattern))
+				{
+					if($overlay_pattern == "custom")
+					{
+						$overlay_src = $overlay_custom_pattern;
+					}
+					else
+					{
+						$overlay_src = str_replace('{{AVIA_BASE_URL}}', AVIA_BASE_URL, $overlay_pattern);
+					}
+				}
+				
+				if(!empty($overlay_src)) $overlay .= "background-image: url({$overlay_src}); background-repeat: repeat;";
+				$overlay = "<div class='av-section-color-overlay' style='{$overlay}'></div>";
+			}
+			
+			return $overlay;
+		}
+		
 
 		
 		
@@ -992,7 +1053,7 @@ if ( !class_exists( 'avia_slideshow_video_helper' ) )
 					$autopause  = empty($meta['video_section_bg']) ? 1 : 0; //pause if another vimeo video plays?
 					$video_url	= explode('/', trim($video_url));
 					$video_url	= end($video_url);
-					$video_url 	= add_query_arg(
+					$video_url 	= esc_url(add_query_arg(
 						array(
 							'portrait' 	=> 0,
 							'byline'	=> 0,
@@ -1006,7 +1067,7 @@ if ( !class_exists( 'avia_slideshow_video_helper' ) )
 							'color'		=> $color
 						),
 					'//player.vimeo.com/video/'.$video_url 
-					);
+					));
 					
 					$video_url = apply_filters( 'avf_vimeo_video_url' , $video_url);
 					$video 	= "<div class='av-click-overlay'></div><div class='mejs-mediaelement'><iframe src='{$video_url}' height='1600' width='900'  frameborder='' class='av_vimeo_frame' id='{$uid}'></iframe></div>";

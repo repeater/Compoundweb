@@ -12,6 +12,8 @@
 	 global $avia_config, $more;
 	 get_header();
 	 echo avia_title();
+	 
+	 do_action( 'ava_after_main_title' );
 	 ?>
 
 

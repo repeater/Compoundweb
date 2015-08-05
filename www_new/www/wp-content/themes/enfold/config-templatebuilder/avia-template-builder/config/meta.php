@@ -2,7 +2,7 @@
 global $builder;
 
 $boxes = array(
-    array( 'title' =>__('Avia Layout Builder','avia_framework' ), 'id'=>'avia_builder', 'page'=>array('portfolio','page'), 'context'=>'normal', 'priority'=>'high', 'expandable'=>true ),
+    array( 'title' =>__('Avia Layout Builder','avia_framework' ), 'id'=>'avia_builder', 'page'=>array('post','portfolio','page','product'), 'context'=>'normal', 'priority'=>'high', 'expandable'=>true ),
     array( 'title' =>__('Layout','avia_framework' ), 'id'=>'layout', 'page'=>array('portfolio', 'page' , 'post'), 'context'=>'side', 'priority'=>'low'),
     array( 'title' =>__('Additional Portfolio Settings','avia_framework' ), 'id'=>'preview', 'page'=>array('portfolio'), 'context'=>'normal', 'priority'=>'high' ),
     array( 'title' =>__('Breadcrumb Hierarchy','avia_framework' ), 'id'=>'hierarchy', 'page'=>array('portfolio'), 'context'=>'side', 'priority'=>'low'),
@@ -171,7 +171,7 @@ array(
     array(
 
         "slug"  => "layout",
-        "name"  => __("Layout",'avia_framework'),
+        "name"  => __("Sidebar Settings",'avia_framework'),
         "desc"  => __("Select the desired Page layout",'avia_framework'),
         "id"    => "layout",
         "type"  => "select",
@@ -243,6 +243,7 @@ array(
         "subtype" => array( __("Default Layout - set in",'avia_framework')." ".THEMENAME." > ". __('Header','avia_framework') => '',
                             __('Display title and breadcrumbs','avia_framework')    =>'title_bar_breadcrumb',
                             __('Display only title'           ,'avia_framework')    =>'title_bar',
+                            __('Display only breadcrumbs', 'avia_framework')	    =>'breadcrumbs_only',
                             __('Hide both'                    ,'avia_framework')    =>'hidden_title_bar',
 
                     )

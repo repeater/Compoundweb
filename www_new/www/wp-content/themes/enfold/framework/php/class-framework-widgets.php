@@ -730,7 +730,7 @@ if (!class_exists('avia_socialcount'))
 
 				echo $before_widget;
 				$output = "";
-				if(isset($twitter))
+				if(!empty($twitter))
 				{
 					$link = 'http://twitter.com/'.$twitter.'/';
 					$before = apply_filters('avf_social_widget', "", 'twitter');
@@ -1065,13 +1065,16 @@ if (!function_exists('avia_get_comment_list'))
 		$time_format = apply_filters( 'avia_widget_time', get_option('date_format')." - ".get_option('time_format'), 'avia_get_comment_list' );
 
 		global $avia_config;
-
+		
+		
 		$comments = get_comments($avia_new_query);
 
 		if(!empty($comments)) :
 		echo '<ul class="news-wrap">';
 		foreach($comments as $comment)
 		{
+			if ($comment->comment_author != 'ActionScheduler')
+			{
 			$gravatar_alt = esc_html($comment->comment_author);
 			echo '<li class="news-content">';
 			echo "<a class='news-link' title='".get_the_title($comment->comment_post_ID)."' href='".get_comment_link($comment)."'>";
@@ -1087,6 +1090,7 @@ if (!function_exists('avia_get_comment_list'))
 			echo "</strong>";
 			echo "</a>";
 			echo '</li>';
+			}
 		}
 		echo "</ul>";
 		wp_reset_postdata();
@@ -1317,15 +1321,20 @@ if(!function_exists('avia_printmap'))
 		if (!$content) {$content = $SGMoptions['content'];}
 		$output = "";
 		$unique = uniqid();
-		$content = str_replace('&lt;', '<', $content);
-		$content = str_replace('&gt;', '>', $content);
-		$content = mysql_real_escape_string($content);
+		
 		$prefix  = isset($_SERVER['HTTPS'] ) ? "https" : "http";
         $width = !empty($width) ? 'width:'.$width.';' : 'width:100%;';
         $height = !empty($height) ? 'height:'.$height.';' : '';
         $icon = !empty($icon) ? $icon : '';
+		
+		$content = htmlspecialchars($content, ENT_QUOTES);
+		$content = str_replace('&lt;', '<', $content);
+		$content = str_replace('&gt;', '>', $content);
+		$content = str_replace('&quot;', '"', $content);
+		$content = str_replace('&#039;', '"', $content);
+		$content = json_encode($content);
 
-
+		
 		$directionsForm = "";
 		if(empty($avia_config['g_maps_widget_active']))
 		{
@@ -1377,7 +1386,7 @@ if(!function_exists('avia_printmap'))
 		}
 		else
 		{
-		  var contentString = '".$content."';
+		  var contentString = ".$content.";
 		  var infowindow = new google.maps.InfoWindow({
 		     content: contentString
 		  });

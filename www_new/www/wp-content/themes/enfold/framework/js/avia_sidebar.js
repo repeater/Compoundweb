@@ -78,12 +78,17 @@
                             $('.widget-control-remove', widget).trigger('click'); //delete all widgets inside
                             widget.remove();
                             
-                            obj.widget_area.find('.widgets-holder-wrap .widgets-sortables').each(function(i) //re calculate widget ids
+                            
+                            //re calculate widget ids - no longer necessary since wp 4.2
+                            
+/*
+                            obj.widget_area.find('.widgets-holder-wrap .widgets-sortables').each(function(i) 
                             {
                                 $(this).attr('id','sidebar-' + (i + 1));
                             });
                             
                             wpWidgets.saveOrder();
+*/
                             
                         });
                    } 

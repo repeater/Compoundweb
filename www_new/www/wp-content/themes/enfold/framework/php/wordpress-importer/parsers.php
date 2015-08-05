@@ -376,6 +376,8 @@ class WXR_Parser_XML {
 /**
  * WXR Parser that uses regular expressions. Fallback for installs without an XML parser.
  */
+if(!class_exists('WXR_Parser_Regex'))
+{
 class WXR_Parser_Regex {
 	var $authors = array();
 	var $posts = array();
@@ -645,4 +647,5 @@ class WXR_Parser_Regex {
 			return gzclose( $fp );
 		return fclose( $fp );
 	}
+}
 }

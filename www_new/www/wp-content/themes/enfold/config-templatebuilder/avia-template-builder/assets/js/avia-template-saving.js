@@ -145,7 +145,8 @@
 					data: 
 					{
 						action: 'avia_ajax_fetch_builder_template',
-						templateName: name
+						templateName: name,
+						avia_request: true
 					},
 					beforeSend: function()
 					{
@@ -200,6 +201,7 @@
 						action: 'avia_ajax_delete_builder_template',
 						post_id: avia_globals.post_id,
 						templateName: name,
+						avia_request: true,
 						'avia-save-nonce': $('#avia-save-nonce').val()
 					},
 					beforeSend: function()
@@ -272,6 +274,7 @@
 						action: 'avia_ajax_save_builder_template',
 						post_id: avia_globals.post_id,
 						templateName: name,
+						avia_request: true,
 						templateValue: obj.textarea_value(),
 						'avia-save-nonce': $('#avia-save-nonce').val()
 					},

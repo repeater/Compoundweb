@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Enfold v2.9.1\n"
+"Project-Id-Version: Enfold v3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-28 13:59+0100\n"
-"PO-Revision-Date: 2015-01-28 13:59+0100\n"
+"PO-Revision-Date: 2015-03-02 12:40+0100\n"
 "Last-Translator: Kriesi <support@kriesi.at>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 1.6.9\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ../\n"
@@ -69,14 +69,12 @@ msgstr "Répondre"
 
 # @ avia_framework
 #: comments.php:163
-#, fuzzy
 msgid "Want to join the discussion?"
-msgstr "Vous souhaitez vous joindre à la discussion ?<br/>N'hésitez pas !"
+msgstr ""
 
 #: comments.php:163
-#, fuzzy
 msgid "Feel free to contribute!"
-msgstr "Vous souhaitez vous joindre à la discussion ?<br/>N'hésitez pas !"
+msgstr ""
 
 # @ avia_framework
 #: comments.php:173
@@ -90,9 +88,8 @@ msgstr "Profil pour l'utilisateur :"
 
 # @ avia_framework
 #: config-events-calendar/config.php:121
-#, fuzzy
 msgid "Additional Functionality"
-msgstr "Aucune option pour afficher des entrées supplémentaires"
+msgstr ""
 
 #: config-events-calendar/config.php:142
 msgid ""
@@ -102,15 +99,13 @@ msgstr ""
 
 # @ LayerSlider
 #: config-events-calendar/config.php:143
-#, fuzzy
 msgid "Check out the"
-msgstr "Transition de sortie"
+msgstr ""
 
 # @ avia_framework
 #: config-events-calendar/config.php:145
-#, fuzzy
 msgid "available add-ons"
-msgstr "est disponible !"
+msgstr ""
 
 #: config-events-calendar/config.php:202 config-events-calendar/config.php:211
 msgid "Events"
@@ -118,9 +113,8 @@ msgstr ""
 
 # @ woothemes
 #: config-events-calendar/config.php:206
-#, fuzzy
 msgid "No Events Found"
-msgstr "Slider non trouvé"
+msgstr ""
 
 #: config-events-calendar/views/default-template.php:10
 msgid "Calendar of Events"
@@ -128,15 +122,13 @@ msgstr ""
 
 # @ avia_framework
 #: config-events-calendar/views/single-event.php:21
-#, fuzzy
 msgid "&laquo; All Events"
-msgstr "&laquo; Anciens commentaires"
+msgstr ""
 
 # @ woothemes
 #: config-events-calendar/views/single-event.php:86
-#, fuzzy
 msgid "Event Navigation"
-msgstr "Appels d'événements"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/classes/class.km.autoupdate.v3.php:276
@@ -242,39 +234,33 @@ msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/config/defaults.php:105
-#, fuzzy
 msgid "Hide on mobile"
-msgstr "Cacher les Items du Sous-menu sur Mobile"
+msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/config/defaults.php:107
-#, fuzzy
 msgid "Hides the slider on mobile devices."
-msgstr "Hotspot sur ​​les appareils mobiles"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:115
-#, fuzzy
 msgid "Hide under"
-msgstr "Cacher"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:117
-#, fuzzy
 msgid "Hides the slider under the given value of browser width in pixels."
-msgstr "Scales the layer's width by the given value from its original size."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:127
-#, fuzzy
 msgid "Hide over"
-msgstr "Cacher"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:129
-#, fuzzy
 msgid "Hides the slider over the given value of browser width in pixel."
-msgstr "Scales the layer's height by the given value from its original size."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:142
@@ -288,9 +274,8 @@ msgstr "Le diaporama démarrera automatiquement après le chargement des pages."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:150
-#, fuzzy
 msgid "Start in viewport"
-msgstr "Lancer le diaporama"
+msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:152
 msgid "The slider will start only if it enters into the viewport."
@@ -359,11 +344,8 @@ msgstr "Diaporama avec double sens"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:196
-#, fuzzy
 msgid "Slideshow can go backwards if someone switches to a previous slide."
 msgstr ""
-"Le diaporama peut revenir en arrière si quelqu'un passe à une diapositive "
-"précédente."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:203
@@ -411,11 +393,8 @@ msgstr "Navigation au toucher"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:231
-#, fuzzy
 msgid "Gesture-based navigation when swiping on touch-enabled devices."
 msgstr ""
-"Navigation basée sur les gestes avec glissement sur les périphériques "
-"tactiles."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:242
@@ -425,15 +404,11 @@ msgstr "Thème"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:244
-#, fuzzy
 msgid ""
 "The skin used for this slider. The 'noskin' skin is a border- and buttonless "
 "skin. Your custom skins will appear in the list when you create their "
 "folders."
 msgstr ""
-"Thème utilisé pour ce slider. Le thème 'Noskin' est une bordure - et le "
-"thème sans boutons. Vos thèmess personnalisés apparaissent dans la liste "
-"lorsque vous créez leurs dossiers ainsi."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:251
@@ -459,19 +434,15 @@ msgstr "Image de fond"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:261
-#, fuzzy
 msgid ""
 "Global background image of the slider. Slides with non-transparent "
 "backgrounds will cover it. This image will not scale in responsive mode."
 msgstr ""
-"Image de fond globale du slider. Les diapositives avec un fond non "
-"transparent couvriront celui-ci."
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/config/defaults.php:266
-#, fuzzy
 msgid "Initial fade duration"
-msgstr "Fondu"
+msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:268
 msgid ""
@@ -481,9 +452,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/config/defaults.php:278
-#, fuzzy
 msgid "Slider CSS"
-msgstr "Slider"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:280
@@ -649,9 +619,8 @@ msgstr "Opacité des vignettes actif"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:405
-#, fuzzy
 msgid "Opacity in percentage of the active slide's thumbnail."
-msgstr "Opacité des vignettes actif"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:415
@@ -660,9 +629,8 @@ msgstr "Opacité des vignettes inactif"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:417
-#, fuzzy
 msgid "Opacity in percentage of inactive slide thumbnails."
-msgstr "Opacité en pourcentages des miniatures de diapositives inactif."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:431
@@ -681,14 +649,10 @@ msgstr "Pause diaporama"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:443
-#, fuzzy
 msgid ""
 "The slideshow can temporally be paused while videos are playing. You can "
 "choose to permanently stop the pause until manual restarting."
 msgstr ""
-"Le diaporama peut temporairement être pause tandis que les vidéo sont "
-"jouées. Vous pouvez choisir d'arrêter définitivement la pause jusqu'à un "
-"redémarrage manuel."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:445
@@ -712,14 +676,10 @@ msgstr "Prévisualisation YouTube"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:463
-#, fuzzy
 msgid ""
 "The preview image quaility for YouTube videos. Please note, some videos do "
 "not have HD previews, and you may need to choose a lower quaility."
 msgstr ""
-"La qualité des images d'aperçu pour les vidéos YouTube. Remarque, certaines "
-"vidéos n'ont pas d'aperçus en HD, et vous pouvez avoir besoin de choisir une "
-"qualité inférieure."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:465
@@ -819,9 +779,8 @@ msgstr "Entrez une URL pour vous reliez l'image VotreLogo."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:539
-#, fuzzy
 msgid "Link target"
-msgstr "Lien Cible"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:667
@@ -1011,13 +970,10 @@ msgstr "Durée"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:887
-#, fuzzy
 msgid ""
 "The transition duration in milliseconds when the layer enters into the "
 "slide. A second equals to 1000 milliseconds."
 msgstr ""
-"La durée de la transition en millisecondes lorsque le calque entrant dans la "
-"diapositive. Une seconde est égale à 1000 millisecondes."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:896
@@ -1037,14 +993,10 @@ msgstr "Délai"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:898
-#, fuzzy
 msgid ""
 "Delays the transition with the given amount of milliseconds before the layer "
 "enters into the slide. A second equals to 1000 milliseconds."
 msgstr ""
-"Retarde la transition avec le montant donné de millisecondes avant que le "
-"calque d'entrer dans la diapositive. Une seconde est égale à 1000 "
-"millisecondes."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:907
@@ -1071,16 +1023,11 @@ msgstr "Atténuation"
 #: config-layerslider/LayerSlider/views/transition_builder.php:725
 #: config-layerslider/LayerSlider/views/transition_builder.php:814
 #: config-layerslider/LayerSlider/views/transition_builder.php:967
-#, fuzzy
 msgid ""
 "The timing function of the animation. With this function you can manipulate "
 "the movement of the animated object. Please click on the link next to this "
 "select field to open easings.net for more information and real-time examples."
 msgstr ""
-"La fonction de timing de l'animation, avec laquelle vous pouvez manipuler le "
-"mouvement de l'objet animé. S'il vous plaît, cliquez sur le lien à côté de "
-"ce champ de sélection pour ouvrir easings.net pour plus d'informations et "
-"des exemples en temps réel."
 
 # @ LayerSlider
 # @ avia_framework
@@ -1110,13 +1057,10 @@ msgstr "Tourner"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:926
-#, fuzzy
 msgid ""
 "Rotates the layer clockwise from the given angle to zero degree. Negative "
 "values are allowed for counterclockwise rotation."
 msgstr ""
-"Tourne dans le sens horaire à partir du calque de l'angle donné à zéro "
-"degré. Les valeurs négatives sont autorisées pour une rotation anti-horaire."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:931
@@ -1266,13 +1210,10 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1003
-#, fuzzy
 msgid ""
 "The transition duration in milliseconds when the layer leaves the slide. A "
 "second equals to 1000 milliseconds."
 msgstr ""
-"La durée de la transition en millisecondes lorsque la calque quitte la "
-"diapositive. Une seconde est égale à 1000 millisecondes."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1012
@@ -1295,14 +1236,10 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1043
-#, fuzzy
 msgid ""
 "Rotates the layer clockwise by the given angle from its original position. "
 "Negative values are allowed for counterclockwise rotation."
 msgstr ""
-"Pivoter le calque dans le sens horaire par l'angle donné de sa position "
-"initiale. Les valeurs négatives sont autorisées pour une rotation anti-"
-"horaire."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1050
@@ -1357,15 +1294,11 @@ msgstr "Niveau Parallax"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1101
-#, fuzzy
 msgid ""
 "Applies a parallax effect on layers when you move your mouse over the "
 "slider. Higher values make the layer more sensitive to mouse move. Negative "
 "values are allowed."
 msgstr ""
-"Applique un effet de parallaxe sur les calques lorsque vous déplacez votre "
-"souris sur le slider. Des valeurs plus élevées rendent le calque plus "
-"sensible au déplacement de la souris. Les valeurs négatives sont autorisées."
 
 # @ LayerSlider
 # @ avia_framework
@@ -1468,13 +1401,11 @@ msgstr "Largeur"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1210
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "You can set the width of your layer. You can use pixels, percentage, or the "
 "default value 'auto'. Examples: 100px, 50% or auto."
 msgstr ""
-"Largeur du calque. Vous pouvez utiliser des pixels, des pourcentages ou le "
-"mot-clé 'auto'. Exemples : 100px ou 50% ou auto"
 
 # @ LayerSlider
 # @ avia_framework
@@ -1485,13 +1416,11 @@ msgstr "Hauteur"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1220
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "You can set the height of your layer. You can use pixels, percentage, or the "
 "default value 'auto'. Examples: 100px, 50% or auto"
 msgstr ""
-"Hauteur du calque. Vous pouvez utiliser des pixels, des pourcentages ou le "
-"mot-clé 'auto'. Exemples : 100px ou 50% ou auto"
 
 # @ LayerSlider
 # @ avia_framework
@@ -1506,16 +1435,11 @@ msgstr "Haut"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1230
-#, fuzzy
 msgid ""
 "The layer position from the top of the slide. You can use pixels and "
 "percentage. Examples: 100px or 50%. You can move your layers in the preview "
 "above with a drag n' drop, or set the exact values here."
 msgstr ""
-"La position du calque à partir du haut du slide. Vous pouvez utiliser des "
-"pixels et des pourcentages. Exemples : 100px ou 50%. Vous pouvez déplacer "
-"vos calques dans l'aperçu ci-dessus avec un glisser-déposer ou définir les "
-"valeurs exactes ici."
 
 # @ LayerSlider
 # @ avia_framework
@@ -1534,16 +1458,11 @@ msgstr "Gauche"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1240
-#, fuzzy
 msgid ""
 "The layer position from the left side of the slide. You can use pixels and "
 "percentage. Examples: 100px or 50%. You can move your layers in the preview "
 "above with a drag n' drop, or set the exact values here."
 msgstr ""
-"La position du calque à partir du côté gauche du slide. Vous pouvez utiliser "
-"des pixels et des pourcentages. Exemples : 100px ou 50%. Vous pouvez "
-"déplacer vos calques dans l'aperçu ci-dessus avec un glisser-déposer ou "
-"définir les valeurs exactes ici."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1250
@@ -1681,11 +1600,8 @@ msgstr "Coins arrondis"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1380
-#, fuzzy
 msgid "If you want rounded corners, you can set its radius here. Example: 5px"
 msgstr ""
-"Si vous souhaitez des coins arrondis, précisez ici la valeur radius. "
-"Exemple : 5px"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1398
@@ -1854,16 +1770,11 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/skin_editor.php:85
-#, fuzzy
 msgid ""
 "You need to make this file writable in order to save your changes. See the "
 "<a href=\"http://codex.wordpress.org/Changing_File_Permissions\" target="
 "\"_blank\">Codex</a> for more information."
 msgstr ""
-"Vous devez rendre ce fichier accessible en écriture avant de pouvoir "
-"enregistrer vos modifications. Voir le <a href=\"http://codex.wordpress.org/"
-"Changing_File_Permissions\" target=\"_blank\">Codex</a> pour plus "
-"d'informations."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/skin_editor.php:87
@@ -1877,20 +1788,16 @@ msgstr "Enregistrer"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/skin_editor.php:88
-#, fuzzy
 msgid ""
 "Modifying a skin with invalid code can break your sliders' appearance. "
 "Changes cannot be reverted after saving."
 msgstr ""
-"La modification d'un thème avec un mauvais code peut briser l'apparence de "
-"vos sliders. Les changements ne peuvent pas être ramenés après la sauvegarde."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:116
 #: config-layerslider/LayerSlider/views/slider_list.php:208
-#, fuzzy
 msgid "Enjoy using LayerSlider?"
-msgstr "LayerSlider"
+msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_edit.php:120
 #: config-layerslider/LayerSlider/views/slider_list.php:212
@@ -1972,9 +1879,8 @@ msgstr "entrer l'URL"
 #: config-layerslider/LayerSlider/views/slider_edit.php:464
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:36
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:205
-#, fuzzy
 msgid "use post image"
-msgstr "Utiliser l'image"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:290
@@ -1989,9 +1895,8 @@ msgstr ""
 #: config-layerslider/LayerSlider/views/slider_edit.php:646
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:64
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:353
-#, fuzzy
 msgid "use post URL"
-msgstr "URL"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:319
@@ -2042,23 +1947,20 @@ msgstr "vue de la chronologie"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:391
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:152
-#, fuzzy
 msgid "Highlight layer in the editor."
-msgstr "Colonne en surbrillance"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:392
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:153
-#, fuzzy
 msgid "Prevent layer from dragging in the editor."
-msgstr "Empêcher le calque de glisser dans l'éditeur."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:393
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:154
-#, fuzzy
 msgid "Hide layer in the editor."
-msgstr "Cacher"
+msgstr ""
 
 # @ LayerSlider
 # @ avia_framework
@@ -2117,9 +2019,8 @@ msgstr "Attributs"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:402
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:163
-#, fuzzy
 msgid "Remove this layer"
-msgstr "(supprimer)"
+msgstr ""
 
 # @ LayerSlider
 # @ avia_framework
@@ -2206,17 +2107,12 @@ msgstr "insérer à partir de l'URL"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:470
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:211
-#, fuzzy
 msgid ""
 "Type here the contents of your layer. You can use any HTML codes in this "
 "field to insert content others then text. This field is also shortcode-"
 "aware, so you can insert content from other plugins as well as video embed "
 "codes."
 msgstr ""
-"Saisissez ici le contenu de votre calque. Vous pouvez utilisez du code HTML "
-"pour insérer autre chose que du texte. Ce champ peut contenir aussi des "
-"shortcodes (provenant par exemple d'autres extensions ou pour insérer des "
-"vidéos)."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:474
@@ -2233,16 +2129,11 @@ msgstr "Insérez vidéo ou audio auto-hébergé"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:503
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:244
-#, fuzzy
 msgid ""
 "Click on one or more post placeholders to insert them into your layer's "
 "content. Post placeholders act like shortcodes in WP, and they will be "
 "filled with the actual content from your posts."
 msgstr ""
-"Cliquez sur un ou plusieurs espaces réservés de messages pour les insérer "
-"dans votre contenu de calques. Les espaces réservés de messages agissent "
-"comme des shortcodes dans WP, et ils seront remplis avec le contenu réel de "
-"vos messages."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:504
@@ -2271,13 +2162,10 @@ msgstr "Autres options"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:634
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:341
-#, fuzzy
 msgid ""
 "If you would like to use similar settings for other layers or to experiment "
 "on a copy, you can duplicate this layer."
 msgstr ""
-"Si vous utilisez des paramètres identiques pour d'autres calques ou si vous "
-"voulez faire des tests avec une copie, vous pouvez dupliquer ce calque."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:634
@@ -2340,9 +2228,8 @@ msgstr ""
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_edit.php:715
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:419
-#, fuzzy
 msgid "Custom CSS"
-msgstr "Classes CSS personnalisés"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:749
@@ -2367,13 +2254,10 @@ msgstr "Appel lorsque le diaporama est arrêté par l'utilisateur."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:792
-#, fuzzy
 msgid ""
 "Fireing when the slideshow is temporary on hold (e.g.: \"Pause on hover\" "
 "feature)."
 msgstr ""
-"Se déclenche lorsque le diaporama est en attente temporaire (par exemple : "
-"\"Pause on hover\" feaure)."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:802
@@ -2403,9 +2287,8 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit_posts.php:40
-#, fuzzy
 msgid "Find posts with the filters above"
-msgstr "Trouver les messages avec les filtres ci-dessus"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit_posts.php:59
@@ -2562,9 +2445,8 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit_settings.php:203
-#, fuzzy
 msgid "Custom slider CSS"
-msgstr "Styles CSS personnalisés"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit_settings.php:213
@@ -2609,9 +2491,8 @@ msgstr "Aucun sliders ont été sélectionnés."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:71
-#, fuzzy
 msgid "The selected sliders were permanently deleted."
-msgstr "Aucun sliders ont été sélectionné pour supprimer."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:72
@@ -2630,9 +2511,8 @@ msgstr "Les sliders sélectionnés ont été restauré."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:77
-#, fuzzy
 msgid "No sliders were found to export."
-msgstr "Aucun sliders ont été sélectionnés pour l'exportation."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:78
@@ -2641,10 +2521,8 @@ msgstr "Aucun sliders ont été sélectionnés pour l'exportation."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:79
-#, fuzzy
 msgid "The PHP ZipArchive extension is required to import .zip files."
 msgstr ""
-"L'extension de l'archive Zip PHP est nécessaire pour l'importation ZIPs."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:81
@@ -2663,15 +2541,11 @@ msgstr "Votre slider a été importé."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:84
-#, fuzzy
 msgid ""
 "Your account does not have the necessary permission you have chosen, and "
 "your settings have not been saved in order to prevent locking yourself out "
 "of the plugin."
 msgstr ""
-"Votre compte n'a pas les permissions nécessaires choisies, et vos paramètres "
-"n'ont pas été enregistrés pour éviter de vous rendre l'accès de l'extension "
-"impossible."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:85
@@ -2733,9 +2607,8 @@ msgstr "Envoyez vos remarques"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:134
-#, fuzzy
 msgid "Name your new slider"
-msgstr "Saisissez votre nom de slider ici."
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:136
@@ -2804,13 +2677,10 @@ msgstr "Restaurer le slider enlevé"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:318
-#, fuzzy
 msgid ""
 "You haven't created any slider yet. Click on the \"Add New\" button above to "
 "add one."
 msgstr ""
-"Vous n'avez pas encore créé de sliderr. Cliquez sur le bouton \"Add New\" ci-"
-"dessus pour en ajouter un."
 
 #: config-layerslider/LayerSlider/views/slider_list.php:325
 msgid "Bulk Actions"
@@ -2848,17 +2718,12 @@ msgstr "Importer des sliders"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:362
-#, fuzzy
 msgid ""
 "Choose a LayerSlider export file downloaded previously to import your "
 "sliders. In order to import from outdated versions, you need to create a "
 "file and paste the export code into it. The file needs to have a .json "
 "extension."
 msgstr ""
-"Choisissez un fichier d'exportation LayerSlider téléchargé précédemment pour "
-"importer vos sliders. Pour importer à partir d'anciennes versions, vous "
-"devez créer un fichier et collez le code d'exportation dedans. Le fichier "
-"doit avoir une extension .json."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:366
@@ -2983,7 +2848,6 @@ msgstr "Code d'achat"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:466
-#, fuzzy
 msgid ""
 "To receive automatic updates, you need to enter your item purchase code. "
 "Click on the Download button next to LayerSlider WP on your CodeCanyon "
@@ -2991,11 +2855,6 @@ msgid ""
 "code&quot; option. This will download a text file that contains your "
 "purchase code."
 msgstr ""
-"Pour recevoir les mises à jour automatiques, vous devez entrer votre code "
-"d'achat de l'objet. Vous pouvez le trouver sur votre page de téléchargement "
-"de CodeCanyon, cliquez simplement sur le bouton de téléchargement et "
-"choisissez l'option \"certificat de licence\". Cela téléchargera un fichier "
-"texte qui contient votre code d'achat."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:470
@@ -3009,14 +2868,10 @@ msgstr "Stable"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:473
-#, fuzzy
 msgid ""
 "Although pre-release versions meant to work properly, they might contain "
 "unknown issues, and are not recommended for sites in production."
 msgstr ""
-"Bien que les versions de pre-release soient de bonne qualité, elles peuvent "
-"contenir des problèmes inconnus, et ne sont pas recommandés pour les sites "
-"de production."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:474
@@ -3039,9 +2894,8 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:497
-#, fuzzy
 msgid "Deauthorize this site"
-msgstr "Dupliquer cette diapositive"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:498
@@ -3094,14 +2948,10 @@ msgstr "Chargement de script conditionnelle"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:528
-#, fuzzy
 msgid ""
 "Increase your site's performance by loading resources only when necessary. "
 "Outdated themes might not support this method."
 msgstr ""
-"Augmenter les performances de votre site par les ressources de chargement "
-"que lorsque c'est nécessaire. Les thèmes obsolètes peuvent ne pas supporter "
-"cette méthode."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:531
@@ -3190,9 +3040,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_list.php:609
-#, fuzzy
 msgid "Greek"
-msgstr "Vert"
+msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_list.php:610
 msgid "Greek Extended"
@@ -3204,18 +3053,13 @@ msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_list.php:612
-#, fuzzy
 msgid "Latin"
 msgstr ""
-"Ajouter une classe CSS personnalisée pour l'élément. Assurez-vous d'utiliser "
-"uniquement des caractères autorisés (caractères latins, de soulignement, des "
-"tirets et des chiffres)"
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_list.php:613
-#, fuzzy
 msgid "Latin Extended"
-msgstr "Latitude"
+msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_list.php:614
 msgid "Vietnamese"
@@ -3223,22 +3067,19 @@ msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_list.php:620
-#, fuzzy
 msgid "Select new"
-msgstr "Sélectionner"
+msgstr ""
 
 # @ avia_framework
 #: config-layerslider/LayerSlider/views/slider_list.php:629
 #: config-layerslider/LayerSlider/views/slider_list.php:636
 #: config-layerslider/LayerSlider/views/slider_list.php:643
-#, fuzzy
 msgid "Remove character set"
-msgstr "(supprimer)"
+msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_list.php:648
-#, fuzzy
 msgid "Use character sets:"
-msgstr "Utiliser une lightbox"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:656
@@ -3301,7 +3142,6 @@ msgstr "La documentation est ici"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_list.php:685
-#, fuzzy
 msgid ""
 "This is a WordPress contextual help menu, it is used to give you fast access "
 "to our documentation. Please keep in mind that because this menu is "
@@ -3309,18 +3149,11 @@ msgid ""
 "currently viewing. So if you search for something else, you should visit the "
 "corresponding page first and then open this help menu."
 msgstr ""
-"Il s'agit d'un menu d'aide contextuelle WordPress, nous l'utilisons pour "
-"vous donner accès rapide à notre documentation. S'il vous plaît gardez à "
-"l'esprit que parce que ce menu est contextuel, il ne montre que les "
-"informations pertinentes pour la page que vous consultez actuellement. Donc, "
-"si vous recherchez quelque chose, vous devriez visiter d'abord la page "
-"correspondante et ensuite ouvrir ce menu d'aide."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/style_editor.php:43
-#, fuzzy
 msgid "LayerSlider CSS Editor"
-msgstr "Editeur de thème LayerSlider"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/style_editor.php:58
@@ -3344,27 +3177,18 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/style_editor.php:82
-#, fuzzy
 msgid ""
 "You need to make your uploads folder writable in order to save your changes. "
 "See the <a href=\"http://codex.wordpress.org/Changing_File_Permissions\" "
 "target=\"_blank\">Codex</a> for more information."
 msgstr ""
-"Vous devez autoriser l'écriture dans le dossier de téléchargement pour "
-"pouvoir enregistrer vos modifications. Voir <a href=\"http://codex.wordpress."
-"org/Changing_File_Permissions\" target=\"_blank\">Codex</a> pour plus "
-"d'informations."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/style_editor.php:85
-#, fuzzy
 msgid ""
 "Using invalid CSS code could break the appearance of your site or your "
 "sliders. Changes cannot be reverted after saving."
 msgstr ""
-"L'utilisation de mauvais code CSS pourrait briser l'apparence de votre site "
-"ou de vos sliders. Les changements ne peuvent pas être ramenés après la "
-"sauvegarde."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:84
@@ -3387,14 +3211,10 @@ msgstr "Nom de la transition"
 #: config-layerslider/LayerSlider/views/transition_builder.php:372
 #: config-layerslider/LayerSlider/views/transition_builder.php:592
 #: config-layerslider/LayerSlider/views/transition_builder.php:924
-#, fuzzy
 msgid ""
 "The name of your custom transition. When you edit a slider, it will appear "
 "with this name, so you can easily identify the individual transitions."
 msgstr ""
-"Le nom de votre transition personnalisée. Lorsque vous modifiez un slider, "
-"il apparaîtra avec ce nom, de sorte que vous pouvez facilement identifier "
-"les transitions."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:93
@@ -3409,7 +3229,6 @@ msgstr "Lignes"
 #: config-layerslider/LayerSlider/views/transition_builder.php:376
 #: config-layerslider/LayerSlider/views/transition_builder.php:598
 #: config-layerslider/LayerSlider/views/transition_builder.php:930
-#, fuzzy
 msgid ""
 "<i>number</i> or <i>min,max</i> If you specify a value greater than 1, "
 "LayerSlider will cut your slide into tiles. You can specify here how many "
@@ -3417,12 +3236,6 @@ msgid ""
 "with a comma, LayerSlider will use that as a range and pick a random number "
 "between your values."
 msgstr ""
-"<number> ou <min_number>,<max_number> Si vous spécifiez une valeur "
-"supérieure à 1, LayerSlider coupera votre diapositive en tiles. Vous pouvez "
-"indiquer ici le nombre de lignes que votre transition devrait avoir. Si vous "
-"spécifiez deux nombres séparés par une virgule, LayerSlider va l'utiliser "
-"comme un maximum et un minimum et va choisir un nombre aléatoire entre vos "
-"valeurs."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:95
@@ -3437,7 +3250,6 @@ msgstr "Colonnes"
 #: config-layerslider/LayerSlider/views/transition_builder.php:378
 #: config-layerslider/LayerSlider/views/transition_builder.php:600
 #: config-layerslider/LayerSlider/views/transition_builder.php:932
-#, fuzzy
 msgid ""
 "<i>number</i> or <i>min,max</i> If you specify a value greater than 1, "
 "LayerSlider will cut your slide into tiles. You can specify here how many "
@@ -3445,12 +3257,6 @@ msgid ""
 "with a comma, LayerSlider will use that as a range and pick a random number "
 "between your values."
 msgstr ""
-"<number> ou <min_number>,<max_number> Si vous spécifiez une valeur "
-"supérieure à 1, LayerSlider coupera votre diapositive en tiles. Vous pouvez "
-"indiquer ici le nombre de colonnes que votre transition devrait avoir. Si "
-"vous spécifiez deux nombres séparés par une virgule, LayerSlider va "
-"l'utiliser comme un maximum et un minimum et va choisir un nombre aléatoire "
-"entre vos valeurs."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:101
@@ -3541,16 +3347,11 @@ msgstr "Profondeur"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:124
 #: config-layerslider/LayerSlider/views/transition_builder.php:628
-#, fuzzy
 msgid ""
 "The script tries to identify the optimal depth for your rotated objects "
 "(tiles). With this option you can force your objects to have a large depth "
 "when performing 180 degree (and its multiplies) rotation."
 msgstr ""
-"Le script va tenter d'identifier la profondeur optimale pour vos objets qui "
-"tournent (tiles). Avec cette option, vous pouvez forcer vos objets à avoir "
-"une grande profondeur lors de l'exécution de rotation de 180 degrés (et ses "
-"multiples)."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:126
@@ -3695,13 +3496,10 @@ msgstr "Mixte"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:460
 #: config-layerslider/LayerSlider/views/transition_builder.php:1014
-#, fuzzy
 msgid ""
 "The direction of the slide or mixed animation if you've chosen this type in "
 "the previous settings."
 msgstr ""
-"La direction de la diapositive ou de l'animation mixte si vous avez choisi "
-"ce type dans les paramètres précédents."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:466
@@ -3772,11 +3570,8 @@ msgstr "Vous n'avez pas encore créer des transitions 3D"
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:888
 #: config-layerslider/LayerSlider/views/transition_builder.php:1058
-#, fuzzy
 msgid "To create a new transition, click to the \\\"Add new\\\" button above."
 msgstr ""
-"Pour créer une nouvelle transition, cliquez sur le bouton \"Add new\" au-"
-"dessus du texte."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:1057
@@ -3785,15 +3580,11 @@ msgstr "Vous n'avez pas encore de créer des transitions 2D"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:1070
-#, fuzzy
 msgid ""
 "Before you can save your changes, you need to make your \"/wp-content/uploads"
 "\" folder writable. See the <a href=\"http://codex.wordpress.org/"
 "Changing_File_Permissions\" target=\"_blank\">Codex</a>"
 msgstr ""
-"Avant de pouvoir enregistrer vos modifications, vous devez rendre "
-"inscriptible votre dossier \"/wp-content/uploads\". Voir le <a href=\"http://"
-"codex.wordpress.org/Changing_File_Permissions\" target=\"_blank\">Codex</ a>"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/transition_builder.php:1094
@@ -3837,9 +3628,8 @@ msgstr "Aucun thème sélectioné."
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/wp/menus.php:45
-#, fuzzy
 msgid "CSS Editor"
-msgstr "Editeur de thème"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/wp/menus.php:50
@@ -3848,9 +3638,8 @@ msgstr "Outil de création de transition"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/wp/notices.php:38
-#, fuzzy
 msgid "An update is available for LayerSlider WP!"
-msgstr "Widget LayerSlider WP"
+msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/wp/notices.php:40
@@ -3891,7 +3680,6 @@ msgstr "Problèmes de configuration du serveur détectés !"
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/wp/notices.php:75
-#, fuzzy
 msgid ""
 "phpQuery, an external library in LayerSlider, have unmet dependencies. It "
 "requires PHP5 with the following extensions installed: PHP DOM extension, "
@@ -3899,11 +3687,6 @@ msgid ""
 "resolve these dependencies, as it will likely prevent LayerSlider from "
 "functioning properly."
 msgstr ""
-"phpQuery, une bibliothèque externe dans LayerSlider, ont des dépendances non "
-"satisfaites. Il nécessite PHP5 avec les extensions suivantes installées: "
-"l'extension PHP DOM, l'extension PHP Multibyte String. S'il vous plaît "
-"contactez votre fournisseur d'hébergement pour résoudre ces dépendances, que "
-"ce sera probablement briser LayerSlider pour fonctionner correctement."
 
 # @ default
 #: config-layerslider/LayerSlider/wp/notices.php:76
@@ -4600,9 +4383,8 @@ msgstr "Grand"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:85
-#, fuzzy
 msgid "X Large"
-msgstr "Grand"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:89
@@ -4666,29 +4448,25 @@ msgstr "Pas d'icône"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:107
-#, fuzzy
 msgid "Yes, display Icon to the left"
-msgstr "Oui, afficher une icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:108
-#, fuzzy
 msgid "Yes, display Icon to the right"
-msgstr "Oui, afficher une icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:111
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:110
-#, fuzzy
 msgid "Icon Visibility"
-msgstr "Pas d'icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:112
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:111
-#, fuzzy
 msgid "Check to only display icon on hover"
-msgstr "Seulement sur survol"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:120
@@ -4717,9 +4495,8 @@ msgstr "Sélectionnez une icône pour votre bouton ci-dessous"
 #: config-templatebuilder/avia-shortcodes/team.php:146
 #: config-templatebuilder/avia-shortcodes/testimonials.php:158
 #: config-templatebuilder/avia-shortcodes/textblock.php:71
-#, fuzzy
 msgid "Colors"
-msgstr "Couleurs douces"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons.php:138
@@ -5023,9 +4800,8 @@ msgstr "Sélectionnez ici une couleur de texte personnalisée pour votre bouton"
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:18
-#, fuzzy
 msgid "Fullwidth Button"
-msgstr "Pleine largeur extensible"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:24
 msgid "Creates a colored button that stretches across the full width"
@@ -5033,59 +4809,48 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:50
-#, fuzzy
 msgid "Button Title"
-msgstr "Bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:58
-#, fuzzy
 msgid "Additional Description"
-msgstr "Description"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:59
-#, fuzzy
 msgid "Enter an additional description"
-msgstr "Saisissez une légende supplémentaire"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:66
-#, fuzzy
 msgid "Description position"
-msgstr "Description"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:67
-#, fuzzy
 msgid "Show the description above or below the title?"
 msgstr ""
-"Ajouter un sous-titre descriptive supplémentaire au-dessus ou en dessous de "
-"l'actuel titre d'en-tête"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:71
-#, fuzzy
 msgid "Description above title"
-msgstr "Description"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:72
-#, fuzzy
 msgid "Description below title"
-msgstr "Description"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:105
-#, fuzzy
 msgid "Yes, display Icon to the left of the title"
-msgstr "Oui, afficher une icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:106
-#, fuzzy
 msgid "Yes, display Icon to the right of the title"
-msgstr "Oui, afficher une icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:138
@@ -5122,27 +4887,23 @@ msgstr "Couleur de fond"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:147
-#, fuzzy
 msgid "Choose a background color for your button here"
-msgstr "Choisissez une couleur pour votre bouton ici"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:179
-#, fuzzy
 msgid "Background Hover Color"
-msgstr "Couleur de fond"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:180
-#, fuzzy
 msgid "Choose a background hover color for your button here"
-msgstr "Choisissez une couleur pour votre bouton ici"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:202
-#, fuzzy
 msgid "Custom Hover Color"
-msgstr "Couleur personnalisée"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/catalogue.php:13
 msgid "Catalogue"
@@ -5150,9 +4911,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:20
-#, fuzzy
 msgid "Creates a pricing list"
-msgstr "Créer un tableau de données ou de prix"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:37
@@ -5181,27 +4941,23 @@ msgstr "Titre de l'item de liste"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:47
-#, fuzzy
 msgid "Enter the list item title here"
-msgstr "Saisissez le titre de l'item de liste ici (court si possible)"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:53
-#, fuzzy
 msgid "List Item Description"
-msgstr "Modifier"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:54
-#, fuzzy
 msgid "Enter the item description here"
-msgstr "Editer la description du profil ici."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:60
-#, fuzzy
 msgid "Pricing"
-msgstr "Ligne de prix"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/catalogue.php:61
 msgid "Enter the price for the item here. Eg: 34$, 55.5€, £12"
@@ -5209,12 +4965,8 @@ msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/catalogue.php:67
-#, fuzzy
 msgid "Thumbnail Image"
 msgstr ""
-"La vignette de la diapositive. Cliquez sur l'image pour ouvrir la "
-"Médiathèque WordPress pour choisir ou télécharger une image. Si vous laissez "
-"ce champ vide, l'image de la diapositive sera utilisé."
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:68
@@ -5253,15 +5005,13 @@ msgstr "Modifier Image"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:77
-#, fuzzy
 msgid "Item Link?"
-msgstr "Lien sur le titre ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:78
-#, fuzzy
 msgid "Where should your item link to?"
-msgstr "Cible du lien de votre bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:83
@@ -5297,9 +5047,8 @@ msgstr ""
 # @ LayerSlider
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/catalogue.php:102
-#, fuzzy
 msgid "Disable Item?"
-msgstr "Désactiver la lecture auto"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/catalogue.php:103
 msgid ""
@@ -5309,9 +5058,8 @@ msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/catalogue.php:124
 #: config-templatebuilder/avia-shortcodes/catalogue.php:129
-#, fuzzy
 msgid "Item"
-msgstr "portfolio-item"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:27
@@ -5350,33 +5098,28 @@ msgstr "Créer une colonne pleine largeur"
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:71
 #: config-templatebuilder/avia-shortcodes/cell.php:94
-#, fuzzy
 msgid "Edit Cell"
-msgstr "Modifier"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:89
-#, fuzzy
 msgid "Delete Cell"
-msgstr "Supprimer"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:90
-#, fuzzy
 msgid "Clone Cell"
-msgstr "Dupliquer la colonne"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/cell.php:125
-#, fuzzy
 msgid "Vertical align"
-msgstr "Verticale"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:126
-#, fuzzy
 msgid "Choose the vertical alignment of your cells content."
-msgstr "Choisissez l'alignement de votre icône ici"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/cell.php:132
 msgid "Middle"
@@ -5384,9 +5127,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:137
-#, fuzzy
 msgid "Cell Padding"
-msgstr "Marge"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/cell.php:138
 msgid ""
@@ -5396,35 +5138,30 @@ msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/cell.php:143
-#, fuzzy
 msgid "Padding-Top"
-msgstr "Marge"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/cell.php:144
-#, fuzzy
 msgid "Padding-Right"
-msgstr "Marge"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:145
-#, fuzzy
 msgid "Padding-Bottom"
-msgstr "Marge en bas"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/cell.php:146
-#, fuzzy
 msgid "Padding-Left"
-msgstr "Marge"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:154
-#, fuzzy
 msgid ""
 "Select a custom background color for this cell here. Leave empty for default "
 "color"
-msgstr "Sélectionnez ici une couleur de fond personnalisée pour votre bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:161
@@ -5436,14 +5173,10 @@ msgstr "Image de fond personnalisée"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:162
-#, fuzzy
 msgid ""
 "Either upload a new, or choose an existing image from your media library. "
 "Leave empty if you don't want to use a background image "
 msgstr ""
-"Vous pouvez, au choix, télécharger une nouvelle image ou en choisir une de "
-"la bibliothèque des médias. Laisser vide si vous souhaitez utiliser l'image "
-"de fond du modèle de couleurs défini ci-dessus."
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:165
@@ -5479,11 +5212,8 @@ msgstr "Fixation du fond"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:171
-#, fuzzy
 msgid "Background can either scroll with the page or be fixed"
 msgstr ""
-"L'arrière plan peut soit défiler avec la page, être fixe ou défiler avec un "
-"mouvement de parallaxe"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:177
@@ -5655,65 +5385,56 @@ msgstr "Etirer pour ajuster automatiquement"
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:362
 #: config-templatebuilder/avia-shortcodes/columns.php:149
-#, fuzzy
 msgid "Creates a single column with 50&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:384
 #: config-templatebuilder/avia-shortcodes/columns.php:170
-#, fuzzy
 msgid "Creates a single column with 33&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:406
 #: config-templatebuilder/avia-shortcodes/columns.php:194
-#, fuzzy
 msgid "Creates a single column with 67&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:427
 #: config-templatebuilder/avia-shortcodes/columns.php:217
-#, fuzzy
 msgid "Creates a single column with 25&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:449
 #: config-templatebuilder/avia-shortcodes/columns.php:241
-#, fuzzy
 msgid "Creates a single column with 75&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:472
 #: config-templatebuilder/avia-shortcodes/columns.php:266
-#, fuzzy
 msgid "Creates a single column with 20&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:494
 #: config-templatebuilder/avia-shortcodes/columns.php:290
-#, fuzzy
 msgid "Creates a single column with 40&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:516
 #: config-templatebuilder/avia-shortcodes/columns.php:314
-#, fuzzy
 msgid "Creates a single column with 60&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/cell.php:538
 #: config-templatebuilder/avia-shortcodes/columns.php:338
-#, fuzzy
 msgid "Creates a single column with 80&percnt; width"
-msgstr "Créer une colonne pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/codeblock.php:19
@@ -5855,9 +5576,8 @@ msgid "Creates a customizable contact form"
 msgstr "Créer un formulaire de contact personnalisé"
 
 #: config-templatebuilder/avia-shortcodes/contact.php:44
-#, fuzzy
 msgid "Form"
-msgstr "Formulaire de contact"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:49
@@ -6209,15 +5929,13 @@ msgid "Display Captcha"
 msgstr "Afficher Captcha"
 
 #: config-templatebuilder/avia-shortcodes/contact.php:236
-#, fuzzy
 msgid "Form Color Scheme"
-msgstr "Sélectionner une palette de couleurs prédéfinie"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:237
-#, fuzzy
 msgid "Select a form color scheme here"
-msgstr "Sélectionner une palette de couleurs prédéfinie"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:241
@@ -6248,15 +5966,13 @@ msgstr "Par défaut"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:242
-#, fuzzy
 msgid "Light transparent"
-msgstr "Clair Transparent"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:243
-#, fuzzy
 msgid "Dark transparent"
-msgstr "Foncé Transparent"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:271
@@ -6574,12 +6290,8 @@ msgstr "Les images seront affichées après ce nombre de secondes."
 #: config-templatebuilder/avia-shortcodes/team.php:152
 #: config-templatebuilder/avia-shortcodes/testimonials.php:164
 #: config-templatebuilder/avia-shortcodes/textblock.php:77
-#, fuzzy
 msgid "Font Colors"
 msgstr ""
-"Vous pouvez utiliser les couleurs et les styles de police par défaut ou "
-"utiliser une couleur de police personnalisée pour l'élément (dans le cas où "
-"vous utilisez une image de fond par exemple)"
 
 #: config-templatebuilder/avia-shortcodes/contentslider.php:185
 #: config-templatebuilder/avia-shortcodes/iconbox.php:151
@@ -6607,9 +6319,8 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/team.php:158
 #: config-templatebuilder/avia-shortcodes/testimonials.php:170
 #: config-templatebuilder/avia-shortcodes/textblock.php:83
-#, fuzzy
 msgid "Define Custom Colors"
-msgstr "Couleur personnalisée"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contentslider.php:195
@@ -6628,9 +6339,8 @@ msgstr "Couleur personnalisée"
 #: config-templatebuilder/avia-shortcodes/testimonials.php:175
 #: config-templatebuilder/avia-shortcodes/testimonials.php:185
 #: config-templatebuilder/avia-shortcodes/textblock.php:88
-#, fuzzy
 msgid "Select a custom font color. Leave empty to use the default"
-msgstr "Sélectionnez ici une couleur de texte personnalisée pour votre bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contentslider.php:453
@@ -6654,9 +6364,8 @@ msgid "Next"
 msgstr "Suivant"
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:16
-#, fuzzy
 msgid "Animated Countdown"
-msgstr "Numéros animés"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:22
 msgid "Display an countdown to a specific date"
@@ -6664,17 +6373,15 @@ msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:25
 #: config-templatebuilder/avia-shortcodes/countdown.php:187
-#, fuzzy
 msgid "Second"
-msgstr "Ceci est le texte qui apparaît sur votre second bouton."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:26
 #: config-templatebuilder/avia-shortcodes/countdown.php:78
 #: config-templatebuilder/avia-shortcodes/countdown.php:188
-#, fuzzy
 msgid "Minute"
-msgstr "Minute %1$s"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:27
 #: config-templatebuilder/avia-shortcodes/countdown.php:69
@@ -6685,16 +6392,14 @@ msgstr ""
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/countdown.php:28
 #: config-templatebuilder/avia-shortcodes/countdown.php:190
-#, fuzzy
 msgid "Day"
-msgstr "Délai"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:29
 #: config-templatebuilder/avia-shortcodes/countdown.php:191
-#, fuzzy
 msgid "Week"
-msgstr "Semaine %1$s"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:61
@@ -6705,9 +6410,8 @@ msgid "Date"
 msgstr "Date"
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:62
-#, fuzzy
 msgid "Pick a date in the future."
-msgstr "Date"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:70
 msgid "Pick the hour of the day"
@@ -6715,43 +6419,36 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:79
-#, fuzzy
 msgid "Pick the minute of the hour"
-msgstr "Minute %1$s"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:88
-#, fuzzy
 msgid "Smallest time unit"
-msgstr "Time Shift"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:89
-#, fuzzy
 msgid "The smallest unit that will be displayed"
-msgstr "Voulez-vous une pagination ?"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:97
-#, fuzzy
 msgid "Largest time unit"
-msgstr "Time Shift"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:98
-#, fuzzy
 msgid "The largest unit that will be displayed"
-msgstr "Voulez-vous une pagination ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:108
-#, fuzzy
 msgid "Text Alignment"
-msgstr "Alignement de l'image"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:109
-#, fuzzy
 msgid "Choose here, how to align your text"
-msgstr "Choisissez la manière d'aligner votre image"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:114
@@ -6763,15 +6460,13 @@ msgstr "Centré"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:120
-#, fuzzy
 msgid "Number Font Size"
-msgstr "Quelle taille de police personnalisée du nombre ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:121
-#, fuzzy
 msgid "Size of your numbers in Pixel"
-msgstr "Taille de votre En-tête en pixel"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:124
@@ -6786,21 +6481,18 @@ msgstr "Taille par défaut"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:140
-#, fuzzy
 msgid "Choose the colors here"
-msgstr "Choisir le mod&egrave;le du blog par d&eacute;faut ici."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:146
-#, fuzzy
 msgid "Theme colors"
-msgstr "Couleurs douces"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:147
-#, fuzzy
 msgid "Transparent Light"
-msgstr "Clair Transparent"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:148
@@ -6809,15 +6501,13 @@ msgid "Transparent Dark"
 msgstr "Transparent Foncé"
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:187
-#, fuzzy
 msgid "Seconds"
-msgstr "Options d'affichage en boucle en secondes"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:188
-#, fuzzy
 msgid "Minutes"
-msgstr "Minute %1$s"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:189
 msgid "Hours"
@@ -6829,26 +6519,22 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:191
-#, fuzzy
 msgid "Weeks"
-msgstr "Semaine %1$s"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:192
-#, fuzzy
 msgid "Month"
-msgstr "Archive pour le mois :"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/countdown.php:192
-#, fuzzy
 msgid "Months"
-msgstr "Mensuel"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:193
-#, fuzzy
 msgid "Year"
-msgstr "Archive pour l'année :"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/countdown.php:193
 msgid "Years"
@@ -7432,9 +7118,8 @@ msgstr "Adresse"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:23
-#, fuzzy
 msgid "Grid Row"
-msgstr "Ligne par défaut"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:30
 msgid ""
@@ -7444,38 +7129,32 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:94
-#, fuzzy
 msgid "Delete Row"
-msgstr "Supprimer"
+msgstr ""
 
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/grid_row.php:98
-#, fuzzy
 msgid "Edit Row"
-msgstr "Ligne par défaut"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:101
-#, fuzzy
 msgid "Clone Row"
-msgstr "Dupliquer la colonne"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/grid_row.php:102
-#, fuzzy
 msgid "Add Cell"
-msgstr "Ajouter"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:103
-#, fuzzy
 msgid "Set Cell Size"
-msgstr "Définissez la taille des images d'aperçu"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/grid_row.php:127
-#, fuzzy
 msgid "Grid Borders"
-msgstr "Grille"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:129
 msgid "Choose if your layout grid should display any border"
@@ -7483,21 +7162,16 @@ msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/grid_row.php:132
-#, fuzzy
 msgid "No Borders"
 msgstr ""
-"Afficher la vidéo en mode par défaut, des bordures noires peuvent se "
-"produire, mais la totalité de la vidéo sera visible"
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:133
-#, fuzzy
 msgid "Borders on top and bottom"
-msgstr "Du haut vers le bas"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:134
-#, fuzzy
 msgid "Borders between cells"
-msgstr "Écart entre les éléments"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:135
 msgid "Borders on top and bottom and between cells"
@@ -7505,15 +7179,13 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:140
-#, fuzzy
 msgid "Minimum height"
-msgstr "Section Hauteur Minimale"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/grid_row.php:141
-#, fuzzy
 msgid "Set the minimum height of all the cells in pixel. eg:400px"
-msgstr "La hauteur du slider en pixels."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:149
@@ -7540,9 +7212,8 @@ msgstr "(Afficher la page de styles)"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/grid_row.php:160
-#, fuzzy
 msgid "Mobile Behaviour"
-msgstr "Menu Mobile"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/grid_row.php:162
 msgid ""
@@ -7830,20 +7501,17 @@ msgid "Set the position of the short ruler"
 msgstr "Indique la position de la règle horizontale"
 
 #: config-templatebuilder/avia-shortcodes/hr.php:108
-#, fuzzy
 msgid "none"
-msgstr "Aucun"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/hr.php:109
-#, fuzzy
 msgid "thin"
-msgstr "Vedette mince"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:110
-#, fuzzy
 msgid "fat"
-msgstr "Par défaut"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/hr.php:114
 msgid "Enter a custom width. Both, px and &percnt; values are allowed"
@@ -7854,27 +7522,23 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/iconbox.php:214
 #: config-templatebuilder/avia-shortcodes/iconlist.php:215
 #: config-templatebuilder/avia-shortcodes/promobox.php:213
-#, fuzzy
 msgid "Custom Border Color"
-msgstr "Couleur Bordure"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:122
 #: config-templatebuilder/avia-shortcodes/hr.php:161
-#, fuzzy
 msgid "Leave empty for default theme color"
-msgstr "Laisser vide si vous souhaitez utiliser le marqueur par défaut"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/hr.php:130
-#, fuzzy
 msgid "Top Margin in px"
-msgstr "Haut"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:137
-#, fuzzy
 msgid "Bottom Margin  in px"
-msgstr "Bas"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:147
@@ -7888,9 +7552,8 @@ msgstr "Icône"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:148
-#, fuzzy
 msgid "Should an icon be displayed at the center?"
-msgstr "Est-ce qu'une icône doit être affichée sur le côté gauche du bouton ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:155
@@ -7903,15 +7566,13 @@ msgstr "Oui, afficher une icône"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:160
-#, fuzzy
 msgid "Custom Icon Color"
-msgstr "Couleur de l'icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/hr.php:170
-#, fuzzy
 msgid "Select an icon below"
-msgstr "Sélectionnez une icône ci-dessous"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/icon.php:23
@@ -7970,9 +7631,8 @@ msgstr "Taille de l'icône"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/icon.php:111
-#, fuzzy
 msgid "Enter the font size in px, em or &percnt;"
-msgstr "Saisissez la taille de la police en px, em ou %"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/icon.php:118
@@ -8024,9 +7684,8 @@ msgstr "Créer un bloc de contenu avec une icône"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:49
-#, fuzzy
 msgid "IconBox Styling"
-msgstr "Icône"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/iconbox.php:50
 msgid "Defines the styling of the iconbox and the position of the icon"
@@ -8034,15 +7693,13 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:54
-#, fuzzy
 msgid "Display small icon at the left side of the title"
-msgstr "Souhaitez-vous afficher une icône à gauche du titre de l'onglet ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:55
-#, fuzzy
 msgid "Display a large icon at the left side of the whole content block"
-msgstr "Cocher pour afficher les commandes sur le côté gauche de la carte"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/iconbox.php:56
 msgid "Display a large icon at the right side of the whole content block"
@@ -8050,33 +7707,27 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:57
-#, fuzzy
 msgid "Display a large icon above the title"
-msgstr "Affiche une légende à l'image au survol de la souris"
+msgstr ""
 
 # @ LayerSlider
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:62
-#, fuzzy
 msgid "Content block"
-msgstr "Créer un bloc de contenu avec une icône"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:63
-#, fuzzy
 msgid "Select if the iconbox should receive a border around the content"
 msgstr ""
-"Sélectionner la largeur de l'info-bulle. L'hauteur est basé sur le contenu"
 
 #: config-templatebuilder/avia-shortcodes/iconbox.php:68
-#, fuzzy
 msgid "Boxed content block with borders"
-msgstr "Créer un bloc de contenu avec une icône"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/iconbox.php:69
-#, fuzzy
 msgid "No box arround content"
-msgstr "Saisissez du contenu pour votre boîte de promotion"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:75
@@ -8151,41 +7802,34 @@ msgstr "Cliquer ici pour ajouter votre propre texte"
 #: config-templatebuilder/avia-shortcodes/iconbox.php:160
 #: config-templatebuilder/avia-shortcodes/iconlist.php:161
 #: config-templatebuilder/avia-shortcodes/team.php:162
-#, fuzzy
 msgid "Custom Title Font Color"
-msgstr "Couleur de texte personnalisée"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:170
 #: config-templatebuilder/avia-shortcodes/iconlist.php:171
 #: config-templatebuilder/avia-shortcodes/team.php:172
 #: config-templatebuilder/avia-shortcodes/testimonials.php:184
-#, fuzzy
 msgid "Custom Content Font Color"
-msgstr "Couleur de texte personnalisée"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:183
 #: config-templatebuilder/avia-shortcodes/iconlist.php:184
-#, fuzzy
 msgid "Icon Colors"
-msgstr "Couleurs douces"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:195
 #: config-templatebuilder/avia-shortcodes/iconlist.php:196
-#, fuzzy
 msgid "Select a custom background color. Leave empty to use the default"
-msgstr "Sélectionnez ici une couleur de fond personnalisée pour votre bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconbox.php:215
 #: config-templatebuilder/avia-shortcodes/iconlist.php:216
-#, fuzzy
 msgid "Select a custom border color. Leave empty to use the default"
 msgstr ""
-"Couleur du menu pour En-Tête transparente (Laissez vide pour utiliser la "
-"couleur par défaut)"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/iconlist.php:12
@@ -8553,21 +8197,18 @@ msgstr "Choisir le style de votre info-bulle"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/image_hotspots.php:143
-#, fuzzy
 msgid "Hotspot Link?"
-msgstr "Hotspot"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/image_hotspots.php:144
-#, fuzzy
 msgid "Where should your hotspot link to?"
-msgstr "Cible du lien de votre bouton"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/image_hotspots.php:163
-#, fuzzy
 msgid "Hotspot Colors"
-msgstr "Définir les couleurs de votre hotspot"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/image_hotspots.php:167
@@ -8955,9 +8596,8 @@ msgstr ""
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:67
 #: config-templatebuilder/avia-shortcodes/portfolio.php:141
-#, fuzzy
 msgid "Yes, display sort options"
-msgstr "Oui, afficher une icône"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:68
 msgid "Yes, display sort options and currently active taxonomy"
@@ -8966,16 +8606,13 @@ msgstr ""
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:69
 #: config-templatebuilder/avia-shortcodes/portfolio.php:143
-#, fuzzy
 msgid "No, do not display sort options"
-msgstr "Ne pas afficher d'ombre"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:86
 #: config-templatebuilder/avia-shortcodes/masonry_gallery.php:71
-#, fuzzy
 msgid "Automatic, based on screen width"
 msgstr ""
-"Sélectionner la largeur de l'info-bulle. L'hauteur est basé sur le contenu"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:99
@@ -9006,9 +8643,8 @@ msgstr "Aucune option pour afficher des entrées supplémentaires"
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:110
 #: config-templatebuilder/avia-shortcodes/portfolio.php:156
-#, fuzzy
 msgid "Order by"
-msgstr "Commande"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:111
 #: config-templatebuilder/avia-shortcodes/portfolio.php:157
@@ -9020,43 +8656,37 @@ msgstr ""
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:119
 #: config-templatebuilder/avia-shortcodes/portfolio.php:165
-#, fuzzy
 msgid "Author"
-msgstr "Archive d'auteur"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:120
 #: config-templatebuilder/avia-shortcodes/portfolio.php:166
-#, fuzzy
 msgid "Name (Post Slug)"
-msgstr "Nom"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:121
 #: config-templatebuilder/avia-shortcodes/portfolio.php:167
-#, fuzzy
 msgid "Last modified"
-msgstr "Modifié"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:122
 #: config-templatebuilder/avia-shortcodes/portfolio.php:168
-#, fuzzy
 msgid "Comment Count"
-msgstr "Compteur commentaire du blog"
+msgstr ""
 
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:123
 #: config-templatebuilder/avia-shortcodes/portfolio.php:169
-#, fuzzy
 msgid "Page Order"
-msgstr "Commande"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:127
 #: config-templatebuilder/avia-shortcodes/portfolio.php:173
-#, fuzzy
 msgid "Display order"
-msgstr "Commande"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:128
 #: config-templatebuilder/avia-shortcodes/portfolio.php:174
@@ -9066,16 +8696,14 @@ msgstr ""
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:133
 #: config-templatebuilder/avia-shortcodes/portfolio.php:179
-#, fuzzy
 msgid "Ascending Order"
-msgstr "Cliquer pour trier les produits en ordre ascendant"
+msgstr ""
 
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:134
 #: config-templatebuilder/avia-shortcodes/portfolio.php:180
-#, fuzzy
 msgid "Descending Order"
-msgstr "Cliquer pour trier les produits en ordre descendant"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:139
@@ -9404,33 +9032,28 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:18
-#, fuzzy
 msgid "Fullwidth Sub Menu"
-msgstr "Séparateur pleine largeur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:24
-#, fuzzy
 msgid "Display a sub menu"
-msgstr "Afficher une vidéo"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:44
-#, fuzzy
 msgid "Select menu to display"
-msgstr "Cocher pour afficher"
+msgstr ""
 
 # @ wordpress-importer
 #: config-templatebuilder/avia-shortcodes/menu.php:45
-#, fuzzy
 msgid "You can create new menus in "
-msgstr "Vous pouvez ici ajouter des images au diaporama"
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-shortcodes/menu.php:45
-#, fuzzy
 msgid "Appearance -> Menus"
-msgstr "Apparence"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:45
 msgid "Please note that Mega Menus are not supported for this element "
@@ -9438,10 +9061,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:53
-#, fuzzy
 msgid "Menu Position"
 msgstr ""
-"Laisser la position du logo et du menu s'adapter à la fenêtre du navigateur"
 
 #: config-templatebuilder/avia-shortcodes/menu.php:54
 msgid "Aligns the menu either to the left, the right or centers it"
@@ -9449,45 +9070,35 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:65
-#, fuzzy
 msgid "Menu Colors"
-msgstr "Couleurs douces"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:67
-#, fuzzy
 msgid ""
 "The menu will use the color scheme you select. Color schemes are defined on "
 "your styling page"
 msgstr ""
-"Cette section va utiliser le modèle de couleurs que vous avez sélectionné. "
-"Les modèles de couleurs sont définis sur votre page de styles."
 
 #: config-templatebuilder/avia-shortcodes/menu.php:75
-#, fuzzy
 msgid "Sticky Submenu"
-msgstr "En-tête collant"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:76
-#, fuzzy
 msgid ""
 "If checked the menu will stick at the top of the page once it touches it"
 msgstr ""
-"Si coché l'en-tête va coller au sommet de votre site si utilisateur fait "
-"défiler vers le bas (ignoré sur les smartphones)"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:82
-#, fuzzy
 msgid "Mobile Menu Display"
-msgstr "Menu Mobile"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:83
-#, fuzzy
 msgid "How do you want to display the menu on mobile devices"
-msgstr "Voulez-vous afficher un lien Lire la suite ?"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:87
 msgid "Display full menu (works best if you only got a few menu items)"
@@ -9518,9 +9129,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/menu.php:186
-#, fuzzy
 msgid "Menu"
-msgstr "(Mega Menu)"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/notification.php:16
@@ -9656,14 +9266,10 @@ msgstr "Numéro"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/numbers.php:50
-#, fuzzy
 msgid ""
 "Add a Number here. It will be animated. You can also add non numerical "
 "characters. Valid examples: 24/7, 99.9$, 90&percnt;, 35k, 200mm etc "
 msgstr ""
-"Ajouter un Numéro ici. Il sera animé. Vous pouvez également ajouter des "
-"caractères non numériques. Exemples valides : 24/7, 99.9$, 90%, 35k, 200mm "
-"etc "
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/numbers.php:53
@@ -9734,9 +9340,8 @@ msgstr "Voulez-vous appliquer un lien pour l'élément ?"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/numbers.php:139
-#, fuzzy
 msgid "Font color?"
-msgstr "Couleur Police"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/numbers.php:140
@@ -10110,32 +9715,27 @@ msgstr "Trier par popularité"
 
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/product_list.php:23
-#, fuzzy
 msgid "Product List"
-msgstr "Produit"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/product_list.php:29
-#, fuzzy
 msgid "Display a List of Product Entries"
-msgstr "Affiche une grille des produits"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/product_list.php:106
-#, fuzzy
 msgid "Item Links"
-msgstr "Liens"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/product_list.php:107
-#, fuzzy
 msgid "What should happen if a user clicks the product link?"
-msgstr "Que devrait se produire une fois que le formulaire est envoyé ?"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/product_list.php:112
-#, fuzzy
 msgid "Show single product page"
-msgstr "(Afficher la page de styles)"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/product_list.php:113
 msgid ""
@@ -10145,15 +9745,13 @@ msgstr ""
 
 # @ woothemes
 #: config-templatebuilder/avia-shortcodes/product_list.php:116
-#, fuzzy
 msgid "Product Images"
-msgstr "Produit"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/product_list.php:117
-#, fuzzy
 msgid "Should product image be displayed?"
-msgstr "Voulez-vous une pagination ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/productslider.php:25
@@ -10228,9 +9826,8 @@ msgstr "Saisissez le titre de la barre de progression ici"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:61
-#, fuzzy
 msgid "Progress in &percnt;"
-msgstr "Barres de progression"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:62
@@ -10256,15 +9853,13 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:112
-#, fuzzy
 msgid "Progress Bar Style"
-msgstr "Titre de la barre de progression"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:113
-#, fuzzy
 msgid "Chose the styling of the progress bar here"
-msgstr "Choisissez une couleur pour votre barre de progression ici."
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/progressbar.php:118
 msgid "Striped"
@@ -10272,24 +9867,19 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:119
-#, fuzzy
 msgid "Single Color"
-msgstr "Entrée unique"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:123
-#, fuzzy
 msgid "Progress Bar Animation enabled?"
-msgstr "Choisissez une couleur pour votre barre de progression ici."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/progressbar.php:124
-#, fuzzy
 msgid ""
 "Chose if you want to enable the continuous animation of the progress bar"
 msgstr ""
-"Cochez si vous souhaitez désactiver le traitement de shortcode pour ce bloc "
-"de code"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/promobox.php:16
@@ -10330,9 +9920,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/promobox.php:214
-#, fuzzy
 msgid "Select a custom border color here"
-msgstr "Sélectionner une couleur de fond personnalisée ici"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:25
@@ -10361,9 +9950,8 @@ msgstr "Dupliquer la section"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:112
-#, fuzzy
 msgid "Section Layout"
-msgstr "Mise en forme"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:118
@@ -10388,39 +9976,33 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:124
-#, fuzzy
 msgid "At least 100&percnt; of Browser Window height"
-msgstr "Au moins 100% de la hauteur de la fenêtre du navigateur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:125
-#, fuzzy
 msgid "At least 75&percnt; of Browser Window height"
-msgstr "Au moins 75% de la hauteur de la fenêtre du navigateur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:126
-#, fuzzy
 msgid "At least 50&percnt; of Browser Window height"
-msgstr "Au moins 50% de la hauteur de la fenêtre du navigateur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:127
-#, fuzzy
 msgid "At least 25&percnt; of Browser Window height"
-msgstr "Au moins 25% de la hauteur de la fenêtre du navigateur"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:128
-#, fuzzy
 msgid "Custom height in pixel"
-msgstr "Valeur personnalisé en pixel"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:133
-#, fuzzy
 msgid "Section custom height"
-msgstr "Section Hauteur Minimale"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/section.php:134
 msgid "Define a minimum height for the section. Use a pixel value. eg: 500px"
@@ -10479,29 +10061,23 @@ msgstr "Aucun style de bordure"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:170
-#, fuzzy
 msgid "Section Bottom Border Styling"
-msgstr "Section style haut de bordure"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:172
-#, fuzzy
 msgid "Chose a border styling for the bottom of your section"
-msgstr "Choisir un style de bordure pour le haut de votre section"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:177
-#, fuzzy
 msgid "Display a small arrow that points down to the next section"
-msgstr "Affiche une petite ombre en faut de la section"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:195
-#, fuzzy
 msgid "Section Background"
 msgstr ""
-"Vous pouvez choisir de masquer la vidéo entièrement sur les appareils "
-"mobiles et à la place afficher une image de fond dans la Section"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/section.php:212
@@ -10904,28 +10480,23 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/slideshow.php:243
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:508
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:505
-#, fuzzy
 msgid ""
 "Check if you want to disable autorotation when this last slide is displayed"
 msgstr ""
-"Cocher si vous voulez désactiver la lecture auto de la vidéo quand cette "
-"diapositive s'affiche"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow.php:259
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:524
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:522
-#, fuzzy
 msgid "Slideshow control styling?"
-msgstr "Diaporama"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow.php:260
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:525
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:523
-#, fuzzy
 msgid "Here you can select if and how to display the slideshow controls"
-msgstr "Vous pouvez ici ajouter des images au diaporama"
+msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/slideshow.php:264
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:529
@@ -11097,27 +10668,22 @@ msgstr ""
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:207
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:199
-#, fuzzy
 msgid "Caption Title Font Size"
-msgstr "Personnaliser la taille de police de la légende ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:208
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:227
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:200
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:219
-#, fuzzy
 msgid "Select a custom font size. Leave empty to use the default"
 msgstr ""
-"Couleur du menu pour En-Tête transparente (Laissez vide pour utiliser la "
-"couleur par défaut)"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:226
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:218
-#, fuzzy
 msgid "Caption Text Font Size"
-msgstr "Personnaliser la taille de police de la légende ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:236
@@ -11208,16 +10774,14 @@ msgstr "Cible du lien Bouton 2 ?"
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:447
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:435
-#, fuzzy
 msgid "Custom Caption Title Font Color"
-msgstr "Personnaliser la taille de police de la légende ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:457
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:445
-#, fuzzy
 msgid "Custom Caption Content Font Color"
-msgstr "Personnaliser la taille de police de la légende ?"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:532
@@ -11795,15 +11359,13 @@ msgstr "Grille de témoignages"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/testimonials.php:126
-#, fuzzy
 msgid "Testimonial Slider (Compact)"
-msgstr "Témoignage de"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/testimonials.php:127
-#, fuzzy
 msgid "Testimonial Slider (Large)"
-msgstr "Grand"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/testimonials.php:133
@@ -11817,9 +11379,8 @@ msgstr "Nombre de colonnes à afficher"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/testimonials.php:174
-#, fuzzy
 msgid "Name Font Color"
-msgstr "Couleur Police"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/testimonials.php:218
@@ -11858,9 +11419,8 @@ msgstr "Taille Police"
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/textblock.php:58
-#, fuzzy
 msgid "Size of the text in px"
-msgstr "Texte"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/toggles.php:21
@@ -12180,9 +11740,8 @@ msgstr "Fermer"
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:15
-#, fuzzy
 msgid "Select a cell layout"
-msgstr "Sélectionner un modèle de hotspot"
+msgstr ""
 
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:16
 msgid "The current number of cells does not allow any layout variations"
@@ -12190,15 +11749,13 @@ msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:17
-#, fuzzy
 msgid "You need to add at least one cell"
-msgstr "Vous devez sélectionner au moins deux sliders pour les fusionner."
+msgstr ""
 
 # @ LayerSlider
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:18
-#, fuzzy
 msgid "You need to remove at least one cell"
-msgstr "Vous devez sélectionner au moins deux sliders pour les fusionner."
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:23
@@ -12366,11 +11923,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:55
-#, fuzzy
 msgid "If you add a link to a video that video will open in a lightbox "
 msgstr ""
-"Vous pouvez ajouter un lien vers une page (externe) ici. <br/> Si vous "
-"ajoutez un lien vers une vidéo, cette vidéo va s'ouvrir dans une lightbox"
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:71
@@ -12562,9 +12116,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:225
-#, fuzzy
 msgid "Change layout"
-msgstr "Changer"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:237
@@ -12603,9 +12156,8 @@ msgstr "Masquer les deux"
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:254
-#, fuzzy
 msgid "Header visibility and transparency"
-msgstr "Qu'est-ce qu'un haut de page transparent"
+msgstr ""
 
 #: config-templatebuilder/avia-template-builder/config/meta.php:255
 msgid ""
@@ -12634,9 +12186,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:264
-#, fuzzy
 msgid "Hide Header on this page "
-msgstr "Header"
+msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:282
@@ -12655,15 +12206,10 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/pointers.php:13
-#, fuzzy
 msgid ""
 "The Avia Layout Builder allows you to create unique layouts with an easy to "
 "use, drag and drop interface."
 msgstr ""
-"L'outil de création de mise en forme Avia vous permet de créer des mises en "
-"forme uniques avec une interface simple d'utilisation utilisant le glisser-"
-"déposer. <br/><br/>L'outil de création est disponibles pour les pages and "
-"les entrées de portfolio simple."
 
 #: config-templatebuilder/avia-template-builder/config/pointers.php:13
 msgid "The Builder is available on Pages and Single Portfolio Entries"
@@ -13417,9 +12963,8 @@ msgstr "Afficher"
 # @ LayerSlider
 # @ avia_framework
 #: config-woocommerce/config.php:1346
-#, fuzzy
 msgid "(disabled)"
-msgstr "Désactivé"
+msgstr ""
 
 #: config-woocommerce/config.php:1352
 msgid ""
@@ -13429,9 +12974,8 @@ msgstr ""
 
 # @ avia_framework
 #: config-woocommerce/config.php:1352
-#, fuzzy
 msgid "Learn more"
-msgstr "Charger plus"
+msgstr ""
 
 # @ avia_framework
 #: config-wpml/config.php:401
@@ -13700,19 +13244,15 @@ msgstr "URL image du marqueur personnalisée :"
 
 # @ avia_framework
 #: framework/php/class-framework-widgets.php:1264
-#, fuzzy
 msgid ""
 "Enter the width in px or &percnt; (100&percnt; width will be used if you "
 "leave this field empty)"
 msgstr ""
-"Saisir la taille en px ou % (100% de la largeur sera utilisée si vous "
-"laissez ce champ vide)"
 
 # @ avia_framework
 #: framework/php/class-framework-widgets.php:1268
-#, fuzzy
 msgid "Enter the height in px or &percnt;"
-msgstr "Saisissez une valeur pour la hauteur"
+msgstr ""
 
 # @ avia_framework
 #: framework/php/class-framework-widgets.php:1290
@@ -14709,20 +14249,17 @@ msgstr "Ne pas afficher l'image sur un article unique"
 
 # @ avia_framework
 #: functions-enfold.php:1151
-#, fuzzy
 msgid "Menu Style"
-msgstr "Style VotreLogo"
+msgstr ""
 
 # @ avia_framework
 #: functions-enfold.php:1154
-#, fuzzy
 msgid "Button Style (Colored)"
-msgstr "Créer un bouton de couleur"
+msgstr ""
 
 #: functions-enfold.php:1155
-#, fuzzy
 msgid "Button Style (Bordered)"
-msgstr "Bouton"
+msgstr ""
 
 # @ avia_framework
 #: functions.php:133
@@ -14769,13 +14306,10 @@ msgstr "Menu principal"
 
 # @ avia_framework
 #: functions.php:370
-#, fuzzy
 msgid ""
 "Secondary Menu <br/><small>(Will be displayed if you selected a header "
 "layout that supports a submenu <a target=\"_blank\" href=\""
 msgstr ""
-"Menu secondaire - sera affiché si vous avez choisi une mise en page d'en-"
-"tête qui prend en charge un sous-menu"
 
 # @ avia_framework
 #: functions.php:371
@@ -14804,9 +14338,8 @@ msgstr "Options du thème"
 # @ avia_framework
 #: includes/admin/register-admin-options.php:8
 #: includes/admin/register-admin-options.php:1485
-#, fuzzy
 msgid "General Layout"
-msgstr "Information générale"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:9
@@ -14821,9 +14354,8 @@ msgstr "Style avancé"
 # @ avia_framework
 #: includes/admin/register-admin-options.php:12
 #: includes/admin/register-admin-options.php:282
-#, fuzzy
 msgid "Sidebar Settings"
-msgstr "Sidebar"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:14
@@ -14835,15 +14367,13 @@ msgstr "Modèle Blog"
 #: includes/admin/register-admin-options.php:235
 #: includes/admin/register-admin-options.php:1353
 #: includes/admin/register-admin-options.php:1604
-#, fuzzy
 msgid "Social Profiles"
-msgstr "Pas d'icônes social"
+msgstr ""
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:19
-#, fuzzy
 msgid "Demo Import"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:20
@@ -14851,9 +14381,8 @@ msgid "Import/Export"
 msgstr "Importer/Exporter"
 
 #: includes/admin/register-admin-options.php:48
-#, fuzzy
 msgid "A rough preview of the frontend."
-msgstr "Prévisualisation"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:152
@@ -14880,11 +14409,8 @@ msgstr "Disposition en boîte"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:165
-#, fuzzy
 msgid "Logo and Main Menu"
 msgstr ""
-"Vous pouvez choisir le logo et le menu principal dans diverses positions "
-"différentes ici"
 
 #: includes/admin/register-admin-options.php:166
 msgid ""
@@ -14894,15 +14420,13 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:173
-#, fuzzy
 msgid "Top Header"
-msgstr "Header"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:181
-#, fuzzy
 msgid "Content Alignment"
-msgstr "Alignement de l'image"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:182
 msgid ""
@@ -14912,36 +14436,30 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:189
-#, fuzzy
 msgid "Center Content"
-msgstr "Centré"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:190
-#, fuzzy
 msgid "Position at the Left"
-msgstr "Position"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:191
-#, fuzzy
 msgid "Position at the Right"
-msgstr "Position de l'image"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:198
-#, fuzzy
 msgid "Sticky Sidebar menu"
-msgstr "En-tête collant"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:199
-#, fuzzy
 msgid ""
 "You can choose if you want a sticky sidebar that does not scroll with the "
 "content"
 msgstr ""
-"Vous pouvez choisir si vous souhaitez afficher le titre et/ou l'extrait"
 
 #: includes/admin/register-admin-options.php:206
 msgid "Sticky if Sidebar is smaller than the screen height, scroll otherwise"
@@ -14949,20 +14467,17 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:207
-#, fuzzy
 msgid "Always Sticky"
-msgstr "Toujours"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:208
-#, fuzzy
 msgid "Never Sticky"
-msgstr "Non, jamais afficher le titre"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:217
-#, fuzzy
 msgid "Main Menu Sidebar"
-msgstr "Menu principal"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:218
 msgid "You can choose to use the main menu area to also display widget areas"
@@ -14994,15 +14509,13 @@ msgstr "Cocher pour afficher"
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:251
-#, fuzzy
 msgid "Dimensions"
-msgstr "Dimensions Slider"
+msgstr ""
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:256
-#, fuzzy
 msgid "Responsive Site"
-msgstr "Responsive"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:257
 msgid ""
@@ -15012,9 +14525,8 @@ msgstr ""
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:266
-#, fuzzy
 msgid "Maximum Container width"
-msgstr "Largeur du conteneur des vignettes"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:267
 msgid ""
@@ -15024,9 +14536,8 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:278
-#, fuzzy
 msgid "Content | Sidebar Ratio"
-msgstr "Slider articles"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:279
 msgid ""
@@ -15036,21 +14547,18 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:279
-#, fuzzy
 msgid "Note:"
-msgstr "Note"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:280
-#, fuzzy
 msgid "If you want to disable sidebars you can do so in the"
-msgstr "Voulez-vous afficher des boutons de navigation pour le slider ?"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:334
-#, fuzzy
 msgid "Content + Sidebar width"
-msgstr "Ajuster à la largeur du contenu"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:335
 msgid "Here you can enter the combined width of content and sidebar"
@@ -15063,17 +14571,12 @@ msgstr "Importer les paramètres depuis votre thème parent"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:360
-#, fuzzy
 msgid ""
 "We have detected that you are using a Child Theme. That's Great!. If you "
 "want to, we can import the settings of your Parent theme to your Child "
 "theme. Please be aware that this will overwrite your current child theme "
 "settings."
 msgstr ""
-"Nous avons détecté que vous utilisez un thème enfant. C'est génial ! Si vous "
-"voulez, nous pouvons importer les paramètres de votre thème parent à votre "
-"thème enfant. <br/>S'il vous plaît soyez conscient que cela écrasera vos "
-"paramètres actuels du thème enfant."
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:369
@@ -15120,30 +14623,16 @@ msgid "Iconfont Manager"
 msgstr "Iconfont Manager"
 
 #: includes/admin/register-admin-options.php:395
-#, fuzzy
 msgid "You can upload additional Iconfont Packages generated with"
 msgstr ""
-"Vous pouvez télécharger les packs Iconfont supplémentaires générés avec <a "
-"href='http://fontello.com/' target='_blank'>Fontello</a> pour les utiliser "
-"dans votre modèle de mise en page.<br/><br/>La «police par défaut\" ne peut "
-"pas être supprimée. <br/><br/>Assurez-vous de supprimer toutes les polices "
-"que vous n'utilisez pas, pour que le temps de chargement pour vos visiteurs "
-"soit court"
 
 #: includes/admin/register-admin-options.php:396
 msgid "Those icons can then be used in your Layout Builder."
 msgstr ""
 
 #: includes/admin/register-admin-options.php:397
-#, fuzzy
 msgid "The 'Default Font' can't be deleted."
 msgstr ""
-"Vous pouvez télécharger les packs Iconfont supplémentaires générés avec <a "
-"href='http://fontello.com/' target='_blank'>Fontello</a> pour les utiliser "
-"dans votre modèle de mise en page.<br/><br/>La «police par défaut\" ne peut "
-"pas être supprimée. <br/><br/>Assurez-vous de supprimer toutes les polices "
-"que vous n'utilisez pas, pour que le temps de chargement pour vos visiteurs "
-"soit court"
 
 #: includes/admin/register-admin-options.php:398
 msgid ""
@@ -15196,14 +14685,11 @@ msgstr "Logo"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:437
-#, fuzzy
 msgid ""
 "Upload a logo image, or enter the URL or ID of an image if its already "
 "uploaded. The themes default logo gets applied if the input field is left "
 "blank"
 msgstr ""
-"Téléchargez une image de logo, ou entrer l'URL d'une image si elle est déjà "
-"téléchargée. (Laisser vide pour utiliser le logo par défaut)"
 
 #: includes/admin/register-admin-options.php:437
 msgid ""
@@ -15213,9 +14699,8 @@ msgstr ""
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:439
-#, fuzzy
 msgid "Header Settings"
-msgstr "Header"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:443
@@ -15230,27 +14715,21 @@ msgstr "Favicon"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:448
-#, fuzzy
 msgid "Specify a favicon for your site."
-msgstr "Sélectionnez une icône pour votre item de liste ci-dessous"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:448
-#, fuzzy
 msgid "Accepted formats: .ico, .png, .gif"
 msgstr ""
-"Spécifiez un <a href='http://en.wikipedia.org/wiki/Favicon'>favicon</a> pour "
-"votre site. <br/>Formats acceptés : .ico, .png, .gif"
 
 #: includes/admin/register-admin-options.php:449
-#, fuzzy
 msgid "What is a"
-msgstr "Qu'est-ce qu'un haut de page transparent"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:451
-#, fuzzy
 msgid "favicon"
-msgstr "Favicon"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:455
@@ -15370,33 +14849,20 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:526
-#, fuzzy
 msgid "Attention"
-msgstr "Attention !"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:527
-#, fuzzy
 msgid ""
 "This feature is in active BETA! We will constantly add new elements to "
 "customize and need your help: If you got any suggestions on what to add "
 "please post them here:"
 msgstr ""
-"<strong>Attention :</strong> Cette fonction est active <strong>BETA !</"
-"strong> Nous allons ajouter sans cesse de nouveaux éléments pour "
-"personnaliser et avons besoin de votre aide : Si vous avez des suggestions "
-"sur ce qu'il faut ajouter s'il vous plaît <a target='_blank' href='http://"
-"www.kriesi.at/support/enfold-feature-requests/'>poster ici</a><br/><br/>"
 
 #: includes/admin/register-admin-options.php:529
-#, fuzzy
 msgid "Enfold Feature Requests"
 msgstr ""
-"<strong>Attention :</strong> Cette fonction est active <strong>BETA !</"
-"strong> Nous allons ajouter sans cesse de nouveaux éléments pour "
-"personnaliser et avons besoin de votre aide : Si vous avez des suggestions "
-"sur ce qu'il faut ajouter s'il vous plaît <a target='_blank' href='http://"
-"www.kriesi.at/support/enfold-feature-requests/'>poster ici</a><br/><br/>"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:534
@@ -15447,9 +14913,8 @@ msgstr "Couleur de Surbrillance"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:710
-#, fuzzy
 msgid "Secondary color for link and button hover, etc"
-msgstr "Couleur secondaire pour lien et survol bouton, etc<br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:721
@@ -15469,9 +14934,8 @@ msgstr "Image de fond"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:750
-#, fuzzy
 msgid "The background image of your"
-msgstr "L'image de fond de votre corps de page<br/><br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:752
@@ -15487,9 +14951,8 @@ msgstr "Télécharger une image personnalisée"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:766
-#, fuzzy
 msgid "Upload a BG image for your"
-msgstr "Télécharger une image de fond pour votre corps de page<br/><br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:771
@@ -15523,9 +14986,8 @@ msgstr "Attachement"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:842
-#, fuzzy
 msgid "Body background"
-msgstr "Couleur de fond du corps de page"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:844
 msgid ""
@@ -15534,17 +14996,13 @@ msgid ""
 msgstr ""
 
 #: includes/admin/register-admin-options.php:845
-#, fuzzy
 msgid "You can change that setting"
 msgstr ""
-"Choisir le modèle de page par défaut ici. Vous pouvez modifier le réglage de "
-"chaque page lors de l'édition de cette page"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:847
-#, fuzzy
 msgid "at General Layout"
-msgstr "Information générale"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:852
@@ -15553,27 +15011,23 @@ msgstr "Couleur de fond du corps de page"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:853
-#, fuzzy
 msgid "Background color for your site"
-msgstr "Couleur de fond de votre site<br/><br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:855
-#, fuzzy
 msgid "This is the color that is displayed behind your boxed content area"
-msgstr "Ajouter le texte qui doit être affiché dans votre en-tête ici"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:869
-#, fuzzy
 msgid "The background image of your Body"
-msgstr "L'image de fond de votre corps de page<br/><br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:886
-#, fuzzy
 msgid "Upload a BG image for your Body"
-msgstr "Télécharger une image de fond pour votre corps de page<br/><br/>"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:935
@@ -15582,9 +15036,8 @@ msgstr "Plein écran étiré"
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:957
-#, fuzzy
 msgid "Fonts"
-msgstr "Polices Google"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:960
@@ -15607,13 +15060,10 @@ msgstr "Définit la police pour le texte de votre corps de page"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:973
-#, fuzzy
 msgid ""
 "Choose between web safe fonts (faster rendering) and google webkit fonts "
 "(more unqiue)"
 msgstr ""
-"Choisissez entre les polices Web sûrs (rendu plus rapide) et les polices "
-"google webkit (plus unique)<br/><br/>"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:980
@@ -15632,15 +15082,11 @@ msgstr "CSS Rapide"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1010
-#, fuzzy
 msgid ""
 "Just want to do some quick CSS changes? Enter them here, they will be "
 "applied to the theme. If you need to change major portions of the theme "
 "please use the custom.css file"
 msgstr ""
-"Je veux juste faire quelques changements de style CSS rapides ? Entrez ici, "
-"ils seront appliqués au thème. Si vous avez besoin de changer des parties "
-"importantes du thème s'il vous plaît utiliser le fichier custom.css."
 
 #: includes/admin/register-admin-options.php:1012
 msgid "or the Enfold Child theme."
@@ -15700,9 +15146,8 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1057
-#, fuzzy
 msgid "Sidebar on Single Post Entries"
-msgstr "Article unique"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1058
@@ -15978,9 +15423,8 @@ msgstr "En-Tête Social Icons"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1351
-#, fuzzy
 msgid "Chose if and where to display social icons. You can define the icons at"
-msgstr "Choisir si et où afficher les icônes sociales"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1362
@@ -16011,9 +15455,8 @@ msgstr "Menu Secondaire d'En-Tête"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1371
-#, fuzzy
 msgid "Chose if you want to display a secondary menu and where to display it"
-msgstr "Choisir si et où afficher un menu secondaire"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1378
@@ -16095,13 +15538,10 @@ msgstr "Logo Transparent"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1428
-#, fuzzy
 msgid ""
 "Upload a logo image, or enter the URL or ID of an image if its already "
 "uploaded. (Leave empty to use the default logo)"
 msgstr ""
-"Téléchargez une image de logo, ou entrer l'URL d'une image si elle est déjà "
-"téléchargée. (Laisser vide pour utiliser le logo par défaut)"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1436
@@ -16155,9 +15595,8 @@ msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1484
-#, fuzzy
 msgid "Your social profiles"
-msgstr "Pas d'icônes social"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1485
 msgid ""
@@ -16217,9 +15656,8 @@ msgstr "Colonnes pied de page"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1578
-#, fuzzy
 msgid "How many columns should be displayed in your footer"
-msgstr "Nombre de colonnes à afficher"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1583
@@ -16253,20 +15691,17 @@ msgstr "Ajouter un texte copyright personnalisé vers le bas de votre site. ex:"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1601
-#, fuzzy
 msgid "Social Icons"
-msgstr "Pas d'icônes social"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1602
-#, fuzzy
 msgid "Check to display the social icons defined in"
-msgstr "Quand afficher la légende ?"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1606
-#, fuzzy
 msgid "in your socket"
-msgstr "Afficher les widgets de pied de page & le bandeau de bas de page"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1621
@@ -16387,9 +15822,8 @@ msgstr "Les balises HTML du Blog autorisées"
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1735
-#, fuzzy
 msgid "Blog Post Tags"
-msgstr "Les balises HTML du Blog autorisées"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1750
@@ -16453,39 +15887,29 @@ msgstr "Lien Email"
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:1858
-#, fuzzy
 msgid "Import demo files"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1859
-#, fuzzy
 msgid ""
 "If you are new to wordpress or have problems creating posts or pages that "
 "look like the Theme Demo you can import dummy posts and pages here that will "
 "definitely help to understand how those tasks are done."
 msgstr ""
-"Si vous êtes nouveau sur wordpress ou avez des problèmes pour créer des "
-"postes ou des pages qui ressemblent à la <a href='http://www.kriesi.at/"
-"themes/enfold/'>Démo du thème</a> vous pouvez importer des messages et des "
-"pages factices ici qui va certainement vous aidez à comprendre comment ces "
-"tâches sont effectuées."
 
 #: includes/admin/register-admin-options.php:1870
-#, fuzzy
 msgid "What you get:"
-msgstr "Obtenez le"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1871
-#, fuzzy
 msgid "Online Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ wordpress-importer
 #: includes/admin/register-admin-options.php:1875
-#, fuzzy
 msgid "Import: Default Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1877
@@ -16495,14 +15919,12 @@ msgstr "Choisissez un slider de démonstration à importer"
 #: includes/admin/register-admin-options.php:1944
 #: includes/admin/register-admin-options.php:1962
 #: includes/admin/register-admin-options.php:1979
-#, fuzzy
 msgid "Recommended Plugins:"
-msgstr "Recommandé"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1878
-#, fuzzy
 msgid "(for shop functionality)"
-msgstr "Magasin"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1879
 msgid "(for forum functionality)"
@@ -16515,34 +15937,29 @@ msgstr ""
 #: includes/admin/register-admin-options.php:1947
 #: includes/admin/register-admin-options.php:1965
 #: includes/admin/register-admin-options.php:1982
-#, fuzzy
 msgid "Demo Images included:"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1882
-#, fuzzy
 msgid "A few"
-msgstr "Saisissez quelques mots pour décrire la personne"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1892
 msgid "Import: Small Business - Flat"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1909
-#, fuzzy
 msgid "Import: Photography Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-admin-options.php:1912
-#, fuzzy
 msgid "(if you want to sell photos online)"
-msgstr "Voulez-vous afficher des articles ?"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1926
-#, fuzzy
 msgid "Import: Restaurant Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1929
 #: includes/admin/register-admin-options.php:1945
@@ -16555,14 +15972,12 @@ msgstr ""
 
 # @ LayerSlider
 #: includes/admin/register-admin-options.php:1960
-#, fuzzy
 msgid "Import: Simple Blog Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 #: includes/admin/register-admin-options.php:1977
-#, fuzzy
 msgid "Import: 'Coming Soon' Demo"
-msgstr "Choisissez un slider de démonstration à importer"
+msgstr ""
 
 # @ avia_framework
 #: includes/admin/register-backend-advanced-styles.php:9
@@ -16782,13 +16197,10 @@ msgstr "Base"
 # @ avia_framework
 #: includes/admin/register-portfolio.php:181
 #: includes/admin/register-portfolio.php:195
-#, fuzzy
 msgid ""
 "Enter a custom base to use. A base must be set or WordPress will use default "
 "instead."
 msgstr ""
-"Saisissez une base personnalisée à utiliser. Une base <strong>doit</strong> "
-"être réglée ou WordPress en utilisera une par défaut à la place."
 
 # @ avia_framework
 #: includes/admin/register-widget-area.php:93

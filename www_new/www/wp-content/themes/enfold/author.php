@@ -13,6 +13,8 @@
 	$author_id    = get_query_var( 'author' );
 	$name         = apply_filters('avf_author_name', get_the_author_meta('display_name', $author_id), $author_id);
 	$heading_s    = __("Entries by",'avia_framework') ." ".$name;
+
+	do_action( 'ava_after_main_title' );
 	?>
 
 

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Avia Themes\n"
+"Project-Id-Version: Enfold v3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-28 14:02+0100\n"
-"PO-Revision-Date: 2015-01-28 14:02+0100\n"
+"PO-Revision-Date: 2015-03-02 12:48+0100\n"
 "Last-Translator: Kriesi <support@kriesi.at>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -11,9 +11,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.6.9\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: ../404.php:10
 msgid "Error 404 - page not found"
@@ -37,14 +37,12 @@ msgid "reply"
 msgstr "responder"
 
 #: ../comments.php:77 ../comments.php:132
-#, fuzzy
 msgid "&laquo; Older Comments"
-msgstr "Comentários"
+msgstr ""
 
 #: ../comments.php:80 ../comments.php:135
-#, fuzzy
 msgid "Newer Comments &raquo;"
-msgstr "Comentários"
+msgstr ""
 
 #: ../comments.php:111
 msgid "Trackbacks &amp; Pingbacks"
@@ -55,14 +53,12 @@ msgid "Leave a Reply"
 msgstr "Deixe uma resposta"
 
 #: ../comments.php:163
-#, fuzzy
 msgid "Want to join the discussion?"
-msgstr "Quer participar da discussão? <br/> Fique a vontade para contribuir!"
+msgstr ""
 
 #: ../comments.php:163
-#, fuzzy
 msgid "Feel free to contribute!"
-msgstr "Quer participar da discussão? <br/> Fique a vontade para contribuir!"
+msgstr ""
 
 #: ../comments.php:173
 msgid "Comments are closed."
@@ -87,9 +83,8 @@ msgid "Check out the"
 msgstr ""
 
 #: ../config-events-calendar/config.php:145
-#, fuzzy
 msgid "available add-ons"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-events-calendar/config.php:202
 #: ../config-events-calendar/config.php:211
@@ -97,18 +92,16 @@ msgid "Events"
 msgstr ""
 
 #: ../config-events-calendar/config.php:206
-#, fuzzy
 msgid "No Events Found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-events-calendar/views/default-template.php:10
 msgid "Calendar of Events"
 msgstr ""
 
 #: ../config-events-calendar/views/single-event.php:21
-#, fuzzy
 msgid "&laquo; All Events"
-msgstr "Todos"
+msgstr ""
 
 #: ../config-events-calendar/views/single-event.php:86
 msgid "Event Navigation"
@@ -188,27 +181,24 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:105
-#, fuzzy
 msgid "Hide on mobile"
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:107
 msgid "Hides the slider on mobile devices."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:115
-#, fuzzy
 msgid "Hide under"
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:117
 msgid "Hides the slider under the given value of browser width in pixels."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:127
-#, fuzzy
 msgid "Hide over"
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:129
 msgid "Hides the slider over the given value of browser width in pixel."
@@ -288,9 +278,8 @@ msgid "Number of loops if slideshow is enabled. Zero means infinite loops."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:213
-#, fuzzy
 msgid "Force the number of loops"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:215
 msgid ""
@@ -339,9 +328,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:259
 #: ../config-layerslider/LayerSlider/views/slider_edit_settings.php:181
-#, fuzzy
 msgid "Background image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:261
 msgid ""
@@ -350,9 +338,8 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:266
-#, fuzzy
 msgid "Initial fade duration"
-msgstr "Duração"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:268
 msgid ""
@@ -416,18 +403,16 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:336
-#, fuzzy
 msgid "Show bar timer"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:338
 msgid "Show the bar timer to indicate slideshow progression."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:345
-#, fuzzy
 msgid "Show circle timer"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:347
 msgid "Use circle timer to indicate slideshow progression."
@@ -445,9 +430,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/config/defaults.php:363
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:131
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:118
-#, fuzzy
 msgid "Disabled"
-msgstr "Comentários desabilitado"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:364
 msgid "Hover"
@@ -458,14 +442,12 @@ msgid "Always"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:372
-#, fuzzy
 msgid "Thumbnail container width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:374
-#, fuzzy
 msgid "The width of the thumbnail area."
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:380
 msgid "Thumbnail width"
@@ -522,14 +504,12 @@ msgid "While playing"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:446
-#, fuzzy
 msgid "Permanently"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:447
-#, fuzzy
 msgid "No action"
-msgstr "Sem validação"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:461
 msgid "Youtube preview"
@@ -550,18 +530,16 @@ msgid "High quality"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:467
-#, fuzzy
 msgid "Medium quality"
-msgstr "Médio"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:468
 msgid "Default quality"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:479
-#, fuzzy
 msgid "Image preload"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:481
 msgid "Preloads images used in the next slides for seamless animations."
@@ -607,23 +585,20 @@ msgid "CSS properties to control the image placement and appearance."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:530
-#, fuzzy
 msgid "YourLogo link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:532
 msgid "Enter an URL to link the YourLogo image."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:539
-#, fuzzy
 msgid "Link target"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:667
-#, fuzzy
 msgid "Set a slide image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:669
 msgid ""
@@ -676,9 +651,8 @@ msgid "If you want to link the whole slide, enter the URL of your link here."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:749
-#, fuzzy
 msgid "Link Target"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:765
 msgid "#ID"
@@ -956,9 +930,8 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1012
-#, fuzzy
 msgid "Show until"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1014
 msgid ""
@@ -1022,9 +995,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:450
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:1004
 #: ../framework/php/class-tgm-plugin-activation.php:1299
-#, fuzzy
 msgid "Type"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1121
 msgid ""
@@ -1080,15 +1052,13 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1191
-#, fuzzy
 msgid "URL target"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1208
 #: ../config-templatebuilder/avia-shortcodes/hr.php:113
-#, fuzzy
 msgid "Width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1210
 #, php-format
@@ -1290,9 +1260,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:117
 #: ../config-templatebuilder/avia-shortcodes/notification.php:38
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:163
-#, fuzzy
 msgid "Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/config/defaults.php:1441
 msgid ""
@@ -1325,9 +1294,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/slider_list.php:93
 #: ../config-layerslider/LayerSlider/views/style_editor.php:29
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:51
-#, fuzzy
 msgid "Show on screen"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/skin_editor.php:35
 #: ../config-layerslider/LayerSlider/views/slider_list.php:94
@@ -1394,9 +1362,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/slider_list.php:603
 #: ../config-layerslider/LayerSlider/views/style_editor.php:84
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:1068
-#, fuzzy
 msgid "Save changes"
-msgstr "Salvar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/skin_editor.php:88
 msgid ""
@@ -1406,9 +1373,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:116
 #: ../config-layerslider/LayerSlider/views/slider_list.php:208
-#, fuzzy
 msgid "Enjoy using LayerSlider?"
-msgstr "Você está usando a versão"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:120
 #: ../config-layerslider/LayerSlider/views/slider_list.php:212
@@ -1448,9 +1414,8 @@ msgid "Need help? Try these:"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:218
-#, fuzzy
 msgid "Add new slide"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:240
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:15
@@ -1479,9 +1444,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:464
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:36
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:205
-#, fuzzy
 msgid "use post image"
-msgstr "Falha ao importar post tag %s"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:290
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:55
@@ -1493,17 +1457,15 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:646
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:64
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:353
-#, fuzzy
 msgid "use post URL"
-msgstr "Falha ao importar post tag %s"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:319
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:506
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:84
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:247
-#, fuzzy
 msgid "Configure post options"
-msgstr "Falha ao importar post tag %s"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:320
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:85
@@ -1535,9 +1497,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:363
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:128
-#, fuzzy
 msgid "timeline view"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:391
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:152
@@ -1551,9 +1512,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:393
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:154
-#, fuzzy
 msgid "Hide layer in the editor."
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:397
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:158
@@ -1587,9 +1547,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:399
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:160
-#, fuzzy
 msgid "Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:400
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:161
@@ -1605,17 +1564,15 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:402
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:163
-#, fuzzy
 msgid "Remove this layer"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:422
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:171
 #: ../config-templatebuilder/avia-shortcodes/image.php:16
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:70
-#, fuzzy
 msgid "Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:423
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:172
@@ -1688,9 +1645,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:474
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:215
-#, fuzzy
 msgid "Add Media"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:476
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:217
@@ -1785,9 +1741,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:749
 #: ../config-layerslider/LayerSlider/views/slider_edit_sample.php:451
-#, fuzzy
 msgid "Add new layer"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit.php:762
 msgid "Fires when LayerSlider has loaded"
@@ -1828,23 +1783,20 @@ msgid "Find posts with the filters above"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_posts.php:59
-#, fuzzy
 msgid "Don't filter categories"
-msgstr "Categorias:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_posts.php:71
-#, fuzzy
 msgid "Don't filter tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_posts.php:83
 msgid "Don't filter taxonomies"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_posts.php:111
-#, fuzzy
 msgid "Order results by"
-msgstr "resultados encontrado para:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_posts.php:112
 msgid "On this slide"
@@ -1954,9 +1906,8 @@ msgid "Custom slider CSS"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_settings.php:213
-#, fuzzy
 msgid "Show navigation buttons"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_edit_settings.php:229
 msgid "Navigation buttons on hover"
@@ -2016,9 +1967,8 @@ msgid "The PHP ZipArchive extension is required to import .zip files."
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:81
-#, fuzzy
 msgid "Choose a file to import sliders."
-msgstr "Falha ao importar %s %s"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:82
 msgid "The import file seems to be invalid or corrupted."
@@ -2066,24 +2016,20 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:108
 #: ../config-woocommerce/admin-import.php:65
-#, fuzzy
 msgid "Add New"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:109
-#, fuzzy
 msgid "Import sample sliders"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:123
-#, fuzzy
 msgid "Using beta version"
-msgstr "Você está usando a versão"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:124
-#, fuzzy
 msgid "Send feedback"
-msgstr "Nos envie um email"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:134
 msgid "Name your new slider"
@@ -2094,9 +2040,8 @@ msgid "e.g. Homepage slider"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:137
-#, fuzzy
 msgid "Add slider"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:147
 msgid "Choose a demo slider to import"
@@ -2111,9 +2056,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:62
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:80
 #: ../config-woocommerce/config.php:1000
-#, fuzzy
 msgid "Name"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:269
 msgid "Shortcode"
@@ -2136,9 +2080,8 @@ msgid "Duplicate this slider"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:305
-#, fuzzy
 msgid "Remove this slider"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:309
 msgid "Restore removed slider"
@@ -2155,32 +2098,28 @@ msgid "Bulk Actions"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:326
-#, fuzzy
 msgid "Remove selected"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:327
-#, fuzzy
 msgid "Delete permanently"
-msgstr "Deletar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:329
 msgid "Restore removed"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:331
-#, fuzzy
 msgid "Merge selected as new"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:339
 msgid "items"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:358
-#, fuzzy
 msgid "Import Sliders"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:362
 msgid ""
@@ -2191,9 +2130,8 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:366
-#, fuzzy
 msgid "Import"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:373
 msgid "Export Sliders"
@@ -2208,9 +2146,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:382
 #: ../config-layerslider/LayerSlider/wp/menus.php:33
-#, fuzzy
 msgid "All Sliders"
-msgstr "Todos"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:394
 msgid "Export"
@@ -2237,9 +2174,8 @@ msgid "Editor, Admin"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:431
-#, fuzzy
 msgid "Author, Editor, Admin"
-msgstr "Autor:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:432
 msgid "Contributor, Author, Editor, Admin"
@@ -2265,9 +2201,8 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:437
-#, fuzzy
 msgid "this page"
-msgstr "Página"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:440
 msgid "Capability"
@@ -2334,9 +2269,8 @@ msgid "Deauthorize this site"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:498
-#, fuzzy
 msgid "Check for update"
-msgstr "Arquivo para a data:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:509
 msgid "Troubleshooting & Advanced Settings"
@@ -2425,14 +2359,12 @@ msgid "Choose a font family"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:594
-#, fuzzy
 msgid "Add font"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:595
-#, fuzzy
 msgid "Back to results"
-msgstr "resultados encontrado para:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:606
 msgid "Cyrillic"
@@ -2447,9 +2379,8 @@ msgid "Devanagari"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:609
-#, fuzzy
 msgid "Greek"
-msgstr "Verde"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:610
 msgid "Greek Extended"
@@ -2472,25 +2403,22 @@ msgid "Vietnamese"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:620
-#, fuzzy
 msgid "Select new"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:629
 #: ../config-layerslider/LayerSlider/views/slider_list.php:636
 #: ../config-layerslider/LayerSlider/views/slider_list.php:643
-#, fuzzy
 msgid "Remove character set"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:648
 msgid "Use character sets:"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:656
-#, fuzzy
 msgid "LayerSlider News"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:658
 msgid "Filter:"
@@ -2525,18 +2453,16 @@ msgid "Beta versions"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:666
-#, fuzzy
 msgid ">You have version"
-msgstr "Divirta-se"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:666
 msgid "installed"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:685
-#, fuzzy
 msgid "The documentation is here"
-msgstr "Você está aqui:"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/slider_list.php:685
 msgid ""
@@ -2589,9 +2515,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:371
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:591
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:923
-#, fuzzy
 msgid "Transition name"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:90
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:372
@@ -2724,9 +2649,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:126
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:630
-#, fuzzy
 msgid "Large depth"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:134
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:642
@@ -2760,9 +2684,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:701
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:782
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:859
-#, fuzzy
 msgid "Add new"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:182
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:258
@@ -2816,9 +2739,8 @@ msgstr ""
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:494
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:878
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:1048
-#, fuzzy
 msgid "Remove transition"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:410
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:964
@@ -2892,18 +2814,16 @@ msgid "Choose:"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:532
-#, fuzzy
 msgid "No 3D transitions yet"
-msgstr "Este autor ainda tem que escrever sua biografia."
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:542
 msgid "2D transitions"
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:551
-#, fuzzy
 msgid "No 2D transitions yet"
-msgstr "Este autor ainda tem que escrever sua biografia."
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/views/transition_builder.php:887
 msgid "You didn't create any 3D transitions yet"
@@ -2944,9 +2864,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/actions.php:519
 #: ../config-layerslider/LayerSlider/wp/actions.php:545
-#, fuzzy
 msgid "Cannot write to file"
-msgstr "Este autor ainda tem que escrever sua biografia."
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/actions.php:533
 msgid "It looks like you haven't selected any skin to edit."
@@ -3029,14 +2948,12 @@ msgid ""
 msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/shortcodes.php:10
-#, fuzzy
 msgid "Invalid shortcode"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/shortcodes.php:18
-#, fuzzy
 msgid "Slider not found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/widgets.php:10
 msgid "Insert a slider with LayerSlider WP Widget"
@@ -3060,9 +2977,8 @@ msgstr ""
 
 #: ../config-layerslider/LayerSlider/wp/widgets.php:56
 #: ../framework/php/class-framework-widgets.php:1170
-#, fuzzy
 msgid "Title:"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-layerslider/config.php:24
 msgid "(Unnamed Slider)"
@@ -3070,9 +2986,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:16
 #: ../template-archives.php:44
-#, fuzzy
 msgid "Blog Posts"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:17
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:17
@@ -3122,9 +3037,8 @@ msgid "Do you want to display blog posts or entries from a custom taxonomy?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:42
-#, fuzzy
 msgid "Display blog posts"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:43
 msgid "Display entries from a custom taxonomy"
@@ -3178,9 +3092,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:68
 #: ../includes/admin/register-admin-options.php:1620
-#, fuzzy
 msgid "Blog Style"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:69
 #: ../includes/admin/register-admin-options.php:1621
@@ -3215,9 +3128,8 @@ msgid "Grid Layout"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:82
-#, fuzzy
 msgid "Blog Grid Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:83
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:81
@@ -3237,9 +3149,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:100
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:80
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:86
-#, fuzzy
 msgid "Title and Excerpt"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:99
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:87
@@ -3249,9 +3160,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/blog.php:100
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:101
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:88
-#, fuzzy
 msgid "Only Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:101
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:89
@@ -3272,14 +3182,12 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/blog.php:104
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:103
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:92
-#, fuzzy
 msgid "No Title and no excerpt"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:109
-#, fuzzy
 msgid "Blog Content length"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:110
 msgid "Should the full entry be displayed or just a small excerpt?"
@@ -3295,15 +3203,13 @@ msgid "Excerpt"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:118
-#, fuzzy
 msgid "Excerpt With Read More Link"
-msgstr "Leia mais"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:121
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:95
-#, fuzzy
 msgid "Preview Image Size"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:122
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:96
@@ -3333,9 +3239,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/blog.php:140
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:72
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:86
-#, fuzzy
 msgid "Post Number"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:141
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:73
@@ -3350,9 +3255,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:75
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:77
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:74
-#, fuzzy
 msgid "Offset Number"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:149
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:61
@@ -3425,9 +3329,8 @@ msgstr "não"
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:216
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:203
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:149
-#, fuzzy
 msgid "Select Post Type"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/blog.php:173
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:217
@@ -3444,9 +3347,8 @@ msgid "Button"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:22
-#, fuzzy
 msgid "Creates a colored button"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:48
 #: ../config-templatebuilder/avia-shortcodes/promobox.php:67
@@ -3469,9 +3371,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:54
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:77
 #: ../config-templatebuilder/avia-shortcodes/promobox.php:74
-#, fuzzy
 msgid "Button Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:55
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:78
@@ -3551,9 +3452,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:269
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:334
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:398
-#, fuzzy
 msgid "Taxonomy Overview Page"
-msgstr "Página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:67
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:90
@@ -3564,9 +3464,8 @@ msgstr "Página"
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:282
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:274
 #: ../config-templatebuilder/avia-shortcodes/team.php:119
-#, fuzzy
 msgid "Open Link in new Window?"
-msgstr "Sim, abra em uma nova janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:68
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:91
@@ -3612,9 +3511,8 @@ msgid "Large"
 msgstr "Grande"
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:85
-#, fuzzy
 msgid "X Large"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons.php:89
 msgid "Button Position"
@@ -3999,38 +3897,32 @@ msgid "Creates a colored button that stretches across the full width"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:50
-#, fuzzy
 msgid "Button Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:58
-#, fuzzy
 msgid "Additional Description"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:59
-#, fuzzy
 msgid "Enter an additional description"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:66
-#, fuzzy
 msgid "Description position"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:67
 msgid "Show the description above or below the title?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:71
-#, fuzzy
 msgid "Description above title"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:72
-#, fuzzy
 msgid "Description below title"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/buttons_fullwidth.php:105
 msgid "Yes, display Icon to the left of the title"
@@ -4092,9 +3984,8 @@ msgid "Catalogue"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:20
-#, fuzzy
 msgid "Creates a pricing list"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:37
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:44
@@ -4108,24 +3999,21 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:41
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:48
-#, fuzzy
 msgid "Edit List Item"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:46
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:61
-#, fuzzy
 msgid "List Item Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:47
 msgid "Enter the list item title here"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:53
-#, fuzzy
 msgid "List Item Description"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:54
 msgid "Enter the item description here"
@@ -4140,9 +4028,8 @@ msgid "Enter the price for the item here. Eg:"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:67
-#, fuzzy
 msgid "Thumbnail Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:68
 #: ../config-templatebuilder/avia-shortcodes/image.php:40
@@ -4172,14 +4059,12 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:91
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:91
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:92
-#, fuzzy
 msgid "Change Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:77
-#, fuzzy
 msgid "Item Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:78
 msgid "Where should your item link to?"
@@ -4194,9 +4079,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:149
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:85
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:107
-#, fuzzy
 msgid "No Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:84
 msgid ""
@@ -4205,9 +4089,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:92
 #: ../config-templatebuilder/avia-shortcodes/image.php:95
-#, fuzzy
 msgid "Open new tab/window"
-msgstr "Sim, abra em uma nova janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/catalogue.php:93
 #: ../config-templatebuilder/avia-shortcodes/image.php:96
@@ -4258,25 +4141,21 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:33
 #: ../config-templatebuilder/avia-shortcodes/columns.php:31
-#, fuzzy
 msgid "Creates a single full width column"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:71
 #: ../config-templatebuilder/avia-shortcodes/cell.php:94
-#, fuzzy
 msgid "Edit Cell"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:89
-#, fuzzy
 msgid "Delete Cell"
-msgstr "Deletar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:90
-#, fuzzy
 msgid "Clone Cell"
-msgstr "Clonar coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:125
 msgid "Vertical align"
@@ -4326,9 +4205,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/section.php:219
 #: ../includes/admin/register-admin-options.php:765
 #: ../includes/admin/register-admin-options.php:885
-#, fuzzy
 msgid "Custom Background Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:162
 msgid ""
@@ -4344,9 +4222,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/team.php:78
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:75
 #: ../config-templatebuilder/avia-template-builder/php/media.class.php:52
-#, fuzzy
 msgid "Insert Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:166
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:106
@@ -4389,9 +4266,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/cell.php:183
 #: ../config-templatebuilder/avia-shortcodes/section.php:243
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:546
-#, fuzzy
 msgid "Background Image Position"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:188
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:82
@@ -4522,57 +4398,48 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:362
 #: ../config-templatebuilder/avia-shortcodes/columns.php:149
-#, fuzzy
 msgid "Creates a single column with 50&percnt; width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:384
 #: ../config-templatebuilder/avia-shortcodes/columns.php:170
-#, fuzzy
 msgid "Creates a single column with 33&percnt; width"
-msgstr "Cria uma coluna com largura de 33%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:406
 #: ../config-templatebuilder/avia-shortcodes/columns.php:194
-#, fuzzy
 msgid "Creates a single column with 67&percnt; width"
-msgstr "Cria uma coluna com largura de 67%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:427
 #: ../config-templatebuilder/avia-shortcodes/columns.php:217
-#, fuzzy
 msgid "Creates a single column with 25&percnt; width"
-msgstr "Cria uma coluna com largura de 25%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:449
 #: ../config-templatebuilder/avia-shortcodes/columns.php:241
-#, fuzzy
 msgid "Creates a single column with 75&percnt; width"
-msgstr "Cria uma coluna com largura de 75%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:472
 #: ../config-templatebuilder/avia-shortcodes/columns.php:266
-#, fuzzy
 msgid "Creates a single column with 20&percnt; width"
-msgstr "Cria uma coluna com largura de 20%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:494
 #: ../config-templatebuilder/avia-shortcodes/columns.php:290
-#, fuzzy
 msgid "Creates a single column with 40&percnt; width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:516
 #: ../config-templatebuilder/avia-shortcodes/columns.php:314
-#, fuzzy
 msgid "Creates a single column with 60&percnt; width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/cell.php:538
 #: ../config-templatebuilder/avia-shortcodes/columns.php:338
-#, fuzzy
 msgid "Creates a single column with 80&percnt; width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/codeblock.php:19
 msgid "Code Block"
@@ -4595,9 +4462,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/codeblock.php:51
-#, fuzzy
 msgid "Code Wrapper Element"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/codeblock.php:52
 msgid ""
@@ -4642,14 +4508,12 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/columns.php:61
-#, fuzzy
 msgid "Decrease Column Size"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/columns.php:63
-#, fuzzy
 msgid "Increase Column Size"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/columns.php:64
 msgid "Delete Column"
@@ -4677,14 +4541,12 @@ msgid "Contact Form"
 msgstr "Formulário de contato"
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:23
-#, fuzzy
 msgid "Creates a customizable contact form"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:44
-#, fuzzy
 msgid "Form"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:49
 msgid "Your email address"
@@ -4701,9 +4563,8 @@ msgid "Default:"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:57
-#, fuzzy
 msgid "Form Title"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:58
 msgid "Enter a form title that is displayed above the form"
@@ -4744,14 +4605,12 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:47
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:85
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:59
-#, fuzzy
 msgid "Edit Form Element"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:75
-#, fuzzy
 msgid "E-Mail"
-msgstr "Endereço de email válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:76
 msgid "Subject"
@@ -4763,14 +4622,12 @@ msgid "Message"
 msgstr "Mensagem"
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:85
-#, fuzzy
 msgid "Form Element Label"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:93
-#, fuzzy
 msgid "Form Element Type"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:99
 msgid "Form Element: Text Input"
@@ -4785,23 +4642,20 @@ msgid "Form Element: Select Element"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:102
-#, fuzzy
 msgid "Form Element: Checkbox"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:103
-#, fuzzy
 msgid "Form Element: Datepicker"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:104
 msgid "Custom HTML: Add a Description"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:108
-#, fuzzy
 msgid "Form Element Options"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:109
 msgid ""
@@ -4819,14 +4673,12 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:119
-#, fuzzy
 msgid "Add Description"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:127
-#, fuzzy
 msgid "Form Element Validation"
-msgstr "Sem validação"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:134
 msgid "No Validation"
@@ -4849,9 +4701,8 @@ msgid "Valid Number"
 msgstr "Número válido"
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:141
-#, fuzzy
 msgid "Form Element Width"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:142
 msgid ""
@@ -4885,9 +4736,8 @@ msgid "Redirect the user to another page"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:174
-#, fuzzy
 msgid "Message Sent label"
-msgstr "Mensagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:175
 msgid "What should be displayed once the message is sent?"
@@ -4907,9 +4757,8 @@ msgid "To which page do you want the user send to?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:199
-#, fuzzy
 msgid "E-Mail Subject"
-msgstr "Endereço de email válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:200
 msgid ""
@@ -4924,9 +4773,8 @@ msgstr "Nova mensagem"
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:200
 #: ../framework/php/class-form-generator.php:619
-#, fuzzy
 msgid "sent by contact form at"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:206
 msgid "Autorespond Text"
@@ -4943,9 +4791,8 @@ msgid "If left empty no auto-response will be sent."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:215
-#, fuzzy
 msgid "Contact Form Captcha"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:216
 msgid ""
@@ -4969,9 +4816,8 @@ msgid "Display Captcha"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:236
-#, fuzzy
 msgid "Form Color Scheme"
-msgstr "Formulário de contato"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contact.php:237
 msgid "Select a form color scheme here"
@@ -5037,29 +4883,25 @@ msgid "Display a content slider element"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:49
-#, fuzzy
 msgid "Add/Edit Slides"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:50
 msgid "Here you can add, remove and edit the slides you want to display."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:55
-#, fuzzy
 msgid "Slide 1"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:56
-#, fuzzy
 msgid "Slide 2"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:64
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:165
-#, fuzzy
 msgid "Slide Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:65
 msgid "Enter the slide title here (Better keep it short)"
@@ -5069,9 +4911,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/icon.php:84
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:92
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:69
-#, fuzzy
 msgid "Title Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:73
 #: ../config-templatebuilder/avia-shortcodes/icon.php:85
@@ -5086,9 +4927,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/team.php:126
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1415
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1423
-#, fuzzy
 msgid "Open in new window"
-msgstr "Sim, abra em uma nova janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:88
 #: ../config-templatebuilder/avia-shortcodes/icon.php:100
@@ -5193,9 +5033,8 @@ msgstr "5 Colunas"
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:91
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:76
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:71
-#, fuzzy
 msgid "6 Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:133
 msgid "Choose the transition for your content slider."
@@ -5270,9 +5109,8 @@ msgstr "Não"
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:162
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:199
-#, fuzzy
 msgid "Slider autorotation duration"
-msgstr "Duração"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/contentslider.php:163
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:200
@@ -5392,22 +5230,19 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:29
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:191
-#, fuzzy
 msgid "Week"
-msgstr "Semana %1$s"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:61
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:116
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:162
 #: ../config-woocommerce/config.php:1002
-#, fuzzy
 msgid "Date"
-msgstr "Arquivo para a data:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:62
-#, fuzzy
 msgid "Pick a date in the future."
-msgstr "Arquivo para a data:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:70
 msgid "Pick the hour of the day"
@@ -5422,18 +5257,16 @@ msgid "Smallest time unit"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:89
-#, fuzzy
 msgid "The smallest unit that will be displayed"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:97
 msgid "Largest time unit"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:98
-#, fuzzy
 msgid "The largest unit that will be displayed"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:108
 msgid "Text Alignment"
@@ -5451,9 +5284,8 @@ msgid "Center"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:120
-#, fuzzy
 msgid "Number Font Size"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:121
 msgid "Size of your numbers in Pixel"
@@ -5470,9 +5302,8 @@ msgid "Default Size"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:140
-#, fuzzy
 msgid "Choose the colors here"
-msgstr "Você está aqui:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:146
 msgid "Theme colors"
@@ -5504,23 +5335,20 @@ msgid "Days"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:191
-#, fuzzy
 msgid "Weeks"
-msgstr "Semana %1$s"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:192
-#, fuzzy
 msgid "Month"
-msgstr "Arquivo para o mês:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:192
 msgid "Months"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:193
-#, fuzzy
 msgid "Year"
-msgstr "Arquivo para o ano:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/countdown.php:193
 msgid "Years"
@@ -5547,9 +5375,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:24
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:26
 #: ../config-templatebuilder/avia-shortcodes/slideshow_revolution.php:14
-#, fuzzy
 msgid "Plugin Additions"
-msgstr "Paginação"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/events_upcoming.php:36
 msgid "Show a list of upcoming events"
@@ -5560,9 +5387,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/product_grid.php:67
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:67
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:69
-#, fuzzy
 msgid "Entry Number"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/events_upcoming.php:64
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:65
@@ -5595,15 +5421,13 @@ msgid "Media Elements"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:26
-#, fuzzy
 msgid "Creates a custom gallery"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:42
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:47
-#, fuzzy
 msgid "Edit Gallery"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:43
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:48
@@ -5612,9 +5436,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:46
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:52
-#, fuzzy
 msgid "Add/Edit Gallery"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:47
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:53
@@ -5628,18 +5451,16 @@ msgid "Insert Images"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:51
-#, fuzzy
 msgid "Gallery Style"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:52
 msgid "Choose the layout of your Gallery"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:57
-#, fuzzy
 msgid "Small Thumbnails"
-msgstr "Pequeno"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:58
 msgid "Big image with thumbnails below"
@@ -5682,9 +5503,8 @@ msgid "Choose image size for the small preview thumbnails"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:91
-#, fuzzy
 msgid "Gallery Columns"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:92
 msgid "Choose the column count of your Gallery"
@@ -5699,14 +5519,12 @@ msgid "Do you want to activate the lightbox"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:107
-#, fuzzy
 msgid "No, open the images in the browser window"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:108
-#, fuzzy
 msgid "No, open the images in a new browser window/tab"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/gallery.php:109
 msgid "No, don't add a link to the images at all"
@@ -5763,9 +5581,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:71
-#, fuzzy
 msgid "Edit Location"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:76
 msgid "Full Adress"
@@ -5806,9 +5623,8 @@ msgid "Leave empty if you want to use the default marker"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:105
-#, fuzzy
 msgid "Insert Marker Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:110
 msgid "Custom Map Marker Image Size"
@@ -5879,27 +5695,24 @@ msgid "Choose the saturation of your map"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:157
-#, fuzzy
 msgid "Oversaturated"
-msgstr "Destaque"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:158
 msgid "Slightly oversaturated"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:159
-#, fuzzy
 msgid "Normal Saturation"
-msgstr "Sem validação"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:160
 msgid "Muted colors"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:161
-#, fuzzy
 msgid "Greyscale"
-msgstr "Cinza"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:166
 msgid "Custom Overlay Color"
@@ -5982,15 +5795,13 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:199
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:241
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:225
-#, fuzzy
 msgid "Adjust to content width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:230
 #: ../config-templatebuilder/avia-shortcodes/google_maps.php:233
-#, fuzzy
 msgid "Address"
-msgstr "O seu endereço de email"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:23
 msgid "Grid Row"
@@ -6003,24 +5814,20 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:94
-#, fuzzy
 msgid "Delete Row"
-msgstr "Deletar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:98
-#, fuzzy
 msgid "Edit Row"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:101
-#, fuzzy
 msgid "Clone Row"
-msgstr "Clonar coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:102
-#, fuzzy
 msgid "Add Cell"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:103
 msgid "Set Cell Size"
@@ -6073,9 +5880,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:152
 #: ../config-templatebuilder/avia-shortcodes/menu.php:68
 #: ../config-templatebuilder/avia-shortcodes/section.php:204
-#, fuzzy
 msgid "(Show Styling Page)"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/grid_row.php:160
 msgid "Mobile Behaviour"
@@ -6126,9 +5932,8 @@ msgid "Special Heading"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:28
-#, fuzzy
 msgid "Creates a special Heading"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:55
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:92
@@ -6140,9 +5945,8 @@ msgid "Hello"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:62
-#, fuzzy
 msgid "Heading Type"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:63
 msgid "Select which kind of heading you want to display."
@@ -6153,9 +5957,8 @@ msgid "Heading Style"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:73
-#, fuzzy
 msgid "Select a heading style"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:77
 #: ../functions-enfold.php:1153
@@ -6231,14 +6034,12 @@ msgid "Heading Color"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:135
-#, fuzzy
 msgid "Select a heading color"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:139
-#, fuzzy
 msgid "Default Color"
-msgstr "Deletar coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/heading.php:139
 msgid "Meta Color"
@@ -6358,27 +6159,24 @@ msgid "Icon"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/hr.php:148
-#, fuzzy
 msgid "Should an icon be displayed at the center?"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/hr.php:155
 #: ../config-templatebuilder/avia-shortcodes/notification.php:116
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:98
 #: ../config-templatebuilder/avia-shortcodes/promobox.php:162
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:113
-#, fuzzy
 msgid "Yes, display Icon"
-msgstr "sim"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/hr.php:160
 msgid "Custom Icon Color"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/hr.php:170
-#, fuzzy
 msgid "Select an icon below"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/icon.php:23
 msgid "Display an icon with optional hover effect"
@@ -6389,9 +6187,8 @@ msgid "Font Icon"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/icon.php:53
-#, fuzzy
 msgid "Select an Icon below"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/icon.php:59
 msgid "Icon Style"
@@ -6412,9 +6209,8 @@ msgid "Standalone Icon with border and optional caption"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/icon.php:72
-#, fuzzy
 msgid "Icon Caption"
-msgstr "Informação"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/icon.php:73
 msgid "A small caption below the icon"
@@ -6517,9 +6313,8 @@ msgid "Add an IconBox title here"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:89
-#, fuzzy
 msgid "IconBox Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:93
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:70
@@ -6528,9 +6323,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:116
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:94
-#, fuzzy
 msgid "Apply link to icon"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:117
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:95
@@ -6539,9 +6333,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:123
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:101
-#, fuzzy
 msgid "No, apply link to the title"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconbox.php:124
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:102
@@ -6600,19 +6393,16 @@ msgid "Creates a list with nice icons beside"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:51
-#, fuzzy
 msgid "List Title 1"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:52
-#, fuzzy
 msgid "List Title 2"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:53
-#, fuzzy
 msgid "List Title 3"
-msgstr "3 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/iconlist.php:62
 msgid "Enter the list item title here (Better keep it short)"
@@ -6652,14 +6442,12 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:137
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:116
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:117
-#, fuzzy
 msgid "Choose Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:50
-#, fuzzy
 msgid "Image Alignment"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:51
 msgid "Choose here, how to align your image"
@@ -6671,9 +6459,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:64
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:226
-#, fuzzy
 msgid "Image Fade in Animation"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:65
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:227
@@ -6722,9 +6509,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:130
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:267
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:259
-#, fuzzy
 msgid "Image Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:81
 msgid "Where should your image link to?"
@@ -6736,9 +6522,8 @@ msgid "Lightbox"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:106
-#, fuzzy
 msgid "Image Styling"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:107
 msgid "Chose a styling variaton"
@@ -6754,9 +6539,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:119
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:69
-#, fuzzy
 msgid "Image Caption"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:120
 msgid "Display a caption overlay?"
@@ -6765,9 +6549,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/image.php:131
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:194
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:185
-#, fuzzy
 msgid "Caption"
-msgstr "Duração"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image.php:139
 msgid "Caption custom font size?"
@@ -6794,9 +6577,8 @@ msgid "Only display on hover"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:16
-#, fuzzy
 msgid "Image with Hotspots"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:24
 msgid "Inserts an image with one or many hotspots that show tooltips"
@@ -6813,14 +6595,12 @@ msgid "Add/Edit your hotspots."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:54
-#, fuzzy
 msgid "Edit Hotspot Tooltip"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:55
-#, fuzzy
 msgid "Add Hotspot"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:69
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:121
@@ -6876,9 +6656,8 @@ msgid "Select the width of the tooltip. Height is based on the content"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:116
-#, fuzzy
 msgid "Extra Large"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:122
 msgid ""
@@ -6895,9 +6674,8 @@ msgid "Chose the style of your tooltip"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:143
-#, fuzzy
 msgid "Hotspot Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:144
 msgid "Where should your hotspot link to?"
@@ -6942,9 +6720,8 @@ msgid "Hotspot Layout"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:244
-#, fuzzy
 msgid "Select the hotspot layout"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/image_hotspots.php:249
 msgid "Numbered Hotspot"
@@ -6973,9 +6750,8 @@ msgid "Hotspot"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:16
-#, fuzzy
 msgid "Partner/Logo Element"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:23
 msgid "Display a partner/logo Grid or Slider"
@@ -6986,9 +6762,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:93
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:52
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:53
-#, fuzzy
 msgid "Add Images"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:49
 msgid "Here you can add new Images to the partner/logo element."
@@ -6999,9 +6774,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:97
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:56
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:57
-#, fuzzy
 msgid "Add multiple Images"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:58
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:69
@@ -7016,23 +6790,20 @@ msgid "Display a image caption on hover"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:78
-#, fuzzy
 msgid "Partner/Logo Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:79
 msgid "Where should the image/logo link to?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:94
-#, fuzzy
 msgid "Link Title"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:95
-#, fuzzy
 msgid "Enter a link title"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:116
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:62
@@ -7044,19 +6815,16 @@ msgid "How many columns should be displayed?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:126
-#, fuzzy
 msgid "7 Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:127
-#, fuzzy
 msgid "8 Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:139
-#, fuzzy
 msgid "Logo Image Size"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/logoslider.php:140
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:482
@@ -7113,15 +6881,13 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:52
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:65
-#, fuzzy
 msgid "Number of entries"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:53
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:66
-#, fuzzy
 msgid "How many entries should be displayed?"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:70
 msgid "Display Tabs for each category selected above?"
@@ -7142,18 +6908,16 @@ msgid "If checked all entries that got a feature image will show it"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:85
-#, fuzzy
 msgid "Display Element Heading?"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:86
 msgid "If checked you can enter a title with link for this element"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:99
-#, fuzzy
 msgid "Heading Link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:100
 msgid "Where should the heading link to?"
@@ -7172,9 +6936,8 @@ msgid "Select a custom font color for your Heading area here"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:146
-#, fuzzy
 msgid "Should the first entry be displayed bigger?"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:147
 msgid "If checked the first entry will stand out with big image"
@@ -7200,9 +6963,8 @@ msgstr ""
 #: ../framework/php/class-queryfilter.php:77
 #: ../framework/php/class-queryfilter.php:168
 #: ../includes/helper-post-format.php:233
-#, fuzzy
 msgid "Link to:"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:537
 #: ../config-templatebuilder/avia-shortcodes/magazine.php:538
@@ -7256,9 +7018,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:105
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:88
-#, fuzzy
 msgid "Display Pagination"
-msgstr "Paginação"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:106
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:89
@@ -7283,15 +7044,13 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:119
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:165
-#, fuzzy
 msgid "Author"
-msgstr "Autor:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:120
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:166
-#, fuzzy
 msgid "Name (Post Slug)"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:121
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:167
@@ -7300,15 +7059,13 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:122
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:168
-#, fuzzy
 msgid "Comment Count"
-msgstr "Comentário"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:123
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:169
-#, fuzzy
 msgid "Page Order"
-msgstr "Página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:127
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:173
@@ -7386,20 +7143,17 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:160
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:114
-#, fuzzy
 msgid "1 Pixel Gap"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:161
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:115
-#, fuzzy
 msgid "Large Gap"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:165
-#, fuzzy
 msgid "Image overlay effect"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:166
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:120
@@ -7420,24 +7174,21 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:177
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:191
-#, fuzzy
 msgid "Element Title and Excerpt"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:178
 msgid "You can choose if you want to display title and/or excerpt"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:183
-#, fuzzy
 msgid "Display Title and Excerpt"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:184
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:138
-#, fuzzy
 msgid "Display Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:185
 msgid "Display Excerpt"
@@ -7464,27 +7215,24 @@ msgid "Display on mouse hover"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:670
-#, fuzzy
 msgid "Load more"
-msgstr "Leia mais"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_entries.php:827
 msgid "Sale!"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:16
-#, fuzzy
 msgid "Masonry Gallery"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:22
 msgid "Display a fullwidth masonry/grid gallery"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:57
-#, fuzzy
 msgid "Image Number"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:58
 msgid "How many images should be displayed per page?"
@@ -7525,32 +7273,28 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:119
-#, fuzzy
 msgid "Image overlay"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:131
-#, fuzzy
 msgid "Image Title and Caption"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:132
 msgid "You can choose if you want to display title and/or caption"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:137
-#, fuzzy
 msgid "Display Title and Caption"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:139
 msgid "Display Caption"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:145
-#, fuzzy
 msgid "Element Title and Caption"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:146
 msgid ""
@@ -7558,9 +7302,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:157
-#, fuzzy
 msgid "Image Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/masonry_gallery.php:158
 msgid ""
@@ -7586,9 +7329,8 @@ msgid "Display a sub menu"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/menu.php:44
-#, fuzzy
 msgid "Select menu to display"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/menu.php:45
 msgid "You can create new menus in "
@@ -7688,43 +7430,36 @@ msgid "This is a notification of some sort."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:51
-#, fuzzy
 msgid "Message Colors"
-msgstr "Mensagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:52
 msgid "Choose the color for your Box here"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:57
-#, fuzzy
 msgid "Success (Green)"
-msgstr "Verde"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:58
-#, fuzzy
 msgid "Notification (Blue)"
-msgstr "Azul"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:59
-#, fuzzy
 msgid "Warning (Red)"
-msgstr "Vermelho"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:60
-#, fuzzy
 msgid "Alert (Orange)"
-msgstr "Laranja"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:61
-#, fuzzy
 msgid "Neutral (Light Grey)"
-msgstr "Cinza"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:62
-#, fuzzy
 msgid "Neutral (Dark Grey)"
-msgstr "Cinza"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/notification.php:67
 msgid "Notification Box Border"
@@ -7763,18 +7498,16 @@ msgid "Normal"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:16
-#, fuzzy
 msgid "Animated Numbers"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:22
 msgid "Display an animated Number with subtitle"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:49
-#, fuzzy
 msgid "Number"
-msgstr "Número válido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:50
 msgid ""
@@ -7796,9 +7529,8 @@ msgid "Add some content to be displayed bellow the number"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:65
-#, fuzzy
 msgid "Add an icon to the element?"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:71
 msgid "Yes, display an icon in front of number"
@@ -7829,9 +7561,8 @@ msgid "Size of your description in pixel"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:100
-#, fuzzy
 msgid "Apply link?"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/numbers.php:101
 msgid "Do you want to apply  a link to the element?"
@@ -7860,9 +7591,8 @@ msgid "Select a custom color for your text here"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/page_split.php:20
-#, fuzzy
 msgid "Page Split"
-msgstr "Página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/page_split.php:27
 msgid ""
@@ -7871,9 +7601,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:16
-#, fuzzy
 msgid "Portfolio Grid"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:22
 msgid "Creates a grid of portfolio excerpts"
@@ -7885,14 +7614,12 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:66
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:61
-#, fuzzy
 msgid "1 Column"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:75
-#, fuzzy
 msgid "1 Column layout"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:76
 msgid "Choose the 1 column layout"
@@ -7942,9 +7669,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:124
-#, fuzzy
 msgid "Link Handling"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:125
 msgid ""
@@ -7954,9 +7680,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:130
-#, fuzzy
 msgid "Open the entry on a new page"
-msgstr "Sim, abra em uma nova janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/portfolio.php:131
 msgid "Open a preview of the entry (known as AJAX Portfolio)"
@@ -7983,9 +7708,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/postcontent.php:17
-#, fuzzy
 msgid "Page Content"
-msgstr "Página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/postcontent.php:24
 msgid "Display the content of another entry"
@@ -7996,9 +7720,8 @@ msgid "Which Entry?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/postcontent.php:45
-#, fuzzy
 msgid "Select the Entry that should be displayed"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:18
 msgid "Post Slider"
@@ -8039,9 +7762,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:515
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:512
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:143
-#, fuzzy
 msgid "Slideshow autorotation duration"
-msgstr "Duração"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/postslider.php:134
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:109
@@ -8113,9 +7835,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/product_grid.php:92
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:91
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:95
-#, fuzzy
 msgid "Sort by most recent"
-msgstr "Recente"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/product_grid.php:93
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:92
@@ -8138,9 +7859,8 @@ msgid "Display a List of Product Entries"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:106
-#, fuzzy
 msgid "Item Links"
-msgstr "Links interessantes"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:107
 msgid "What should happen if a user clicks the product link?"
@@ -8161,9 +7881,8 @@ msgid "Product Images"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/product_list.php:117
-#, fuzzy
 msgid "Should product image be displayed?"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/productslider.php:25
 msgid "Product Slider"
@@ -8202,18 +7921,16 @@ msgid "Here you can add, remove and edit the various progress bars."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:44
-#, fuzzy
 msgid "Edit Progress Bars"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:47
 msgid "Skill or Task"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:54
-#, fuzzy
 msgid "Progress Bars Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/progressbar.php:55
 msgid "Enter the Progress Bars title here"
@@ -8304,19 +8021,16 @@ msgid "Creates a section with unique background image and colors"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:72
-#, fuzzy
 msgid "Delete Section"
-msgstr "Deletar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:76
-#, fuzzy
 msgid "Edit Section"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:79
-#, fuzzy
 msgid "Clone Section"
-msgstr "Clonar coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:112
 msgid "Section Layout"
@@ -8377,18 +8091,16 @@ msgid "No Padding"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:148
-#, fuzzy
 msgid "Small Padding"
-msgstr "Pequeno"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:149
 msgid "Default Padding"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:150
-#, fuzzy
 msgid "Large Padding"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/section.php:156
 msgid "Section Top Border Styling"
@@ -8524,16 +8236,14 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:59
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:74
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:75
-#, fuzzy
 msgid "Which type of slide is this?"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:63
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:78
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:79
-#, fuzzy
 msgid "Image Slide"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:64
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:79
@@ -8585,9 +8295,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:129
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:156
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:144
-#, fuzzy
 msgid "Hide Video Controls"
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:130
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:157
@@ -8639,9 +8348,8 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:115
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:199
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:191
-#, fuzzy
 msgid "Caption Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:162
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:116
@@ -8681,16 +8389,14 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:182
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:260
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:252
-#, fuzzy
 msgid "No Link for this slide"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:183
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:261
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:253
-#, fuzzy
 msgid "Apply Link to Image"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:188
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:131
@@ -8703,15 +8409,13 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:136
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:274
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:266
-#, fuzzy
 msgid "Open Image in Lightbox"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:216
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:481
-#, fuzzy
 msgid "Slideshow Image Size"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow.php:217
 msgid "Choose the size of the image that loads into the slideshow."
@@ -8795,9 +8499,8 @@ msgid "Display an accordion slider with images or post entries"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:42
-#, fuzzy
 msgid "Which type of slider is this?"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:43
 msgid ""
@@ -8806,9 +8509,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:47
-#, fuzzy
 msgid "Image based Slider"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:48
 msgid "Entry based Slider"
@@ -8822,14 +8524,12 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:88
-#, fuzzy
 msgid "Add single image"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:156
-#, fuzzy
 msgid "Accordion Image Size"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:157
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:471
@@ -8841,9 +8541,8 @@ msgid "Display the entry title by default?"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:170
-#, fuzzy
 msgid "Yes - display everywhere"
-msgstr "sim"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:171
 msgid "Yes - display, but remove title on mobile devices"
@@ -8854,9 +8553,8 @@ msgid "Display only on active slides"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:173
-#, fuzzy
 msgid "No, never display title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_accordion.php:176
 msgid "Display Excerpt?"
@@ -8875,9 +8573,8 @@ msgid "Display a fullscreen slideshow element"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:96
-#, fuzzy
 msgid "Image Position"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:143
 msgid "Video Display"
@@ -8935,21 +8632,18 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:292
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:284
-#, fuzzy
 msgid "Button 1 Label"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:301
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:293
-#, fuzzy
 msgid "Button 1 Color"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:333
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:324
-#, fuzzy
 msgid "Button 1 Link?"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:334
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:401
@@ -8965,9 +8659,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:359
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:348
-#, fuzzy
 msgid "Button 2 Label"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:360
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:349
@@ -8976,9 +8669,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:368
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:357
-#, fuzzy
 msgid "Button 2 Color"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:369
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:358
@@ -8987,9 +8679,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:400
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:388
-#, fuzzy
 msgid "Button 2 Link?"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:416
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:403
@@ -9065,9 +8756,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:484
-#, fuzzy
 msgid "Yes, stretch the image"
-msgstr "sim"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:484
 msgid ""
@@ -9076,9 +8766,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:537
-#, fuzzy
 msgid "Slideshow Background Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:538
 msgid ""
@@ -9151,24 +8840,20 @@ msgid "Button Row"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/table.php:69
-#, fuzzy
 msgid "Default Column"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/table.php:70
-#, fuzzy
 msgid "Highlight Column"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/table.php:71
-#, fuzzy
 msgid "Description Column"
-msgstr "Descrição"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/table.php:72
-#, fuzzy
 msgid "Center Text Column"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/table.php:79
 msgid "Table Purpose"
@@ -9229,9 +8914,8 @@ msgid "Tab Position"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:55
-#, fuzzy
 msgid "Where should the tabs be displayed"
-msgstr "A paginação deve ser mostrada?"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:61
 msgid "Display tabs at the top"
@@ -9262,28 +8946,24 @@ msgid "Without border"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:80
-#, fuzzy
 msgid "Add/Edit Tabs"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:81
 msgid "Here you can add, remove and edit the Tabs you want to display."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:88
-#, fuzzy
 msgid "Tab 1"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:89
-#, fuzzy
 msgid "Tab 2"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:97
-#, fuzzy
 msgid "Tab Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:98
 msgid "Enter the tab title here (Better keep it short)"
@@ -9310,9 +8990,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:137
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:97
-#, fuzzy
 msgid "Initial Open"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/tabs.php:138
 msgid "Enter the Number of the Tab that should be open initially."
@@ -9329,9 +9008,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:16
-#, fuzzy
 msgid "Team Member"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:23
 msgid "Display a team members image with additional information"
@@ -9342,18 +9020,16 @@ msgid "Team Member Name"
 msgstr "Nome do membro da equipe"
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:61
-#, fuzzy
 msgid "Name of the person"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:67
 msgid "Team Member Job title"
 msgstr "Cargo do membro da equipe"
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:68
-#, fuzzy
 msgid "Job title of the person."
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:74
 msgid "Team Member Image"
@@ -9378,9 +9054,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:96
-#, fuzzy
 msgid "Edit Icon Link"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:105
 msgid "Hover Text"
@@ -9391,9 +9066,8 @@ msgid "Text that appears if you place your mouse above the Icon"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:112
-#, fuzzy
 msgid "Icon Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/team.php:113
 msgid "Enter the URL of the Page you want to link to"
@@ -9402,56 +9076,48 @@ msgstr ""
 #: ../config-templatebuilder/avia-shortcodes/team.php:125
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1413
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1422
-#, fuzzy
 msgid "Open in same window"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:22
 msgid "Testimonials"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:29
-#, fuzzy
 msgid "Creates a Testimonial Grid"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:55
-#, fuzzy
 msgid "Add/Edit Testimonial"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:56
 msgid "Here you can add, remove and edit your Testimonials."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:59
-#, fuzzy
 msgid "Edit Testimonial"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:87
-#, fuzzy
 msgid "Subtitle below name"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:94
 msgid "Quote"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:95
-#, fuzzy
 msgid "Enter the testimonial here"
-msgstr "Você está aqui:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:102
-#, fuzzy
 msgid "Website Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:109
-#, fuzzy
 msgid "Website Name"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:120
 msgid "Testimonial Style"
@@ -9472,23 +9138,20 @@ msgid "Testimonial Slider (Compact)"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:127
-#, fuzzy
 msgid "Testimonial Slider (Large)"
-msgstr "Grande"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:133
-#, fuzzy
 msgid "Testimonial Grid Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:134
 msgid "How many columns do you want to display"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:174
-#, fuzzy
 msgid "Name Font Color"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:218
 #: ../config-templatebuilder/avia-shortcodes/testimonials.php:221
@@ -9529,33 +9192,28 @@ msgid "Accordion"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:28
-#, fuzzy
 msgid "Creates toggles or accordions"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:55
-#, fuzzy
 msgid "Add/Edit Toggles"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:56
 msgid "Here you can add, remove and edit the toggles you want to display."
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:62
-#, fuzzy
 msgid "Toggle 1"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:63
-#, fuzzy
 msgid "Toggle 2"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:71
-#, fuzzy
 msgid "Toggle Title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:72
 msgid "Enter the toggle title here (Better keep it short)"
@@ -9566,9 +9224,8 @@ msgid "Toggle Content"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:87
-#, fuzzy
 msgid "Toggle Sorting Tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/toggles.php:88
 msgid ""
@@ -9685,9 +9342,8 @@ msgid "16:9"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/video.php:62
-#, fuzzy
 msgid "4:3"
-msgstr "4 Colunas"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/video.php:63
 msgid "Custom Ratio"
@@ -9698,9 +9354,8 @@ msgid "Video width"
 msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/video.php:69
-#, fuzzy
 msgid "Enter a value for the width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../config-templatebuilder/avia-shortcodes/video.php:77
 msgid "Video height"
@@ -9753,9 +9408,8 @@ msgid "Attention!"
 msgstr "Atenção!"
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:10
-#, fuzzy
 msgid "All right!"
-msgstr "Todos"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:11
 msgid "Save"
@@ -9768,9 +9422,8 @@ msgid "Close"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:15
-#, fuzzy
 msgid "Select a cell layout"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:16
 msgid "The current number of cells does not allow any layout variations"
@@ -9799,9 +9452,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:30
-#, fuzzy
 msgid "Choose Template Name"
-msgstr "Nome do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/javascript_strings.php:31
 msgid "Allowed Characters: Whitespace"
@@ -9820,9 +9472,8 @@ msgid "Avia Layout Builder"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:7
-#, fuzzy
 msgid "Additional Portfolio Settings"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:8
 msgid "Breadcrumb Hierarchy"
@@ -9923,9 +9574,8 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:81
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:85
-#, fuzzy
 msgid "Add Preview Images"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:82
 msgid ""
@@ -9934,9 +9584,8 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:86
-#, fuzzy
 msgid "Remove Images"
-msgstr "(remover)"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:93
 msgid "Display Preview Images"
@@ -9948,45 +9597,40 @@ msgid ""
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:101
-#, fuzzy
 msgid "Image List"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:102
 msgid "Don't show the images at all and display the preview text only"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:110
-#, fuzzy
 msgid "Autorotation"
-msgstr "Duração"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:111
 msgid "Slideshow autorotation Settings in Seconds"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:136
-#, fuzzy
 msgid "Gallery Thumbnail Columns"
-msgstr "Galeria"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:137
 msgid "How many Thumbnails should be displayed beside each other"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:164
-#, fuzzy
 msgid "Add Preview Text"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:165
 msgid "The text will appear beside your gallery/slideshow"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:175
-#, fuzzy
 msgid "Select the desired Page layout"
-msgstr "Selecione uma página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:180
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:213
@@ -10065,9 +9709,8 @@ msgid "Change layout"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:237
-#, fuzzy
 msgid "Title Bar Settings"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:238
 msgid "Display the Title Bar with Page Title and Breadcrumb Navigation?"
@@ -10081,21 +9724,18 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:244
 #: ../includes/admin/register-admin-options.php:1291
-#, fuzzy
 msgid "Display title and breadcrumbs"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:245
 #: ../includes/admin/register-admin-options.php:1292
-#, fuzzy
 msgid "Display only title"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:246
 #: ../includes/admin/register-admin-options.php:1293
-#, fuzzy
 msgid "Hide both"
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:254
 msgid "Header visibility and transparency"
@@ -10124,14 +9764,12 @@ msgid "Header is invisible and appears once the users scrolls down "
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:264
-#, fuzzy
 msgid "Hide Header on this page "
-msgstr "Esconder"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:282
-#, fuzzy
 msgid "Breadcrumb parent page"
-msgstr "Página"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/config/meta.php:283
 msgid ""
@@ -10170,9 +9808,8 @@ msgid "Select"
 msgstr "Selecione"
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1148
-#, fuzzy
 msgid "Street address"
-msgstr "O seu endereço de email"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1150
 msgid "City"
@@ -10195,34 +9832,28 @@ msgid "Latitude"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1234
-#, fuzzy
 msgid "Add Table Row"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1235
-#, fuzzy
 msgid "Add Table Column"
-msgstr "Coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1263
-#, fuzzy
 msgid "move up"
-msgstr "Mover"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1264
-#, fuzzy
 msgid "move down"
-msgstr "Mover"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1265
-#, fuzzy
 msgid "move left"
-msgstr "Mover"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1266
-#, fuzzy
 msgid "move right"
-msgstr "Mover"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/html-helper.class.php:1389
 msgid "Remove Image"
@@ -10237,27 +9868,24 @@ msgid "Open in new window and use rel=nofollow"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/media.class.php:90
-#, fuzzy
 msgid "Custom Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/meta-box.class.php:121
 msgid "Expand"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:49
-#, fuzzy
 msgid "No Templates saved yet"
-msgstr "Este autor ainda tem que escrever sua biografia."
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:61
 msgid "Templates"
 msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:63
-#, fuzzy
 msgid "Save Entry as Template"
-msgstr "Salvar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:65
 msgid "Load Template"
@@ -10281,19 +9909,16 @@ msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:501
 #: ../framework/php/class-htmlhelper.php:1560
-#, fuzzy
 msgid "Edit Element"
-msgstr "Elemento"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:505
-#, fuzzy
 msgid "Delete Element"
-msgstr "Deletar"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:506
-#, fuzzy
 msgid "Clone Element"
-msgstr "Clonar coluna"
+msgstr ""
 
 #: ../config-templatebuilder/avia-template-builder/php/template-builder.class.php:274
 msgid "Insert Theme Shortcode"
@@ -10325,14 +9950,12 @@ msgstr ""
 #: ../config-woocommerce/admin-import.php:196
 #: ../config-woocommerce/admin-import.php:237
 #: ../config-woocommerce/admin-import.php:294
-#, fuzzy
 msgid "Edit"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:66
-#, fuzzy
 msgid "New"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:114
 #: ../config-woocommerce/admin-import.php:116
@@ -10341,39 +9964,32 @@ msgid "Categories"
 msgstr "Categoria"
 
 #: ../config-woocommerce/admin-import.php:117
-#, fuzzy
 msgid "Product Category"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:118
-#, fuzzy
 msgid "Search Product Categories"
-msgstr "Categorias:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:119
-#, fuzzy
 msgid "All Product Categories"
-msgstr "Categorias:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:120
-#, fuzzy
 msgid "Parent Product Category"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:121
-#, fuzzy
 msgid "Parent Product Category:"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:122
-#, fuzzy
 msgid "Edit Product Category"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:123
-#, fuzzy
 msgid "Update Product Category"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:124
 msgid "Add New Product Category"
@@ -10389,44 +10005,36 @@ msgstr ""
 #: ../includes/admin/register-admin-options.php:534
 #: ../includes/admin/register-backend-advanced-styles.php:8
 #: ../includes/admin/register-backend-advanced-styles.php:22
-#, fuzzy
 msgid "Tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:140
-#, fuzzy
 msgid "Product Tag"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:141
-#, fuzzy
 msgid "Search Product Tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:142
-#, fuzzy
 msgid "All Product Tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:143
-#, fuzzy
 msgid "Parent Product Tag"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:144
-#, fuzzy
 msgid "Parent Product Tag:"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:145
-#, fuzzy
 msgid "Edit Product Tag"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:146
-#, fuzzy
 msgid "Update Product Tag"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:147
 msgid "Add New Product Tag"
@@ -10445,45 +10053,37 @@ msgid "Product"
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:162
-#, fuzzy
 msgid "Add Product"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:163
-#, fuzzy
 msgid "Add New Product"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:165
-#, fuzzy
 msgid "Edit Product"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:166
-#, fuzzy
 msgid "New Product"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:167
 #: ../config-woocommerce/admin-import.php:168
-#, fuzzy
 msgid "View Product"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:169
-#, fuzzy
 msgid "Search Products"
-msgstr "Pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:170
-#, fuzzy
 msgid "No Products found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:171
-#, fuzzy
 msgid "No Products found in trash"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:172
 msgid "Parent Product"
@@ -10494,60 +10094,49 @@ msgid "This is where you can add new products to your store."
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:192
-#, fuzzy
 msgid "Variations"
-msgstr "Paginação"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:193
-#, fuzzy
 msgid "Variation"
-msgstr "Paginação"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:194
-#, fuzzy
 msgid "Add Variation"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:195
-#, fuzzy
 msgid "Add New Variation"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:197
-#, fuzzy
 msgid "Edit Variation"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:198
-#, fuzzy
 msgid "New Variation"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:199
 #: ../config-woocommerce/admin-import.php:200
-#, fuzzy
 msgid "View Variation"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:201
-#, fuzzy
 msgid "Search Variations"
-msgstr "Pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:202
-#, fuzzy
 msgid "No Variations found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:203
-#, fuzzy
 msgid "No Variations found in trash"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:204
-#, fuzzy
 msgid "Parent Variation"
-msgstr "Sem validação"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:233
 msgid "Orders"
@@ -10558,46 +10147,38 @@ msgid "Order"
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:235
-#, fuzzy
 msgid "Add Order"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:236
-#, fuzzy
 msgid "Add New Order"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:238
-#, fuzzy
 msgid "Edit Order"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:239
-#, fuzzy
 msgid "New Order"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:240
 #: ../config-woocommerce/admin-import.php:241
 #: ../config-woocommerce/config.php:303
-#, fuzzy
 msgid "View Order"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:242
-#, fuzzy
 msgid "Search Orders"
-msgstr "Pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:243
-#, fuzzy
 msgid "No Orders found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:244
-#, fuzzy
 msgid "No Orders found in trash"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:245
 msgid "Parent Orders"
@@ -10616,14 +10197,12 @@ msgid "Order status"
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:271
-#, fuzzy
 msgid "Search Order statuses"
-msgstr "Pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:272
-#, fuzzy
 msgid "All  Order statuses"
-msgstr "Todos"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:273
 msgid "Parent Order status"
@@ -10634,9 +10213,8 @@ msgid "Parent Order status:"
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:275
-#, fuzzy
 msgid "Edit Order status"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:276
 msgid "Update Order status"
@@ -10659,49 +10237,40 @@ msgid "Coupon"
 msgstr ""
 
 #: ../config-woocommerce/admin-import.php:292
-#, fuzzy
 msgid "Add Coupon"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:293
-#, fuzzy
 msgid "Add New Coupon"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:295
-#, fuzzy
 msgid "Edit Coupon"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:296
-#, fuzzy
 msgid "New Coupon"
-msgstr "Nova pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:297
-#, fuzzy
 msgid "View Coupons"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:298
-#, fuzzy
 msgid "View Coupon"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:299
-#, fuzzy
 msgid "Search Coupons"
-msgstr "Pesquisa"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:300
-#, fuzzy
 msgid "No Coupons found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:301
-#, fuzzy
 msgid "No Coupons found in trash"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../config-woocommerce/admin-import.php:302
 msgid "Parent Coupon"
@@ -10717,16 +10286,14 @@ msgid "Product Hover"
 msgstr ""
 
 #: ../config-woocommerce/config.php:218
-#, fuzzy
 msgid "Select options"
-msgstr "Selecione"
+msgstr ""
 
 #: ../config-woocommerce/config.php:223
 #: ../framework/php/class-tgm-plugin-activation.php:1956
 #: ../framework/php/class-tgm-plugin-activation.php:1965
-#, fuzzy
 msgid "Show Details"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../config-woocommerce/config.php:299
 msgid "My Account"
@@ -10737,9 +10304,8 @@ msgid "Change Password"
 msgstr ""
 
 #: ../config-woocommerce/config.php:302
-#, fuzzy
 msgid "Edit Address"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../config-woocommerce/config.php:306
 msgid "Log Out"
@@ -10759,9 +10325,8 @@ msgid "Search results for:"
 msgstr "Resultados encontrado para:"
 
 #: ../config-woocommerce/config.php:494
-#, fuzzy
 msgid "Tag"
-msgstr "Arquivo para Tag:"
+msgstr ""
 
 #: ../config-woocommerce/config.php:546
 msgid "Shop"
@@ -10796,9 +10361,8 @@ msgid "Click to order products descending"
 msgstr ""
 
 #: ../config-woocommerce/config.php:1008
-#, fuzzy
 msgid "Products per page"
-msgstr "Página"
+msgstr ""
 
 #: ../config-woocommerce/config.php:1030
 msgid "Sort by"
@@ -10809,9 +10373,8 @@ msgid "Display"
 msgstr ""
 
 #: ../config-woocommerce/config.php:1346
-#, fuzzy
 msgid "(disabled)"
-msgstr "Comentários desabilitado"
+msgstr ""
 
 #: ../config-woocommerce/config.php:1352
 msgid ""
@@ -10820,18 +10383,16 @@ msgid ""
 msgstr ""
 
 #: ../config-woocommerce/config.php:1352
-#, fuzzy
 msgid "Learn more"
-msgstr "Leia mais"
+msgstr ""
 
 #: ../config-wpml/config.php:401
 msgid "Editing:"
 msgstr ""
 
 #: ../config-wpml/config.php:402
-#, fuzzy
 msgid "Change"
-msgstr "Laranja"
+msgstr ""
 
 #: ../footer.php:77 ../includes/admin/register-admin-options.php:1591
 #: ../includes/admin/register-admin-options.php:1592
@@ -10847,9 +10408,8 @@ msgid "Forums"
 msgstr ""
 
 #: ../forum.php:20
-#, fuzzy
 msgid "Edit profile for User:"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../framework/php/auto-updates/class-envato-protected-api.php:67
 msgid "Please enter your Envato Marketplace Username."
@@ -10886,9 +10446,9 @@ msgid "g:i a"
 msgstr ""
 
 #: ../framework/php/class-breadcrumb.php:408
-#, fuzzy, php-format
+#, php-format
 msgid "Minute %1$s"
-msgstr "%1$s às %2$s"
+msgstr ""
 
 #: ../framework/php/class-breadcrumb.php:408
 msgid "i"
@@ -10930,27 +10490,24 @@ msgid "404 Not Found"
 msgstr "4040 Não encontrado"
 
 #: ../framework/php/class-form-generator.php:225
-#, fuzzy
 msgid "Sending"
-msgstr "%s (Pendente)"
+msgstr ""
 
 #: ../framework/php/class-form-generator.php:345
 msgid "Today"
 msgstr ""
 
 #: ../framework/php/class-form-generator.php:347
-#, fuzzy
 msgid "Prev"
-msgstr "Anterior"
+msgstr ""
 
 #: ../framework/php/class-form-generator.php:738
 msgid "Your Message:"
 msgstr "Sua mensagem:"
 
 #: ../framework/php/class-framework-widgets.php:737
-#, fuzzy
 msgid "Follow"
-msgstr "Seguindo"
+msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:737
 msgid "on Twitter"
@@ -10966,9 +10523,8 @@ msgstr "o RSS Feed"
 
 #: ../framework/php/class-framework-widgets.php:820
 #: ../framework/php/class-framework-widgets.php:822
-#, fuzzy
 msgid "Advertise here"
-msgstr "Você está aqui:"
+msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:933
 msgid "Popular"
@@ -10983,9 +10539,8 @@ msgid "Add a google map to your blog or site"
 msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:1178
-#, fuzzy
 msgid "Street Address:"
-msgstr "O seu endereço de email"
+msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:1182
 msgid "City:"
@@ -11028,9 +10583,8 @@ msgid "(1-19)"
 msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:1233
-#, fuzzy
 msgid "Map Type:"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../framework/php/class-framework-widgets.php:1252
 msgid ""
@@ -11089,9 +10643,8 @@ msgid "Export Theme Settings File"
 msgstr ""
 
 #: ../framework/php/class-htmlhelper.php:1536
-#, fuzzy
 msgid "Select an element to customize"
-msgstr "Elemento"
+msgstr ""
 
 #: ../framework/php/class-htmlhelper.php:1651
 msgid "Apply to Section: "
@@ -11102,9 +10655,8 @@ msgid "Apply only to mouse hover state"
 msgstr ""
 
 #: ../framework/php/class-media.php:195
-#, fuzzy
 msgid "Add to Gallery"
-msgstr "Galeria"
+msgstr ""
 
 #: ../framework/php/class-media.php:254
 msgid "Enter Video URL"
@@ -11125,9 +10677,8 @@ msgstr ""
 
 #: ../framework/php/class-megamenu.php:453
 #: ../framework/php/class-megamenu.php:455
-#, fuzzy
 msgid "Edit Menu Item"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:464
 msgid "URL"
@@ -11144,43 +10695,37 @@ msgid ""
 msgstr ""
 
 #: ../framework/php/class-megamenu.php:480
-#, fuzzy
 msgid "Title Attribute"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:486
-#, fuzzy
 msgid "link Target"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:488
-#, fuzzy
 msgid "Same window or tab"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:489
-#, fuzzy
 msgid "New window or tab"
-msgstr "Sim, abra em uma nova janela"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:495
 msgid "CSS Classes (optional)"
 msgstr ""
 
 #: ../framework/php/class-megamenu.php:501
-#, fuzzy
 msgid "link Relationship (XFN)"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:582
-#, fuzzy, php-format
+#, php-format
 msgid "Original: %s"
-msgstr "Falha ao importar %s %s"
+msgstr ""
 
 #: ../framework/php/class-megamenu.php:595
-#, fuzzy
 msgid "Remove"
-msgstr "(remover)"
+msgstr ""
 
 #: ../framework/php/class-sidebar-generator.php:34
 msgid "Custom Widget Area"
@@ -11191,9 +10736,8 @@ msgid "Enter Name of the new Widget Area here"
 msgstr ""
 
 #: ../framework/php/class-sidebar-generator.php:65
-#, fuzzy
 msgid "Add Widget Area"
-msgstr "Adicionar"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:164
 msgid "Install Required Plugins"
@@ -11204,9 +10748,9 @@ msgid "Install Plugins"
 msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:166
-#, fuzzy, php-format
+#, php-format
 msgid "Installing Plugin: %s"
-msgstr "Falha ao importar %s %s"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:167
 msgid "Something went wrong."
@@ -11242,9 +10786,8 @@ msgid "Dismiss this notice"
 msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1091
-#, fuzzy
 msgid "External Link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1096
 msgid "Private Repository"
@@ -11315,18 +10858,16 @@ msgid "Installing the plugin&#8230;"
 msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1833
-#, fuzzy
 msgid "Plugin install failed."
-msgstr "Falha ao importar categoria %s"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1834
 msgid "Plugin installed successfully."
 msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1845
-#, fuzzy
 msgid "Plugin activation failed."
-msgstr "Falha ao importar categoria %s"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1955
 msgid ""
@@ -11341,9 +10882,8 @@ msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1956
 #: ../framework/php/class-tgm-plugin-activation.php:1965
-#, fuzzy
 msgid "Hide Details"
-msgstr "Esconder"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1957
 msgid "All installations and activations have been completed."
@@ -11366,14 +10906,14 @@ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1964
-#, fuzzy, php-format
+#, php-format
 msgid "The installation of %1$s failed."
-msgstr "Falha ao importar %s %s"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1965
-#, fuzzy, php-format
+#, php-format
 msgid "%1$s installed successfully."
-msgstr "%1$s às %2$s"
+msgstr ""
 
 #: ../framework/php/class-tgm-plugin-activation.php:1966
 msgid "All installations have been completed."
@@ -11393,9 +10933,8 @@ msgid "is available!"
 msgstr ""
 
 #: ../framework/php/class-update-notifier.php:159
-#, fuzzy
 msgid "The latest version is"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../framework/php/class-update-notifier.php:159
 #: ../framework/php/class-update-notifier.php:160
@@ -11416,9 +10955,8 @@ msgid "View Changelog on http://kriesi.at"
 msgstr ""
 
 #: ../framework/php/class-update-notifier.php:169
-#, fuzzy
 msgid "View Changelog"
-msgstr "Ver todos os resultados"
+msgstr ""
 
 #: ../framework/php/class-update-notifier.php:173
 msgid "Remind Me Later"
@@ -11433,14 +10971,12 @@ msgid "Ignore This Update Notice"
 msgstr ""
 
 #: ../framework/php/function-set-avia-backend.php:797
-#, fuzzy
 msgid "Edit Frontpage"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../framework/php/function-set-avia-backend.php:815
-#, fuzzy
 msgid "Edit this entry"
-msgstr "(Editar)"
+msgstr ""
 
 #: ../framework/php/function-set-avia-backend.php:824
 msgid "Edit Dynamic Template of this entry"
@@ -11555,9 +11091,8 @@ msgid "The file does not exist, please try again."
 msgstr "O arquivo não existe, por favor tente novamente."
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:178
-#, fuzzy
 msgid "All done."
-msgstr "Todos"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:178
 msgid "Have fun!"
@@ -11609,9 +11144,8 @@ msgid ""
 msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:279
-#, fuzzy
 msgid "Import Attachments"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:282
 msgid "Download and import file attachments"
@@ -11626,9 +11160,8 @@ msgid "or create new user with login name:"
 msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:313
-#, fuzzy
 msgid "as a new user:"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:321
 msgid "assign posts to an existing user:"
@@ -11639,9 +11172,8 @@ msgid "or assign posts to an existing user:"
 msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:324
-#, fuzzy
 msgid "- Select -"
-msgstr "Selecione"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:374
 #, php-format
@@ -11672,9 +11204,9 @@ msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
 msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:548
-#, fuzzy, php-format
+#, php-format
 msgid "%s &#8220;%s&#8221; already exists."
-msgstr "Falha ao importar  %s &#8220;%s&#8221;"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:603
 #, php-format
@@ -11712,9 +11244,8 @@ msgid "Remote file is too large, limit is %s"
 msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:999
-#, fuzzy
 msgid "Import WordPress"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../framework/php/wordpress-importer/wordpress-importer.php:1006
 #, php-format
@@ -11740,9 +11271,8 @@ msgid "Sorry, no posts matched your criteria"
 msgstr ""
 
 #: ../functions-enfold.php:107
-#, fuzzy
 msgid "Please try another search term"
-msgstr "Para efetuar busca neste site, por favor forneça um termo válido"
+msgstr ""
 
 #: ../functions-enfold.php:111
 msgid "View all results"
@@ -11774,14 +11304,12 @@ msgid "Square"
 msgstr ""
 
 #: ../functions.php:134
-#, fuzzy
 msgid "Featured Thin"
-msgstr "Destaque"
+msgstr ""
 
 #: ../functions.php:135
-#, fuzzy
 msgid "Featured Large"
-msgstr "Destaque"
+msgstr ""
 
 #: ../functions.php:136 ../template-archives.php:136
 msgid "Portfolio"
@@ -11849,9 +11377,8 @@ msgid "Sidebar Settings"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:14
-#, fuzzy
 msgid "Blog Layout"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:15
 #: ../includes/admin/register-admin-options.php:235
@@ -11861,14 +11388,12 @@ msgid "Social Profiles"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:19
-#, fuzzy
 msgid "Demo Import"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:20
-#, fuzzy
 msgid "Import/Export"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:48
 msgid "A rough preview of the frontend."
@@ -11995,9 +11520,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:266
-#, fuzzy
 msgid "Maximum Container width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:267
 msgid ""
@@ -12024,9 +11548,8 @@ msgid "If you want to disable sidebars you can do so in the"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:334
-#, fuzzy
 msgid "Content + Sidebar width"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:335
 msgid "Here you can enter the combined width of content and sidebar"
@@ -12067,9 +11590,8 @@ msgid "Upload Theme Settings File"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:379
-#, fuzzy
 msgid "Insert Settings File"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:394
 msgid "Iconfont Manager"
@@ -12098,9 +11620,8 @@ msgid "Upload/Select Fontello Font Zip"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:401
-#, fuzzy
 msgid "Insert Zip File"
-msgstr "Tipo de arquivo inválido"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:418
 msgid "Frontpage Settings"
@@ -12145,9 +11666,8 @@ msgstr ""
 
 #: ../includes/admin/register-admin-options.php:443
 #: ../includes/admin/register-admin-options.php:1431
-#, fuzzy
 msgid "Use Image as logo"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:447
 msgid "Favicon"
@@ -12170,9 +11690,8 @@ msgid "favicon"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:455
-#, fuzzy
 msgid "Use Image as Favicon"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:460
 msgid "Websafe fonts fallback for Windows"
@@ -12188,15 +11707,13 @@ msgstr ""
 
 #: ../includes/admin/register-admin-options.php:466
 #: ../includes/admin/register-admin-options.php:479
-#, fuzzy
 msgid "Not activated"
-msgstr "Ativar"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:467
 #: ../includes/admin/register-admin-options.php:480
-#, fuzzy
 msgid "Activated"
-msgstr "Ativar"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:473
 msgid "Automated Schema.org HTML Markup"
@@ -12211,9 +11728,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:486
-#, fuzzy
 msgid "Lightbox Modal Window"
-msgstr "Não, abra na mesma janela"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:487
 msgid ""
@@ -12254,9 +11770,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:526
-#, fuzzy
 msgid "Attention"
-msgstr "Atenção!"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:527
 msgid ""
@@ -12322,26 +11837,22 @@ msgstr ""
 
 #: ../includes/admin/register-admin-options.php:749
 #: ../includes/admin/register-admin-options.php:868
-#, fuzzy
 msgid "Background Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:750
-#, fuzzy
 msgid "The background image of your"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:752
 #: ../includes/admin/register-admin-options.php:871
-#, fuzzy
 msgid "No Background Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:752
 #: ../includes/admin/register-admin-options.php:871
-#, fuzzy
 msgid "Upload custom image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:766
 msgid "Upload a BG image for your"
@@ -12349,15 +11860,13 @@ msgstr ""
 
 #: ../includes/admin/register-admin-options.php:771
 #: ../includes/admin/register-admin-options.php:891
-#, fuzzy
 msgid "Use Image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:779
 #: ../includes/admin/register-admin-options.php:899
-#, fuzzy
 msgid "Position of the image"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:795
 #: ../includes/admin/register-admin-options.php:915
@@ -12441,9 +11950,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:980
-#, fuzzy
 msgid "Web save fonts"
-msgstr "Salvar"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:988
 msgid "Google fonts"
@@ -12465,9 +11973,8 @@ msgid "or the Enfold Child theme."
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1025
-#, fuzzy
 msgid "Sidebar on Archive Pages"
-msgstr "Páginas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1026
 msgid ""
@@ -12497,9 +12004,8 @@ msgid "no sidebar"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1041
-#, fuzzy
 msgid "Sidebar on Blog Page"
-msgstr "Página"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1042
 msgid ""
@@ -12518,9 +12024,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1076
-#, fuzzy
 msgid "Sidebar on Pages"
-msgstr "Páginas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1077
 msgid ""
@@ -12539,19 +12044,16 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1096
-#, fuzzy
 msgid "Hide sidebar on smartphones"
-msgstr "Esconder"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1097
-#, fuzzy
 msgid "Show sidebar on smartphones"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1103
-#, fuzzy
 msgid "Page Sidebar navigation"
-msgstr "Página"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1104
 msgid ""
@@ -12576,9 +12078,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1115
-#, fuzzy
 msgid "Widgets Page"
-msgstr "Página"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1116
 msgid ""
@@ -12637,9 +12138,8 @@ msgid "slim"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1263
-#, fuzzy
 msgid "large"
-msgstr "Grande"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1264
 msgid "custom pixel value"
@@ -12656,9 +12156,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1284
-#, fuzzy
 msgid "Header Title and Breadcrumbs"
-msgstr "Cargo do membro da equipe"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1285
 msgid ""
@@ -12701,9 +12200,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1333
-#, fuzzy
 msgid "Extra Elements"
-msgstr "Elemento"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1338
 msgid "Append search icon to main menu"
@@ -12762,9 +12260,8 @@ msgid "Secondary Menu in top bar at the right"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1385
-#, fuzzy
 msgid "Header Phone Number/Extra Info"
-msgstr "Número do telefone válido"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1386
 msgid ""
@@ -12773,9 +12270,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1393
-#, fuzzy
 msgid "No Phone Number/Extra Info"
-msgstr "Número do telefone válido"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1399
 msgid "Phone Number or small info text"
@@ -12802,9 +12298,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1417
-#, fuzzy
 msgid "(Show example Screenshot)"
-msgstr "Mostrar"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1427
 msgid "Transparency Logo"
@@ -12850,9 +12345,8 @@ msgid "Activate for Smartphones and Tablets (browser width below 990px)"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1484
-#, fuzzy
 msgid "Your social profiles"
-msgstr "Sua mensagem:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1485
 msgid ""
@@ -12895,38 +12389,32 @@ msgid "Do you want to display the footer widgets & footer socket?"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1577
-#, fuzzy
 msgid "Footer Columns"
-msgstr "Colunas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1578
 msgid "How many columns should be displayed in your footer"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1583
-#, fuzzy
 msgid "1"
-msgstr "1 Coluna"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1584
-#, fuzzy
 msgid "2"
-msgstr "2 Colunas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1585
-#, fuzzy
 msgid "3"
-msgstr "3 Colunas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1586
-#, fuzzy
 msgid "4"
-msgstr "4 Colunas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1587
-#, fuzzy
 msgid "5"
-msgstr "5 Colunas"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1592
 msgid "Add a custom copyright text at the bottom of your site. eg:"
@@ -12941,9 +12429,8 @@ msgid "Check to display the social icons defined in"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1606
-#, fuzzy
 msgid "in your socket"
-msgstr "Sua mensagem:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1621
 msgid ""
@@ -12958,18 +12445,16 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1638
-#, fuzzy
 msgid "Single Post Options"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1639
 msgid "Here you can set options that affect your single blog post layout"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1648
-#, fuzzy
 msgid "Single Post Style"
-msgstr "Cria uma coluna com largura de 50%"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1649
 msgid "Choose the single post style here."
@@ -13007,41 +12492,36 @@ msgid "Disable related entries"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1676
-#, fuzzy
 msgid "Blog meta elements"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1677
 msgid "You can chose to hide some of the default Blog elements here:"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1686
-#, fuzzy
 msgid "Blog Post Author"
-msgstr "Autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1696
 msgid "Blog Post Comment Count"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1705
-#, fuzzy
 msgid "Blog Post Category"
-msgstr "Arquivo para categoria:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1716
-#, fuzzy
 msgid "Blog Post Date"
-msgstr "Arquivo para a data:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1726
 msgid "Blog Post Allowed HTML Tags"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1735
-#, fuzzy
 msgid "Blog Post Tags"
-msgstr "Tags:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1750
 msgid "Share links at the bottom of your blog post"
@@ -13054,54 +12534,44 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1760
-#, fuzzy
 msgid "Facebook link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1770
-#, fuzzy
 msgid "Twitter link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1779
-#, fuzzy
 msgid "Pinterest link "
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1791
-#, fuzzy
 msgid "Google Plus link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1801
-#, fuzzy
 msgid "Reddit link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1810
-#, fuzzy
 msgid "Linkedin link "
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1820
-#, fuzzy
 msgid "Tumblr link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1829
-#, fuzzy
 msgid "VK link"
-msgstr "Link permanente:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1839
-#, fuzzy
 msgid "Email link"
-msgstr "O seu endereço de email"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1858
-#, fuzzy
 msgid "Import demo files"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1859
 msgid ""
@@ -13111,18 +12581,16 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1870
-#, fuzzy
 msgid "What you get:"
-msgstr "Você está aqui:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1871
 msgid "Online Demo"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1875
-#, fuzzy
 msgid "Import: Default Demo"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1877
 #: ../includes/admin/register-admin-options.php:1894
@@ -13161,18 +12629,16 @@ msgid "Import: Small Business - Flat"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1909
-#, fuzzy
 msgid "Import: Photography Demo"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1912
 msgid "(if you want to sell photos online)"
 msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1926
-#, fuzzy
 msgid "Import: Restaurant Demo"
-msgstr "Importar autor:"
+msgstr ""
 
 #: ../includes/admin/register-admin-options.php:1929
 #: ../includes/admin/register-admin-options.php:1945
@@ -13258,9 +12724,8 @@ msgid "Change the styling for your H6 Tag"
 msgstr ""
 
 #: ../includes/admin/register-backend-advanced-styles.php:154
-#, fuzzy
 msgid "Main Menu Links"
-msgstr "Links interessantes"
+msgstr ""
 
 #: ../includes/admin/register-backend-advanced-styles.php:156
 msgid "Change the styling for your main menu links"
@@ -13285,9 +12750,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/admin/register-backend-advanced-styles.php:207
-#, fuzzy
 msgid "Linked Image Overlay"
-msgstr "Remover imagem"
+msgstr ""
 
 #: ../includes/admin/register-backend-advanced-styles.php:209
 msgid ""
@@ -13308,43 +12772,36 @@ msgid "Add New Portfolio Entry"
 msgstr ""
 
 #: ../includes/admin/register-portfolio.php:13
-#, fuzzy
 msgid "Edit Portfolio Entry"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:14
-#, fuzzy
 msgid "New Portfolio Entry"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:15
-#, fuzzy
 msgid "View Portfolio Entry"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:16
-#, fuzzy
 msgid "Search Portfolio Entries"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:17
-#, fuzzy
 msgid "No Portfolio Entries found"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:18
 msgid "No Portfolio Entries found in Trash"
 msgstr ""
 
 #: ../includes/admin/register-portfolio.php:25
-#, fuzzy
 msgid "portfolio-item"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:26
-#, fuzzy
 msgid "portfolio_entries"
-msgstr "Portfólio"
+msgstr ""
 
 #: ../includes/admin/register-portfolio.php:141
 msgid "Settings"
@@ -13389,9 +12846,8 @@ msgstr ""
 #: ../includes/error404.php:2 ../includes/loop-author.php:148
 #: ../includes/loop-index.php:234 ../includes/loop-page.php:52
 #: ../includes/loop-portfolio-single.php:65 ../includes/loop-search.php:123
-#, fuzzy
 msgid "Nothing Found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../includes/error404.php:4
 msgid ""
@@ -13420,44 +12876,36 @@ msgid "Feel like browsing some posts instead?"
 msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:46
-#, fuzzy
 msgid "User is logged in"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:47
-#, fuzzy
 msgid "User is logged out"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:48
-#, fuzzy
 msgid "User is Admin"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:49
-#, fuzzy
 msgid "User is Editor"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:50
-#, fuzzy
 msgid "User is Subscriber"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:51
-#, fuzzy
 msgid "User is Author"
-msgstr "Autor:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:52
-#, fuzzy
 msgid "User is Contributor"
-msgstr "Perfil do Usuário:"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:53
-#, fuzzy
 msgid "Front Page"
-msgstr "Página"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:54
 msgid "Single Post"
@@ -13476,9 +12924,8 @@ msgid "if"
 msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:124
-#, fuzzy
 msgid "Page/Post ID"
-msgstr "Página"
+msgstr ""
 
 #: ../includes/helper-conditional-megamenu.php:132
 msgid "Conditional CSS Class"
@@ -13493,9 +12940,8 @@ msgid "Share on Google+"
 msgstr ""
 
 #: ../includes/helper-social-media.php:154
-#, fuzzy
 msgid "Share by Mail"
-msgstr "Endereço de email válido"
+msgstr ""
 
 #: ../includes/helper-social-media.php:217
 msgid "Share this entry"
@@ -13553,9 +12999,8 @@ msgstr "Seu comentário está aguardando revisão"
 
 #: ../includes/loop-index.php:194 ../includes/loop-portfolio-single.php:33
 #: ../template-builder.php:45
-#, fuzzy
 msgid "Pages:"
-msgstr "Páginas"
+msgstr ""
 
 #: ../includes/loop-index.php:208 ../includes/loop-portfolio-single.php:44
 msgid "Tags:"
@@ -13571,9 +13016,8 @@ msgid ""
 msgstr ""
 
 #: ../includes/loop-search.php:132
-#, fuzzy
 msgid "Check your spelling."
-msgstr "Sua mensagem:"
+msgstr ""
 
 #: ../includes/loop-search.php:133
 msgid "Try a similar keyword, for example: tablet instead of laptop."
@@ -13592,43 +13036,36 @@ msgid "New Search"
 msgstr "Nova pesquisa"
 
 #: ../search.php:24
-#, fuzzy
 msgid "If you are not happy with the results below please do another search"
 msgstr ""
-"Se o resultado abaixo não lhe agradou, por favor efetue uma nova pesquisa"
 
 #: ../template-archives.php:51
-#, fuzzy
 msgid "The 20 latest Blog Posts"
-msgstr "Blog - Últimas notícias"
+msgstr ""
 
 #: ../template-archives.php:61
-#, fuzzy
 msgid "No Blog Posts found"
-msgstr "4040 Não encontrado"
+msgstr ""
 
 #: ../template-archives.php:90
 msgid "The 8 latest Portfolio Entries"
 msgstr ""
 
 #: ../template-archives.php:160
-#, fuzzy
 msgid "Available Pages"
-msgstr "Páginas"
+msgstr ""
 
 #: ../template-archives.php:174
-#, fuzzy
 msgid "Archives by Subject:"
-msgstr "Assunto"
+msgstr ""
 
 #: ../template-archives.php:184
 msgid "Monthly"
 msgstr ""
 
 #: ../template-archives.php:189
-#, fuzzy
 msgid "Archives by Month:"
-msgstr "Arquivos"
+msgstr ""
 
 #~ msgid "Followers"
 #~ msgstr "Seguidores"

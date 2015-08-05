@@ -2,65 +2,58 @@
 // global $wp_registered_sidebars;
 #########################################
 	
-		$sidebars_to_show = array('');	 // ('.$sidebar.')
-			
-		foreach ($sidebars_to_show as $sidebar)
-		{	
-			register_sidebar(array(
-				'name' => 'Displayed Everywhere',
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
-			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
-			'before_title' => '<h3 class="widgettitle">', 
-			'after_title' => '</h3>', 
-			));
-		}
+	
+	register_sidebar(array(
+		'name' => 'Displayed Everywhere',
+		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+		'after_widget' => '<span class="seperator extralight-border"></span></section>', 
+		'before_title' => '<h3 class="widgettitle">', 
+		'after_title' => '</h3>',
+		'id'=>'av_everywhere'
+	));
+
+	register_sidebar(array(
+		'name' => 'Sidebar Blog',
+		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+		'after_widget' => '<span class="seperator extralight-border"></span></section>', 
+		'before_title' => '<h3 class="widgettitle">', 
+		'after_title' => '</h3>', 
+		'id'=>'av_blog'
+	));
 		
-		foreach ($sidebars_to_show as $sidebar)
-		{
-			register_sidebar(array(
-				'name' => 'Sidebar Blog',
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
-			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
-			'before_title' => '<h3 class="widgettitle">', 
-			'after_title' => '</h3>', 
-			));
-		}
-		
-		foreach ($sidebars_to_show as $sidebar)
-		{
-			register_sidebar(array(
-				'name' => 'Sidebar Pages',
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
-			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
-			'before_title' => '<h3 class="widgettitle">', 
-			'after_title' => '</h3>', 
-			));
-		}
+	register_sidebar(array(
+		'name' => 'Sidebar Pages',
+		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+		'after_widget' => '<span class="seperator extralight-border"></span></section>', 
+		'before_title' => '<h3 class="widgettitle">', 
+		'after_title' => '</h3>', 
+		'id'=>'av_pages'
+	));
 
 	
 	if(class_exists( 'woocommerce' ))
 	{
-		foreach ($sidebars_to_show as $sidebar)
-		{
-			register_sidebar(array(
-				'name' => 'Shop Overview Page',
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
-			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
-			'before_title' => '<h3 class="widgettitle">', 
-			'after_title' => '</h3>', 
-			));
-		}
 		
-		foreach ($sidebars_to_show as $sidebar)
-		{
-			register_sidebar(array(
-				'name' => 'Single Product Pages',
-				'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+		register_sidebar(array(
+			'name' => 'Shop Overview Page',
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
 			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
 			'before_title' => '<h3 class="widgettitle">', 
 			'after_title' => '</h3>', 
-			));
-		}
+			'id'=>'av_shop_overview'
+		));
+	
+	
+	
+		register_sidebar(array(
+			'name' => 'Single Product Pages',
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
+			'before_title' => '<h3 class="widgettitle">', 
+			'after_title' => '</h3>', 
+			'id'=>'av_shop_single'
+		));
+		
 	}
 		
 
@@ -74,11 +67,12 @@
 	for ($i = 1; $i <= $footer_columns; $i++)
 	{
 		register_sidebar(array(
-		'name' => 'Footer - column'.$i,
-		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
-		'after_widget' => '<span class="seperator extralight-border"></span></section>', 
-		'before_title' => '<h3 class="widgettitle">', 
-		'after_title' => '</h3>', 
+			'name' => 'Footer - column'.$i,
+			'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">', 
+			'after_widget' => '<span class="seperator extralight-border"></span></section>', 
+			'before_title' => '<h3 class="widgettitle">', 
+			'after_title' => '</h3>', 
+			'id'=>'av_footer_'.$i
 		));
 	}
 

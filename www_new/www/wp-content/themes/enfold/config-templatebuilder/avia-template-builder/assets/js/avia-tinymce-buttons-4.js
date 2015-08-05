@@ -1,6 +1,9 @@
+
 (function($)
 {
 	"use strict";
+
+	if(typeof avia_globals == "undefined") return;
 
 	var av_key = "avia_builder_button";	// $this->button['id']
 	

@@ -1,4 +1,7 @@
 		<?php
+			
+		do_action( 'ava_before_footer' );	
+			
 		global $avia_config;
 		$blank = isset($avia_config['template']) ? $avia_config['template'] : "";
 
@@ -106,7 +109,7 @@
 								echo avia_social_media_icons($social_args, false);
                             }
                         
-                            echo "<nav class='sub_menu_socket' ".avia_markup_helper(array('context' => 'nav', 'echo' => false)).">";
+                            
                                 $avia_theme_location = 'avia3';
                                 $avia_menu_class = $avia_theme_location . '-menu';
 
@@ -115,12 +118,18 @@
                                     'menu_id' =>$avia_menu_class,
                                     'container_class' =>$avia_menu_class,
                                     'fallback_cb' => '',
-                                    'depth'=>1
+                                    'depth'=>1,
+                                    'echo' => false,
+                                    'walker' => new avia_responsive_mega_menu(array('megamenu'=>'disabled'))
                                 );
 
-                                wp_nav_menu($args);
+                            $menu = wp_nav_menu($args);
+                            
+                            if($menu){ 
+                            echo "<nav class='sub_menu_socket' ".avia_markup_helper(array('context' => 'nav', 'echo' => false)).">";
+                            echo $menu;
                             echo "</nav>";
-        
+							}
                         ?>
 
                     </div>

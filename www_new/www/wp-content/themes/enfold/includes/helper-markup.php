@@ -56,7 +56,12 @@ if(!function_exists('avia_markup_helper'))
             case 'content':
                 $attributes['role']     = 'main';
                 $attributes['itemprop'] = 'mainContentOfPage';
-
+				
+				if (is_singular('post'))
+                {
+                    unset($attributes['itemprop']);
+                }
+				
                 //* Blog microdata
                 if (is_singular('post') || is_archive() || is_home())
                 {
@@ -152,8 +157,10 @@ if(!function_exists('avia_markup_helper'))
                 break;
 
             case 'entry_time':
+            
+            	
                 $attributes['itemprop'] = 'datePublished';
-                $attributes['datetime'] = get_the_time('c');
+                $attributes['datetime'] = get_the_time('c', $args['id']);
                 break;
 
             case 'entry_title':

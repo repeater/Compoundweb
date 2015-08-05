@@ -25,6 +25,8 @@ global $avia_config;
  	 if(!empty($title)) $args['title'] = $title;
 
  	 if( get_post_meta( @get_the_ID(), 'header', true) != 'no') echo avia_title($args);
+ 	 
+ 	 do_action( 'ava_after_main_title' );
 	 ?>
 
 		<div class='container_wrap container_wrap_first main_color <?php avia_layout_class( 'main' ); ?>'>

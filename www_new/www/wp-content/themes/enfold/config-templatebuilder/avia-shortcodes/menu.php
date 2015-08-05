@@ -9,6 +9,7 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 	class avia_sc_submenu extends aviaShortcodeTemplate
 	{
 			static $count = 0;
+			static $custom_items = 0;
 	
 			/**
 			 * Create the config array for the shortcode button
@@ -21,6 +22,7 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				$this->config['order']			= 30;
 				$this->config['target']			= 'avia-target-insert';
 				$this->config['shortcode'] 		= 'av_submenu';
+				$this->config['shortcode_nested'] = array('av_submenu_item');
 				$this->config['tooltip'] 	    = __('Display a sub menu', 'avia_framework' );
 				$this->config['tinyMCE'] 		= array('disable' => "true");
 				$this->config['drag-level'] 	= 1;
@@ -39,15 +41,94 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				global $avia_config;
 			
 				$this->elements = array(
-			
+					
+					array(	
+						"name" 	=> __("Which kind of menu do you want to display",'avia_framework' ),
+						"name" 	=> __("Either use an existing menu, built in Appearance -> Menus or create a simple custom menu here",'avia_framework' ),
+						"id" 	=> "which_menu",
+						"type" 	=> "select",
+						"std" 	=> "center",
+						"subtype" => array(   __('Use existing menu','avia_framework' ) =>'',
+						                      __('Build simple custom menu','avia_framework' ) =>'custom',
+						                      )
+				    ),
+					
+					
 					array(	
 							"name" 	=> __("Select menu to display", 'avia_framework' ),
 							"desc" 	=> __("You can create new menus in ", 'avia_framework' )."<a target='_blank' href='".admin_url('nav-menus.php?action=edit&menu=0')."'>".__('Appearance -> Menus', 'avia_framework' )."</a><br/>".__("Please note that Mega Menus are not supported for this element ", 'avia_framework' ),
 							"id" 	=> "menu",
 							"type" 	=> "select",
 							"std" 	=> "",
+							"required" 	=> array('which_menu', 'not', 'custom'),
 							"subtype" =>  AviaHelper::list_menus()		
 							),
+							
+					array(
+							"name" => __("Add/Edit rotating text", 'avia_framework' ),
+							"desc" => __("Here you can add, remove and edit the rotating text", 'avia_framework' ),
+							"type" 			=> "modal_group",
+							"id" 			=> "content",
+							"required" 		=> array('which_menu', 'equals', 'custom'),
+							"modal_title" 	=> __("Edit Text Element", 'avia_framework' ),
+							"std"			=> array(
+
+													array('title'=>__('Menu Item 1', 'avia_framework' )),
+													array('title'=>__('Menu Item 2', 'avia_framework' )),
+
+													),
+
+
+							'subelements' 	=> array(
+
+									array(
+									"name" 	=> __("Menu Text", 'avia_framework' ),
+									"desc" 	=> __("Enter the menu text here", 'avia_framework' ) ,
+									"id" 	=> "title",
+									"std" 	=> "",
+									"type" 	=> "input"),
+
+
+                                array(
+                                    "name" 	=> __("Text Link?", 'avia_framework' ),
+                                    "desc" 	=> __("Apply  a link to the menu text?", 'avia_framework' ),
+                                    "id" 	=> "link",
+                                    "type" 	=> "linkpicker",
+                                    "fetchTMPL"	=> true,
+                                    "std"	=> "",
+                                    "subtype" => array(
+                                        __('Set Manually', 'avia_framework' ) =>'manually',
+                                        __('Single Entry', 'avia_framework' ) =>'single',
+                                        __('Taxonomy Overview Page',  'avia_framework' )=>'taxonomy',
+                                    ),
+                                    ),
+
+                                array(
+                                    "name" 	=> __("Open in new window", 'avia_framework' ),
+                                    "desc" 	=> __("Do you want to open the link in a new window", 'avia_framework' ),
+                                    "id" 	=> "linktarget",
+                                    "required" 	=> array('link', 'not', ''),
+                                    "type" 	=> "select",
+                                    "std" 	=> "no",
+									"subtype" => AviaHtmlHelper::linking_options()),
+									
+								array(
+                                    "name" 	=> __("Style", 'avia_framework' ),
+                                    "desc" 	=> __("Select the styling of your menu item", 'avia_framework' ),
+                                    "id" 	=> "button_style",
+                                    "type" 	=> "select",
+                                    "std" 	=> "",
+									"subtype" => array(
+                                        __('Default Style', 'avia_framework' ) 	=>'',
+                                        __('Button Style (Colored)', 'avia_framework' ) 	=>'av-menu-button av-menu-button-colored',
+                                        __('Button Style (Bordered)',  'avia_framework' )	=>'av-menu-button av-menu-button-bordered',
+                                    ),
+							
+							),),	
+
+
+						
+					),
 					
                     array(	
 						"name" 	=> __("Menu Position",'avia_framework' ),
@@ -103,6 +184,25 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 
 			}
 			
+			
+			/**
+			 * Editor Sub Element - this function defines the visual appearance of an element that is displayed within a modal window and on click opens its own modal window
+			 * Works in the same way as Editor Element
+			 * @param array $params this array holds the default values for $content and $args.
+			 * @return $params the return array usually holds an innerHtml key that holds item specific markup.
+			 */
+			function editor_sub_element($params)
+			{
+				$template = $this->update_template("title", "{{title}}");
+
+				$params['innerHtml']  = "";
+				$params['innerHtml'] .= "<div class='avia_title_container'>";
+				$params['innerHtml'] .= "<span {$template} >".$params['args']['title']."</span></div>";
+
+				return $params;
+			}
+			
+			
 			/**
 			 * Editor Element - this function defines the visual appearance of an element on the AviaBuilder Canvas
 			 * Most common usage is to define some markup in the $params['innerHtml'] which is then inserted into the drag and drop container
@@ -141,7 +241,8 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				'sticky'		=> '',
 				'color'			=> 'main_color',
 				'mobile'		=> 'disabled',
-				'mobile_submenu'=> ''
+				'mobile_submenu'=> '',
+				'which_menu'	=> ''
 				
 				), $atts, $this->config['shortcode']);
 				
@@ -149,6 +250,7 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				$output  	= "";
 				$sticky_div = "";
 				avia_sc_submenu::$count++;
+				avia_sc_submenu::$custom_items = 0;
 				
 				
 				$params['class'] = "av-submenu-container {$color} ".$meta['el_class'];
@@ -171,19 +273,34 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				if(isset($meta['index']) && $meta['index'] != 0) $params['class'] .= " submenu-not-first";
 				
 				
-				$element = wp_nav_menu(
-					array(
-	                	'menu' => wp_get_nav_menu_object( $menu ),
-	                    'menu_class' =>"av-subnav-menu av-submenu-pos-{$position}",
-	                    'fallback_cb' => '',
-	                    'container'=>false,
-	                    'echo' =>false,
-	                    'walker' => new avia_responsive_mega_menu(array('megamenu'=>'disabled'))
-	                )
-				);
+				if($which_menu == "custom")
+				{
+					$element = "";
+					$custom_menu = ShortcodeHelper::avia_remove_autop( $content, true );
+					if(!empty($custom_menu))
+					{
+						$element .= "<ul id='av-custom-submenu-".avia_sc_submenu::$count."' class='av-subnav-menu av-submenu-pos-{$position}'>";
+						$element .= $custom_menu;
+						$element .= "</ul>";
+					}
+				}
+				else
+				{
+					$element = wp_nav_menu(
+						array(
+		                	'menu' 			=> wp_get_nav_menu_object( $menu ),
+		                    'menu_class' 	=>"av-subnav-menu av-submenu-pos-{$position}",
+		                    'fallback_cb' 	=> '',
+		                    'container'		=>false,
+		                    'echo' 			=>false,
+		                    'walker' 		=> new avia_responsive_mega_menu(array('megamenu'=>'disabled'))
+		                )
+					);
+				}
+				
 				
 				$submenu_hidden = ""; 
-				$mobile_button = $mobile == "active" ? "<a href='#' class='mobile_menu_toggle' ".av_icon_string('mobile_menu')."><span class='av-current-placeholder'>".__('Menu', 'avia_framework')."</span>" : "";
+				$mobile_button = $mobile == "active" ? "<a href='#' class='mobile_menu_toggle' ".av_icon_string('mobile_menu')."><span class='av-current-placeholder'>".__('Menu', 'avia_framework')."</span></a>" : "";
 				if(!empty($mobile_button) && !empty($mobile_submenu) && $mobile_submenu != "disabled")
 				{
 					$submenu_hidden = "av-submenu-hidden";
@@ -191,10 +308,45 @@ if ( !class_exists( 'avia_sc_submenu' ) )
 				
 				// if(!ShortcodeHelper::is_top_level()) return $element;
 				$output .=  avia_new_section($params);
-				$output .= "<div class='container av-menu-mobile-{$mobile} {$submenu_hidden}'>{$mobile_button}</a>".$element."</div>";
+				$output .= "<div class='container av-menu-mobile-{$mobile} {$submenu_hidden}'>{$mobile_button}".$element."</div>";
 				$output .= avia_section_after_element_content( $meta , 'after_submenu', false, $sticky_div);
 				return $output;
 
+			}
+			
+			function av_submenu_item($atts, $content = "", $shortcodename = "", $meta = "")
+			{
+				$output = "";
+				$atts = shortcode_atts(
+                array(	
+                	'title' 		=> '',
+                	'link' 			=> '',
+                	'linktarget' 	=> '',
+                	'button_style' 	=> '',
+                ), 
+                $atts, 'av_rotator_item');
+                
+                extract($atts);
+                
+                if(!empty($title))
+                {
+	                avia_sc_submenu::$custom_items++;
+	                $link = AviaHelper::get_url($link);
+					$blank = (strpos($linktarget, '_blank') !== false || $linktarget == 'yes') ? ' target="_blank" ' : "";
+					$blank .= strpos($linktarget, 'nofollow') !== false ? ' rel="nofollow" ' : "";
+	                
+	                $output .= "<li class='menu-item menu-item-top-level {$button_style} menu-item-top-level-".avia_sc_submenu::$custom_items."'>";
+	                $output .= "<a href='{$link}' {$blank}><span class='avia-bullet'></span>";
+	                $output .= "<span class='avia-menu-text'>".$title."</span></a>";
+	                //$output .= "<span class='avia-menu-fx'><span class='avia-arrow-wrap'><span class='avia-arrow'></span></span></span>";
+	                $output .= "</a>";
+	                $output .= "</li>";
+	                
+	                
+                }
+                
+                return $output;
+                
 			}
 			
 	}

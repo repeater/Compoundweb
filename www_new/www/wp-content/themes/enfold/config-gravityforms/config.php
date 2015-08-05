@@ -18,8 +18,15 @@ function avia_change_ajax_form_class($class, $formID, $form_params)
 	return 'avia_ajax_form';
 }
 
+
+/*add the gravityforms button to the ajax popup editor*/
 add_filter('gform_display_add_form_button', 'avia_add_gf_button_to_editor', 10, 1);
 function avia_add_gf_button_to_editor($is_post_edit_page)
 {
-    return true;
+	if(!empty($_POST['ajax_fetch']))
+	{
+		$is_post_edit_page = true;
+	}
+	
+    return $is_post_edit_page;
 }

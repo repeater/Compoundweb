@@ -133,6 +133,7 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 									"std" 	=> "main_color",
 									"subtype" => array(
 														__('Default',  'avia_framework' ) =>'main_color',
+														__('Default with drop shadow',  'avia_framework' ) =>'main_color av-tooltip-shadow',
 														__('Transparent Dark',  'avia_framework' ) =>'transparent_dark',
 														
 														)
@@ -152,6 +153,15 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 														__('Taxonomy Overview Page',  'avia_framework' )=>'taxonomy',
 														),
 									"std" 	=> ""),		
+									
+									array(	
+									"name" 	=> __("Open Link in new Window?", 'avia_framework' ),
+									"desc" 	=> __("Select here if you want to open the linked page in a new window", 'avia_framework' ),
+									"id" 	=> "link_target",
+									"required" 	=> array('link', 'not', ''),
+									"type" 	=> "select",
+									"std" 	=> "",
+									"subtype" => AviaHtmlHelper::linking_options()),
 									
 									array(
 									"type" 	=> "close_div",
@@ -250,6 +260,18 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 												__('Blank Hotspot',		'avia_framework' ) 	=>'blank',
 												)
 							),
+					
+					array(
+							"name" 	=> __("Show Tooltips", 'avia_framework' ),
+							"desc" 	=> __("Select when to display the tooltips", 'avia_framework' ),
+							"id" 	=> "hotspot_tooltip_display",
+							"type" 	=> "select",
+							"std" 	=> "",
+							"subtype" => array(
+												__('On Mouse Hover', 'avia_framework' ) =>'',
+												__('Always',		 'avia_framework' ) =>'av-permanent-tooltip',
+												)
+							),
 							
 					array(	
 									"name" 	=> __("Hotspot on mobile devices", 'avia_framework' ),
@@ -277,6 +299,7 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 			 */
 			function editor_element($params)
 			{
+				$img = "";
 				$template = $this->update_template("src", "<img src='{{src}}' alt=''/>");
 				
 				if(!empty($params['args']['attachment']) && !empty($params['args']['attachment_size']))
@@ -340,7 +363,7 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 			 * @return string $output returns the modified html string
 			 */
 			function shortcode_handler($atts, $content = "", $shortcodename = "", $meta = "")
-			{
+			{	
 				$output 	= "";
 				$class  	= "";
 				$alt 		= "";
@@ -350,7 +373,7 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 				$markup_url = avia_markup_helper(array('context' => 'image_url','echo'=>false, 'custom_markup'=>$meta['custom_markup']));
 				$hotspots 	= ShortcodeHelper::shortcode2array($content, 1);
 				
-				extract(shortcode_atts(array('animation'=>'no-animation', 'attachment'=>'', 'attachment_size' =>'', 'hotspot_layout'=>'numbered', 'hotspot_mobile'=>''), $atts, $this->config['shortcode']));
+				extract(shortcode_atts(array('animation'=>'no-animation', 'attachment'=>'', 'attachment_size' =>'', 'hotspot_layout'=>'numbered', 'hotspot_mobile'=>'', 'hotspot_tooltip_display' => ''), $atts, $this->config['shortcode']));
 				
 				if(!empty($attachment))
 				{
@@ -370,42 +393,45 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 					}
 				}
 				
+				
 				//no src? return
-				if(empty($src)) return;
-				if(!ShortcodeHelper::is_top_level()) $meta['el_class'] .= " av-non-fullwidth-hotspot-image";
-				
-				$hotspot_html 	= "";
-				$tooltip_html 	= "";
-				$counter 		= 1;
-				
-				foreach($hotspots as $hotspot)
-				{ 
-					if(!empty($hotspot_mobile)) $tooltip_html .= $this->add_fallback_tooltip($hotspot, $counter);
-					$extraClass = !empty($hotspot_mobile) ? " av-mobile-fallback-active " : "";
+				if(!empty($src))
+				{
+					if(!ShortcodeHelper::is_top_level()) $meta['el_class'] .= " av-non-fullwidth-hotspot-image";
 					
-					$hotspot_html .= $this->add_hotspot($hotspot, $counter, $extraClass);
-					$counter ++; 
+					$hotspot_html 	= "";
+					$tooltip_html 	= "";
+					$counter 		= 1;
+					
+					foreach($hotspots as $hotspot)
+					{ 
+						if(!empty($hotspot_mobile)) $tooltip_html .= $this->add_fallback_tooltip($hotspot, $counter);
+						$extraClass  = !empty($hotspot_mobile) ? " av-mobile-fallback-active " : "";
+						$extraClass .= !empty($hotspot_tooltip_display) ? " {$hotspot_tooltip_display}-single " : "";
+						
+						$hotspot_html .= $this->add_hotspot($hotspot, $counter, $extraClass);
+						$counter ++; 
+					}
+					
+					//some custom classes
+					$class .= $animation == "no-animation" ? "" :" avia_animated_image avia_animate_when_almost_visible ".$animation;
+					$class .= " av-hotspot-".$hotspot_layout;
+					$class .= !empty($hotspot_mobile) ? " av-mobile-fallback-active " : "";
+					$class .= " ".$hotspot_tooltip_display;
+					
+					
+	                $output .= "<div class='av-hotspot-image-container avia_animate_when_almost_visible {$class} ".$meta['el_class']." ' $markup >";
+					$output .= 		"<div class='av-hotspot-container'>";
+					$output .= 			"<div class='av-hotspot-container-inner-cell'>";
+					$output .= 				"<div class='av-hotspot-container-inner-wrap'>";
+					$output .= 					$hotspot_html;
+					$output .= 					"<img class='avia_image ' src='{$src}' alt='{$alt}' title='{$title}'  $markup_url />";
+					$output .= 				"</div>";
+					$output .= 			"</div>";
+					$output .= 		"</div>";
+					$output .=		$tooltip_html;
+					$output .= "</div>";				
 				}
-				
-				//some custom classes
-				$class .= $animation == "no-animation" ? "" :" avia_animated_image avia_animate_when_almost_visible ".$animation;
-				$class .= " av-hotspot-".$hotspot_layout;
-				$class .= !empty($hotspot_mobile) ? " av-mobile-fallback-active " : "";
-					
-				
-				
-                $output .= "<div class='av-hotspot-image-container avia_animate_when_almost_visible {$class} ".$meta['el_class']." ' $markup >";
-				$output .= 		"<div class='av-hotspot-container'>";
-				$output .= 			"<div class='av-hotspot-container-inner-cell'>";
-				$output .= 				"<div class='av-hotspot-container-inner-wrap'>";
-				$output .= 					$hotspot_html;
-				$output .= 					"<img class='avia_image ' src='{$src}' alt='{$alt}' title='{$title}'  $markup_url />";
-				$output .= 				"</div>";
-				$output .= 			"</div>";
-				$output .= 		"</div>";
-				$output .=		$tooltip_html;
-				$output .= "</div>";				
-				
 				
 				
 				
@@ -452,14 +478,17 @@ if ( !class_exists( 'avia_sc_image_hotspots' ) )
 			
 			function add_hotspot($hotspot, $counter, $extraClass = "")
 			{
-				extract(shortcode_atts(array('tooltip_width' => 'av-tt-default-width', 'tooltip_pos'=>'av-tt-pos-above av-tt-align-left', 'hotspot_pos'=>'50,50', 'output'=>'', 'hotspot_color'=>'', 'custom_bg'=>'', 'custom_font'=>'', 'custom_pulse'=>'', 'tooltip_style'=>'main_color', 'link' => ''), $hotspot['attr']));
-				$content = $hotspot['content'];
+				extract(shortcode_atts(array('tooltip_width' => 'av-tt-default-width', 'tooltip_pos'=>'av-tt-pos-above av-tt-align-left', 'hotspot_pos'=>'50,50', 'output'=>'', 'hotspot_color'=>'', 'custom_bg'=>'', 'custom_font'=>'', 'custom_pulse'=>'', 'tooltip_style'=>'main_color', 'link' => '', 'link_target'=>''), $hotspot['attr']));
+				$content = ShortcodeHelper::avia_remove_autop($hotspot['content']);
 				
 				$tags = array('div', 'div');
 				if(!empty($link)) 
 				{
+					$blank  = strpos($link_target, '_blank') !== false ? ' target="_blank" ' : "";
+					$blank .= strpos($link_target, 'nofollow') !== false ? ' rel="nofollow" ' : "";
+					
 					$link = aviaHelper::get_url($link, false);
-					$tags = array("a href={$link} ", 'a');
+					$tags = array("a href={$link} {$blank}", 'a');
 				}
 				
 				if(empty($hotspot_pos)) $hotspot_pos = '50,50';

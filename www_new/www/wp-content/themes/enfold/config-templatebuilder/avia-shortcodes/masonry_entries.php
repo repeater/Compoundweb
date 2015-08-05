@@ -376,19 +376,21 @@ if ( !class_exists( 'avia_masonry' ) )
 			//increase the post items by one to fetch an additional item. this item is later removed by the javascript but it tells the script if there are more items to load or not
 			$_POST['items'] = $_POST['items'] + 1;
 		
-			$masonry  = new avia_masonry($_POST);
+			$masonry  	= new avia_masonry($_POST);
+			$ajax 		= true;
 			
 			if(!empty($_POST['ids']))
 			{
-				$masonry->query_entries_by_id();
+				$masonry->query_entries_by_id(array(), $ajax);
 			}
 			else
 			{
 				$masonry->extract_terms();
-				$masonry->query_entries();
+				$masonry->query_entries(array(), $ajax);
 			}
 			
-			$output = $masonry->html();
+			
+			$output = $masonry->html( );
 					
 			echo '{av-masonry-loaded}'.$output;
 			exit();
@@ -591,8 +593,7 @@ if ( !class_exists( 'avia_masonry' ) )
 							$class_string .= $this->ratio_check_by_tag($entry['tags']);	
 					}
 				}
-
-
+				
 				$linktitle = "";
 				
                 if($post_type == 'attachment' && strpos($html_tags[0], 'a href=') !== false)
@@ -605,7 +606,7 @@ if ( !class_exists( 'avia_masonry' ) )
                 }
                 $markup = ($post_type == 'attachment') ? avia_markup_helper(array('context' => 'image_url','echo'=>false, 'id'=>$entry['ID'], 'custom_markup'=>$this->atts['custom_markup'])) : avia_markup_helper(array('context' => 'entry','echo'=>false, 'id'=>$entry['ID'], 'custom_markup'=>$this->atts['custom_markup']));
 
-				$items .= 	"<{$html_tags[0]} class='{$class_string}' {$linktitle} {$markup}>";
+				$items .= 	"<{$html_tags[0]} id='av-masonry-".self::$element."-item-".$entry['ID']."' class='{$class_string}' {$linktitle} {$markup}>";
 				$items .= 		"<div class='av-inner-masonry-sizer'></div>"; //responsible for the size
 				$items .=		"<figure class='av-inner-masonry main_color'>";
 				$items .= 			$bg;
@@ -711,7 +712,7 @@ if ( !class_exists( 'avia_masonry' ) )
 		}
 		
 		
-		function prepare_loop_from_entries()
+		function prepare_loop_from_entries( $ajax = false )
 		{
 			$this->loop = array();
 			if(empty($this->entries) || empty($this->entries->posts)) return;
@@ -740,6 +741,11 @@ if ( !class_exists( 'avia_masonry' ) )
 				
 				if(empty($this->loop[$key]['content']))
 				{
+					if($ajax)
+					{
+						$entry->post_content = preg_replace("!\[.*?\]!", "", $entry->post_content);
+					}
+					
 					$this->loop[$key]['content'] 	= avia_backend_truncate($entry->post_content, apply_filters( 'avf_masonry_excerpt_length' , 60) , apply_filters( 'avf_masonry_excerpt_delimiter' , " "), "…", true, '');
 				}
 				
@@ -872,7 +878,7 @@ if ( !class_exists( 'avia_masonry' ) )
 		
 		
 		//fetch new entries
-		public function query_entries($params = array())
+		public function query_entries($params = array(), $ajax = false)
 		{
 			global $avia_config;
 
@@ -898,7 +904,10 @@ if ( !class_exists( 'avia_masonry' ) )
 					$allTax = get_terms( $params['taxonomy']);
 					foreach($allTax as $tax)
 					{
-						$terms[] = $tax->term_id;
+						if( is_object($tax) )
+						{
+							$terms[] = $tax->term_id;
+						}
 					}
 				}
 				
@@ -931,11 +940,11 @@ if ( !class_exists( 'avia_masonry' ) )
 			$query = apply_filters('avia_masonry_entries_query', $query, $params);
 
 			$this->entries = new WP_Query( $query );
-			$this->prepare_loop_from_entries();
+			$this->prepare_loop_from_entries( $ajax );
 		}
 		
 		
-		public function query_entries_by_id($params = array())
+		public function query_entries_by_id($params = array(), $ajax = false)
 		{
 			global $avia_config;
 
@@ -962,7 +971,7 @@ if ( !class_exists( 'avia_masonry' ) )
 			$query = apply_filters('avia_masonry_entries_query', $query, $params);
 
 			$this->entries = new WP_Query( $query );
-			$this->prepare_loop_from_entries();
+			$this->prepare_loop_from_entries( $ajax );
 			
 			
 		}

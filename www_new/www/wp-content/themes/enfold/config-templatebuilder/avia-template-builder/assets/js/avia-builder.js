@@ -49,6 +49,9 @@ function avia_nl2br (str, is_xhtml)
 
 	$.AviaBuilder = function () 
 	{
+		//html container
+		this.body_container		= $('body:eq(0)');
+		
 		// the canvas we use to display the interface
         this.canvas				= $('#aviaLayoutBuilder');
         
@@ -153,13 +156,16 @@ function avia_nl2br (str, is_xhtml)
 			//add a new element to the AviaBuilder canvas
 			this.shortcode_wrap.on('click', '.shortcode_insert_button', function()
 			{
-				var parent 			= $(this).parents('.shortcode_button_wrap'),
+				var current			= $(this),
+					parent 			= $(this).parents('.shortcode_button_wrap'),
 					execute			= this.hash.replace('#',''),
 					target			= "instant_insert", // this.className.indexOf('avia-target-insert') !== -1 ? "target_insert" : "instant_insert",
 					already_active	= this.className.indexOf('avia-active-insert') !== -1 ? true : false;
-
-				obj.shortcodes.fetchShortcodeEditorElement(execute, target, obj);
 				
+				if(!current.is(".av-shortcode-disabled"))
+				{
+					obj.shortcodes.fetchShortcodeEditorElement(execute, target, obj);
+				}
 				return false;
 			});
 			
@@ -198,7 +204,7 @@ function avia_nl2br (str, is_xhtml)
 			$body.on('click', '.avia-edit-element', function()
 			{
 				var parent				  = $(this).parents('.avia_sortable_element:eq(0)');
-				if(!parent.length) parent = $(this).parents('.avia_layout_cell:eq(0)');
+				if(!parent.length) parent = $(this).parents('.avia_layout_column:eq(0)');
 				if(!parent.length) parent = $(this).parents('.avia_layout_section:eq(0)');
 					
 					var params			= parent.data(), modal;
@@ -355,7 +361,7 @@ function avia_nl2br (str, is_xhtml)
 			
 			params.cursorAt = { left: 33, top:33 };
 			params.handle   = false;
-			scope.find('.shortcode_insert_button').not('.ui-draggable').draggable(params);
+			scope.find('.shortcode_insert_button').not('.ui-draggable, .av-shortcode-disabled').draggable(params);
 		},
 		
 		
@@ -569,6 +575,7 @@ function avia_nl2br (str, is_xhtml)
 			if(this.activeStatus.val() != 'active')
 			{
 				$('#content-html').trigger('click');
+				self.body_container.addClass('avia-advanced-editor-enabled');
 				self.classic_editor_wrap.addClass('avia-hidden-editor');
 				self.switch_button.addClass('avia-builder-active').text(self.switch_button.data('active-button'));
 				self.activeStatus.val('active');
@@ -591,6 +598,7 @@ function avia_nl2br (str, is_xhtml)
 			}
 			else
 			{
+				this.body_container.removeClass('avia-advanced-editor-enabled');
 				this.classic_editor_wrap.removeClass('avia-hidden-editor');
 				this.switch_button.removeClass('avia-builder-active').text(this.switch_button.data('inactive-button'));
 				this.activeStatus.val("");
@@ -708,14 +716,17 @@ function avia_nl2br (str, is_xhtml)
                     content_fields	= container.find('.avia_sortable_element ' + this.datastorage),
                     content			= "",
 				    currentSize		= container.data('width'),
-				    currentFirst	= container.is('.avia-first-col') ? " first" : "";
+				    currentFirst	= container.is('.avia-first-col') ? " first" : "",
+				    open_tag        = main_storage.val().match(new RegExp("\\["+currentSize+".*?\\]"));
 				    
 				for (var i = 0; i < content_fields.length; i++) 
     			{
     				content	+= $(content_fields[i]).val();
     			}
     			
-    			content = "["+currentSize+currentFirst+"]\n\n" + content + "[/"+ currentSize +"]";
+    			content = open_tag[0]+"\n\n" + content + "[/"+ currentSize +"]";
+    			//content = "["+currentSize+currentFirst+"]\n\n" + content + "[/"+ currentSize +"]";
+    			
     			main_storage.val(content);
             }
 
@@ -854,6 +865,8 @@ function avia_nl2br (str, is_xhtml)
 		convertTextToInterface: function(text)
 		{	
             if(this.activeStatus.val() != "active") return;
+            
+            this.body_container.addClass('avia-advanced-editor-enabled');
 		
 			var obj = this, editor;
 		
@@ -878,7 +891,8 @@ function avia_nl2br (str, is_xhtml)
 			data: 
 			{
 				action: 'avia_ajax_text_to_interface',
-				text: text
+				text: text,
+				avia_request: true
 			},
 			success: function(response)
 			{
@@ -1119,7 +1133,7 @@ function avia_nl2br (str, is_xhtml)
 			}
 				
 			//if we are working inside a section only update the shortcode open tag
-			if(element_container.is('.avia_layout_section') || element_container.is('.avia_layout_cell'))
+			if(element_container.is('.avia_layout_section') || element_container.is('.avia_layout_column'))
 			{
 			    saveTo.val(saveTo.val().replace(new RegExp("^\\["+shortcode+".*?\\]"), tags.open)); 
 			}
@@ -1530,7 +1544,14 @@ function avia_nl2br (str, is_xhtml)
 			
 			dataStorage.val(dataString);
 			container.removeClass(currentSize).addClass(nextSize[0]);
-			container.attr('data-width',nextSize[0]).data('width',nextSize[0]); //make sure to also set the data attr so html() functions fetch the correct value
+			
+			//make sure to also set the data attr so html() functions fetch the correct value
+			container.attr('data-width',nextSize[0]).data('width',nextSize[0]); 
+			container.attr('data-modal_ajax_hook',nextSize[0]).data('modal_ajax_hook',nextSize[0]); 
+			container.attr('data-allowed-shortcodes',nextSize[0]).data('allowed-shortcodes',nextSize[0]); 
+
+
+
 			sizeString.text(nextSize[1]);
 			
 			obj.updateTextarea();

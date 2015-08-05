@@ -126,7 +126,7 @@ $avia_config['imgSize']['magazine'] 		 	= array('width'=>710, 'height'=>375 );		
 $avia_config['imgSize']['masonry'] 		 		= array('width'=>705, 'height'=>705 , 'crop' => false);		// images for fullscreen masonry
 $avia_config['imgSize']['entry_with_sidebar'] 	= array('width'=>845, 'height'=>321);		            	// big images for blog and page entries
 $avia_config['imgSize']['entry_without_sidebar']= array('width'=>1210, 'height'=>423 );						// images for fullsize pages and fullsize slider
-
+$avia_config['imgSize'] = apply_filters('avf_modify_thumb_size', $avia_config['imgSize']);
 
 
 $avia_config['selectableImgSize'] = array(
@@ -140,6 +140,8 @@ $avia_config['selectableImgSize'] = array(
 	'extra_large' 			=> __('Fullscreen Sections/Sliders','avia_framework'),
 	
 );
+
+
 
 avia_backend_add_thumbnail_size($avia_config);
 
@@ -303,6 +305,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 
         global $avia;
 		$safe_name = avia_backend_safe_string($avia->base_data['prefix']);
+		$safe_name = apply_filters('avf_dynamic_stylesheet_filename', $safe_name);
 
         if( get_option('avia_stylesheet_exists'.$safe_name) == 'true' )
         {
@@ -418,8 +421,12 @@ require_once( 'config-templatebuilder/config.php' );			//templatebuilder plugin
 require_once( 'config-gravityforms/config.php' );				//compatibility with gravityforms plugin
 require_once( 'config-woocommerce/config.php' );				//compatibility with woocommerce plugin
 require_once( 'config-wordpress-seo/config.php' );				//compatibility with Yoast WordPress SEO plugin
-require_once( 'config-events-calendar/config.php' );			//compatibility with the Events Calendar plugin
 
+
+if(!current_theme_supports('deactivate_tribe_events_calendar'))
+{
+	require_once( 'config-events-calendar/config.php' );			//compatibility with the Events Calendar plugin
+}
 
 if(is_admin())
 {
@@ -511,10 +518,3 @@ require_once( 'functions-enfold.php');
  * add option to edit elements via css class
  */
 // add_theme_support('avia_template_builder_custom_css');
-
-
-
-
-
-
-

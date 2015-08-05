@@ -680,6 +680,7 @@ if ( !class_exists( 'avia_post_grid' ) )
 				case 'gallery':
 
 					$params['style'] =  "big_thumb";
+					$params['thumb_size'] =  "square";
 					foreach($params as $key => $param) $string .= $key."='".$param."' ";
 					$images = do_shortcode("[av_gallery {$string}]");
 				break;

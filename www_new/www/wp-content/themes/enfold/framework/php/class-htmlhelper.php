@@ -583,7 +583,7 @@ if( ! class_exists( 'avia_htmlhelper' ) )
 			$upload_class = "avia_uploader"; 
 			global $wp_version;
 			
-			if(version_compare($wp_version, '3.5', '>=' ) && empty($element['force_old_media'])) //check if new media upload is enabled
+			if(version_compare($wp_version, '3.5', '>=' ) && empty($element['force_old_media']) && empty($element['subtype']) ) //check if new media upload is enabled
 			{
 				$upload_class = "avia_uploader_35"; 
 			
@@ -1127,11 +1127,25 @@ if( ! class_exists( 'avia_htmlhelper' ) )
          */
   		function import( $element )
 		{	
-			$data = "";
-			$extra = "";
+			$data 	= "";
+			$extra 	= "";
+			$activeClass = "";
+			$button_class= "";
+			$click_to_import = __("Click to import",'avia_framework');
 			
 			if(isset($element['files'])) $data = "data-files='".$element['files']."'";
 			if(!empty($element['image'])) $extra = "av-import-with-image";
+			
+			if(isset($element['exists']))
+			{
+				$plugin = $element['exists'][0];
+				if(!class_exists($plugin))
+				{
+					$extra .= " av-disable-import";
+					$click_to_import = $element['exists'][1];
+					$button_class .= "avia_button_inactive";
+				}
+			}
 			
 			
 			$output  = "<div class='av-import-wrap {$extra}'>";
@@ -1144,7 +1158,7 @@ if( ! class_exists( 'avia_htmlhelper' ) )
 			}
 			else
 			{
-				$output .= '<a href="#" class="avia_import_image avia_import_button" '.$data.'><div class="avia_import_overlay">Click to import</div><img src="'.AVIA_BASE_URL.$element['image'].'" alt="" title="" /></a>';
+				$output .= '<a href="#" class="avia_import_image avia_import_button '.$button_class.'" '.$data.'><div class="avia_import_overlay">'.$click_to_import.'</div><img src="'.AVIA_BASE_URL.$element['image'].'" alt="" title="" /></a>';
 			}
 			
 			$output .= '<span class="avia_loading avia_import_loading"></span>';

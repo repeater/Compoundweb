@@ -123,7 +123,8 @@ if(!function_exists('avia_bbpress_breadcrumb'))
 		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">', 
 		'after_widget' => '<span class="seperator extralight-border"></span></div>', 
 		'before_title' => '<h3 class="widgettitle">', 
-		'after_title' => '</h3>', 
+		'after_title' => '</h3>',
+		'id' => 'av_forum' 
 	));
 	
 /*

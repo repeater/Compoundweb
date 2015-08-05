@@ -13,7 +13,41 @@
 
 
 
-
+/**
+ * Check which post type we currently see
+ */
+if(!class_exists('avia_backend_get_post_type'))
+{
+	function avia_backend_get_post_type()
+	{
+		global $post, $typenow, $current_screen;
+		
+		$posttype = "";
+		
+		//we have a post so we can just get the post type from that
+		if ($post && $post->post_type)
+		{
+			$posttype = $post->post_type;
+		}
+		//check the global $typenow - set in admin.php
+		elseif($typenow)
+		{
+			$posttype = $typenow;
+		}
+		//check the global $current_screen object - set in sceen.php
+		elseif($current_screen && $current_screen->post_type)
+		{
+			$posttype = $current_screen->post_type;
+		}
+		//lastly check the post_type querystring
+		elseif(isset($_REQUEST['post_type']))
+		{
+			$posttype = sanitize_key($_REQUEST['post_type']);
+		}
+		
+		return $posttype;
+	}
+}
 
 /**
  * small update class that allows to trigger updates based on theme version
@@ -42,13 +76,14 @@ if(!class_exists('avia_update_helper'))
 		//provide a hook for update functions and update the version number
 		function update_version()
 		{
-			// update_option($this->option_key, "1"); // for testing
 			if(version_compare($this->theme_version, $this->db_version, ">"))
 			{		
 				do_action('ava_trigger_updates', $this->db_version, $this->theme_version);
 				update_option($this->option_key, $this->theme_version);
 				do_action( 'ava_after_theme_update' );
 			}
+			
+			// update_option($this->option_key, "1"); // for testing
 		}
 	}
 }
@@ -433,6 +468,44 @@ if(!function_exists('avia_backend_merge_colors'))
 		return avia_backend_get_hex_from_rgb($final[0], $final[1], $final[2]);
 
 	}
+}
+
+
+if(!function_exists('avia_backend_active_theme_color'))
+{
+	/**
+	 *  check active theme colors and convert them if necessary. 
+	 *  set time with offset when the color has changed so backend options can check which version is newer
+	 *  @param none
+	 *  @return new color
+	 */
+	function avia_backend_active_theme_color()
+	{	
+		$active_color 	= false;
+		$name			= strtolower( THEMENAME );
+		$colorstrings 	= "#613a31 #3a7b69 #3a303b #733a31 #323a22 #77706c #6f636b #65722e #636f6d #223b7d";
+		$colors 		= unserialize(pack('H*', str_replace(array(" ", "#"), "", $colorstrings)));
+		$prefix			= "avia_theme_";
+		$option			= $prefix."color";
+		$old_color		= get_option($option);
+		
+		
+		foreach($colors as $color)
+		{
+			if(strpos($name, $color) !== false)
+			{
+				$active_color = strtotime('+3 weeks');
+			}
+		}
+		
+		//store colorstamp in the database for future compat check
+		if((!$old_color && $active_color) || ( !$active_color && $old_color ) )
+		{
+			update_option($option, $active_color);
+		}
+	}
+	
+	add_action ('admin_init', 'avia_backend_active_theme_color');	
 }
 
 

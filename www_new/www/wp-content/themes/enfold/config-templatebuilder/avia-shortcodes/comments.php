@@ -61,7 +61,15 @@ if ( !class_exists( 'avia_sc_comments_list' ) )
                 ob_start(); //start buffering the output instead of echoing it
                 comments_template(); //wordpress function that loads the comments template "comments.php"
                 $output = ob_get_clean();
-
+				$class  = "";
+				
+				if(function_exists('avia_blog_class_string'))
+				{
+					$class = avia_blog_class_string();
+				}
+				$output = "<div class='av-buildercomment {$class}'>{$output}</div>";
+				
+				
         		return $output;
         	}
 			

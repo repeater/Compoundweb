@@ -107,7 +107,7 @@
 	padding-left:20px;
 	margin-bottom:1em;
 	margin-right:1em;
-	font-size: 16px;
+	font-size: 1.235em;
     line-height: 1.5em;
 	}
 
@@ -204,8 +204,7 @@
 		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #777;
 		margin: 0;
-		width: 210px;
-		max-width: 100%;
+		width: 100%;
 		display: block;
 		margin-bottom: 20px;
 		background: #fff;
@@ -226,7 +225,6 @@
 	#top textarea {
 		min-height: 60px; line-height:1.5em;}
 	#top label{
-		display: block;
 		font-weight: bold;
 		font-size: 12px;  }
 	#top legend {
@@ -234,7 +232,7 @@
 		font-weight: normal;
 		font-size: 15px;  }
 	#top select {
-		width: 220px; }
+		width: 100%; }
 	#top input[type="checkbox"] {
 		display: inline; }
 	#top label span,

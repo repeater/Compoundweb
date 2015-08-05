@@ -188,6 +188,7 @@ function avia_breadcrumbs( $args = array() ) {
 		'front_page' => true,
 		'show_home' => __( 'Home', 'avia_framework' ),
 		'echo' => false,
+		'show_categories' => true,
 		'show_posts_page' => true,
 		'truncate' => 70,
 		'richsnippet' => false
@@ -278,7 +279,7 @@ function avia_breadcrumbs( $args = array() ) {
 			}
 		}
 
-        if('post' == $post_type)
+        if('post' == $post_type && $show_categories)
         {
                 $category = get_the_category();
 				
@@ -482,8 +483,10 @@ function avia_breadcrumbs( $args = array() ) {
 
 		if($richsnippet === true)
 		{
-			foreach($trail as &$link)
+			foreach($trail as $key => &$link)
 			{
+				if("trail_end" == $key) continue;
+
 				$link = preg_replace('!rel=".+?"|rel=\'.+?\'|!',"", $link);
 				$link = str_replace('<a ', '<a rel="v:url" property="v:title" ', $link);
 				$link = '<span typeof="v:Breadcrumb">'.$link.'</span>';

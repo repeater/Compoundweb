@@ -1,4 +1,7 @@
 <?php
+$weight 	= array(__('Default','avia_framework') => '' , __('Normal','avia_framework') =>'normal', __('Bold','avia_framework')=>'bold', __('Light','avia_framework')=>'lighter');
+$transform 	= array(__('Default','avia_framework') => '' , __('None'  ,'avia_framework') =>'none', __('Uppercase','avia_framework')=>'uppercase', __('Lowercase','avia_framework')=>'lowercase');
+
 
 $advanced = array();
 
@@ -45,7 +48,9 @@ $advanced['headings_all'] = array(
 	"edit"			=> array(	'color' 			=> array('type' => 'colorpicker', 'name'=> __("Font Color",'avia_framework')), 
 								'background_color' 	=> array('type' => 'colorpicker', 'name'=> __("Background Color",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
-							)
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),							
+								)
 
 );
 
@@ -62,9 +67,14 @@ $advanced['h1'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),
 							)
 
 );
+
+
+
 
 
 $advanced['h2'] = array(
@@ -80,7 +90,9 @@ $advanced['h2'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
-							)
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),		
+								)
 );
 
 $advanced['h3'] = array(
@@ -96,6 +108,8 @@ $advanced['h3'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),		
 							)
 );
 
@@ -112,6 +126,8 @@ $advanced['h4'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),		
 							)
 );
 
@@ -128,6 +144,8 @@ $advanced['h5'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),		
 							)
 );
 
@@ -144,6 +162,8 @@ $advanced['h6'] = array(
 								'font_size' 		=> array('type' => 'size', 'range' => '10-80', 'name'=> __("Font Size",'avia_framework')),
 								'line_height' 		=> array('type' => 'size', 'range' => '0.7-2', 'increment' => 0.1, 'unit' => 'em',  'name'=> __("Line Height",'avia_framework')),
 								'font_family' 		=> array('type' => 'font', 'name'=> __("Font Family",'avia_framework'), 'options' => $google_fonts),
+								'font_weight' 		=> array('type' => 'select', 'name'=> __("Font Weight",'avia_framework'), 'options' => $weight),
+								'text_transform' 	=> array('type' => 'select', 'name'=> __("Text Transform",'avia_framework'), 'options' => $transform ),		
 							)
 );
 
@@ -191,7 +211,7 @@ $advanced['top_bar'] = array(
 	"description"	=> __("Change the styling for the small bar above the main menu which can contain social icons, a second menu and a phone number ",'avia_framework'),
 	"selector"		=> array(
 							 	"#top #header_meta, #top #header_meta nav ul ul li, #top #header_meta nav ul ul a, #top #header_meta nav ul ul" => array("background_color" => "background-color: %background_color%;"), 
-							 	"#top #header_meta a, #top #header_meta ul, #top #header_meta li, #top #header_meta .phone-info" => array( "border_color" => "border-color: %border_color%;", "color" => "color: %color%;" )
+							 	"#top #header_meta a, #top #header_meta li, #top #header_meta .phone-info" => array( "border_color" => "border-color: %border_color%;", "color" => "color: %color%;" )
 							 ),
 	"sections"		=> false,
 	"hover"			=> false,

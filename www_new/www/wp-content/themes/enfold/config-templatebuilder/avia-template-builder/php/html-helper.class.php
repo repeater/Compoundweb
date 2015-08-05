@@ -68,9 +68,15 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 		static function render_element($element, $parent_class = false)
 		{
 		
-			$defaults		= array('id'=>'', 'name'=>'', 'label' => '', 'std' => '', 'class' =>'', 'container_class'=>'', 'desc' =>'', 'required'=>array(), 'target'=>array(), 'shortcode_data'=>array());
+			$defaults		= array('id'=>'', 'name'=>'', 'label' => '', 'std' => '', 'class' =>'', 'container_class'=>'', 'desc' =>'', 'required'=>array(), 'target'=>array(), 'shortcode_data'=>array(), 'builder_active' => '');
 			$element		= array_merge($defaults, $element);
 			$output			= "";
+			
+			if( $element['builder_active'] )
+			{
+				$output .= "<div class='avia-conditional-elements avia-conditional-elements-builder-active'>";	
+			}
+			
 			self::$elementValues[$element['id']] = $element['std']; //save the values into a unique array in case we need it for dependencies
 			
 			//create default data und class string and checks the dependencies of an object
@@ -84,6 +90,7 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			
 			$id_string 		 = empty($element['id']) ? "" : "id='".$element['id']."-form-container'";
 			$class_string 	.= empty($element['container_class']) ? "" : $element['container_class']; 
+			$description_class = empty($element['description_class']) ? "" : $element['description_class']; 
 			
 			$target_string = "";
 			if(!empty($element['target']))
@@ -103,7 +110,7 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			
 				if( !empty($element['name']) ||!empty($element['desc']))  
 				{
-					$output .= "<div class='avia-name-description'>";
+					$output .= "<div class='avia-name-description {$description_class}'>";
 					if( !empty($element['name'])) $output .= "<strong>".$element['name']."</strong>";
 					if( !empty($element['desc'])) 
 					{
@@ -138,8 +145,13 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 				$output .= self::$element['type']($element, $parent_class);
 			}
 			
-			
-			
+			if( $element['builder_active'] )
+			{
+				$output .= "<div class='av-builder-active-overlay'></div>";
+				$output .= "<div class='av-builder-active-overlay-content'>";
+				$output .= __('This element only works with activated advanced layout builder','avia_framework')."</div>";
+				$output .= "</div>";
+			}
 			
 			return $output;
 		}
@@ -226,7 +238,7 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			
 			for ($i = 0; $i < $iterations; $i++)
 			{
-				if(isset($_POST['extracted_shortcode']))
+				if(isset($_POST['extracted_shortcode']) && isset($_POST['extracted_shortcode'][$i]))
 				{
 					$element['shortcode_data'] = $_POST['extracted_shortcode'][$i]['attr'];
 				}
@@ -484,7 +496,7 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			{
 				$output .= "<div class='av-multi-input-cell'>";
 				$value   = isset($element['std'][$count]) ? $element['std'][$count] : $value;
-				$disable = ($checked === 1 && $count !== 0) ? 'disabled' : "";
+				$disable = ($checked === 1 && $count !== 0 && !empty($element['sync'])) ? 'disabled' : "";
 				
 				$output .= !empty($label) ? "<div class='av-multi-input-label'>{$label}</div>" : "";
 				$output .= '<input '.$disable.' type="text" class="'.$element['class'].'" value="'.nl2br($value).'" id="'.$element['id'].'_'.$multi.'" name="'.$element['id'].'"/>';
@@ -640,7 +652,11 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
          */
 		static function colorpicker($element)
 		{
-			$output = '<input type="text" class="colorpicker '.$element['class'].'" value="'.$element['std'].'" id="'.$element['id'].'" name="'.$element['id'].'"/>';
+			$data = "";
+			if( !empty( $element['rgba'] )) $data = "data-av-rgba='1'";
+			
+			$output = '<input type="text" class="av-colorpicker '.$element['class'].'" value="'.$element['std'].'" id="'.$element['id'].'" name="'.$element['id'].'" '.$data.' />';
+			
 			return $output;
 		}
 		
@@ -956,9 +972,12 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
          * @param array $element the array holds data like type, value, id, class, description which are necessary to render the whole option-section
          * @return string $output the string returned contains the html code generated within the method
          */
+        
 		static function select( $element )
 		{	
-			$select = __('Select','avia_framework' );
+			$select 	= __('Select','avia_framework' );
+			$parents 	= array();
+			$fake_val 	= "";
 			
 			if($element['subtype'] == 'cat')
 			{
@@ -968,6 +987,16 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			
 				$entries = get_categories('title_li=&orderby=name&hide_empty=0'.$add_taxonomy);
 				
+				//sort entries so subentries are displayed with indentation
+				
+		        foreach($entries as $key => $entry)
+		        {
+			    	if($entry->parent)
+			    	{
+				    	$parents[$entry->parent][$entry->term_id] = $entry;
+				    	unset($entries[$key]);
+			    	}
+		        }
 			}
 			else if(!is_array($element['subtype']))
 			{
@@ -1079,6 +1108,19 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 			}
 			
 			$entries = $real_entries;
+			$output .= AviaHtmlHelper::create_select_option($element, $entries, $fake_val, $parents, 0);				
+				
+				
+			
+			$output .= '</select>';
+
+			
+			return $output;
+		}
+		
+		static function create_select_option($element, $entries, $fake_val, $parents, $level)
+		{	
+			$output = "";
 			
 			foreach ($entries as $key => $entry)
 			{
@@ -1100,12 +1142,22 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 					$id = $entry;
 					$title = $key;				
 				}
-			
+				
 				if(!empty($title) || (isset($title) && $title === 0))
 				{
-					if(!isset($fake_val)) $fake_val = $title;
+					if(empty($fake_val)) $fake_val = $title;
 					$selected = "";
-					if ($element['std'] == $id || (is_array($element['std']) && in_array($id, $element['std']))) { $selected = "selected='selected'"; $fake_val = $title;}
+					if ($element['std'] == $id || (is_array($element['std']) && in_array($id, $element['std']))) 
+					{ 
+						$selected = "selected='selected'"; 
+						$fake_val = $title;
+					}
+					
+					$indent = "";
+					for($i = 0; $i < $level; $i++)
+					{
+						$indent .= "- ";
+					}
 					
 					if(strpos ( $title , 'option_group_') === 0) 
 					{
@@ -1117,16 +1169,22 @@ if ( !class_exists( 'AviaHtmlHelper' ) ) {
 					}
 					else
 					{
-						$output .= "<option $selected value='". $id."'>". $title."</option>";
+						$output .= "<option $selected value='". $id."'>". $indent.$title."</option>";
 					}
 					
+					if(!empty($parents) && !empty($parents[$id]))
+					{
+						$level ++;
+						$output .= AviaHtmlHelper::create_select_option($element, $parents[$id], $fake_val, $parents, $level);
+						$level --;
+					}
+					
+					
 				}
-			}
-			$output .= '</select>';
-
-			
-			return $output;
+			}	
+			return $output;	
 		}
+		
 		
 		
 		/**

@@ -57,9 +57,11 @@ html.responsive { min-width: 0px; }
   z-index: 2;
   overflow: hidden;
 }
+
 .boxed #wrap_all {
   overflow: visible; /*needed for cart icon */
 }
+
 /* Nested Column Classes */
 body .unit.alpha, body .units.alpha, body div .first {
   margin-left: 0;
@@ -83,15 +85,26 @@ body .unit.alpha, body .units.alpha {
 /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
 @media only screen and (min-width: 768px) and (max-width: 989px) {
   .responsive #top { overflow-x: hidden; }
-  .responsive .boxed#top , .responsive.html_boxed.html_header_sticky #header{ width: 782px; }
+  .responsive .boxed#top , 
+  .responsive.html_boxed.html_header_sticky #header{ width: 782px;}
   .responsive .container{ max-width: 782px; }
+  .responsive.html_mobile_menu_tablet .boxed #wrap_all { overflow: hidden; /*needed for mobile menu scrolling */ }
 }
+
+
 /*  #Mobile (Portrait)
 ================================================== */
 
 @media only screen and (max-width: 767px) {
+	
+  .responsive .boxed #wrap_all { overflow: hidden; /*needed for mobile menu scrolling */ }
   .responsive #top { overflow-x: hidden; }
-  .responsive .boxed#top, .responsive #top.boxed .stretch_full , .responsive.html_boxed.html_header_sticky #header{ width: 100%; }
+  .responsive .boxed#top, .responsive #top.boxed .stretch_full , 
+  .responsive.html_boxed.html_header_sticky #header,
+  .responsive.html_boxed.html_header_transparency div #header{ width: 100%; max-width: 100%; }
+  .responsive #top .flex_column_table_cell{display: block;}
+  .responsive #top .flex_column_table{display:block;}
+  
   .responsive #top #wrap_all .container {
     width: 85%;
     max-width: 85%;
@@ -115,14 +128,19 @@ body .unit.alpha, body .units.alpha {
 	  margin: 0;
 	  height:auto !important;
 	  overflow: hidden;
-	  padding-left:0 !important;
-	  padding-right:0 !important;
+	  padding-left:8% !important;
+	  padding-right:8% !important;
   }
   
   .responsive #top #wrap_all .av-flex-cells .no_margin .flex_cell_inner{
-	    width: 85%;
-		max-width: 85%;
+	    width: 100%;
+		max-width: 100%;
 		margin: 0 auto;  
+  }
+  
+  .responsive #top #wrap_all .av-flex-cells .no_margin.av-zero-padding{
+	  padding-left:0% !important;
+	  padding-right:0% !important;
   }
   
   .responsive #top #wrap_all .flex_column:empty{margin:0;}
@@ -151,7 +169,7 @@ body .unit.alpha, body .units.alpha {
 .flex_column:before,
 .flex_column:after,
 .widget:before,
-.widget:after,
+.widget:after
 {
   content: '\0020';
   display: block;
@@ -294,35 +312,59 @@ div .av_one_tenth {
 #top .no_margin.av_one_tenth {
   width: 10%;
 }
+
+/* Columns with equal height
+================================================== */
+
+#top .flex_column_table{
+	display: table;
+	table-layout: fixed;
+	width:100%;
+}
+
+#top .flex_column_table_cell{
+	float:none;
+	display: table-cell;
+}
+
+#top .av-flex-placeholder{
+	display: table-cell;
+	width: 6%;
+}
+
+.av-align-top{ vertical-align: top; }
+.av-align-middle{ vertical-align: middle; }
+.av-align-bottom{ vertical-align: bottom; }
+
 /*breaking point logic for the common  1/4 element in ipads. makes sure that it converts to a 1/2 element in most cases*/
 @media only screen and (min-width: 768px) and (max-width: 989px) {
-  .responsive .av_one_fourth.first.el_before_av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth,
-  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth + .av_one_fourth,
-  .responsive .avia-content-slider-inner .av_one_fourth {
+  .responsive .av_one_fourth.first.el_before_av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth.flex_column_div,
+  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .avia-content-slider-inner .av_one_fourth.flex_column_div {
     margin-left: 4%;
     width: 48%;
   }
-  .responsive .av_one_fourth.first.el_before_av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half,
-  .responsive .avia-content-slider-inner .av_one_fourth.first {
+  .responsive .av_one_fourth.first.el_before_av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_half.first + .av_one_fourth.el_before_av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half.flex_column_div,
+  .responsive .avia-content-slider-inner .av_one_fourth.first.flex_column_div {
     margin-left: 0%;
     clear: both;
   }
-  .responsive .av_one_half.first.el_before_av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half {
+  .responsive .av_one_half.first.el_before_av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half.flex_column_div {
     width: 100%;
   }
-  .responsive .av_one_half.first + .av_one_fourth,
-  .responsive .av_one_half.first + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth + .av_one_fourth,
-  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half {
+  .responsive .av_one_half.first + .av_one_fourth.flex_column_div,
+  .responsive .av_one_half.first + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth + .av_one_fourth.flex_column_div,
+  .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half.flex_column_div {
     margin-top: 30px;
   }
 }

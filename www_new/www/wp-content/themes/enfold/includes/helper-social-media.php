@@ -132,6 +132,7 @@ if(!class_exists('avia_social_share_links'))
 		var $options;
 		var $links = array();
 		var $html  = "";
+		var $title = "";
 		var $counter = 0;
 		
 		/*
@@ -139,7 +140,7 @@ if(!class_exists('avia_social_share_links'))
 		 * initialize the variables necessary for all social media links
 		 */
 
-		function __construct($args = array(), $options = false)
+		function __construct($args = array(), $options = false, $title = false)
 		{
 			$default_arguments = array
 			(
@@ -154,10 +155,11 @@ if(!class_exists('avia_social_share_links'))
 				'mail' 		=> array("encode"=>true, "encode_urls"=>false, "pattern" => "mailto:?subject=[title]&amp;body=[permalink]", 'label' => __("Share by Mail",'avia_framework') ),
 			);
 			
-			$this->args = array_merge($default_arguments, apply_filters( 'avia_social_share_link_arguments', $args));
+			$this->args = apply_filters( 'avia_social_share_link_arguments', array_merge($default_arguments, $args) );
 			
 			if(empty($options)) $options = avia_get_option();
-			$this->options = $options;
+			$this->options 	= $options;
+			$this->title 	= $title !== false? $title : __("Share this entry",'avia_framework');
 			$this->build_share_links();
 		}
 		
@@ -213,9 +215,12 @@ if(!class_exists('avia_social_share_links'))
 			if($this->counter == 0) return;
 			
 			$this->html .= "<div class='av-share-box'>";
-			$this->html .= 		"<h5 class='av-share-link-description'>";
-			$this->html .= 	apply_filters('avia_social_share_title', __("Share this entry",'avia_framework'), $this->args);
-			$this->html .= 		"</h5>";
+			if($this->title)
+			{
+				$this->html .= 		"<h5 class='av-share-link-description'>";
+				$this->html .= 		apply_filters('avia_social_share_title', $this->title , $this->args);
+				$this->html .= 		"</h5>";
+			}
 			$this->html .= 		"<ul class='av-share-box-list noLightbox'>";
 			
 			foreach($this->args as $key => $share)
@@ -250,9 +255,9 @@ if(!class_exists('avia_social_share_links'))
 
 if(!function_exists('avia_social_share_links'))
 {
-	function avia_social_share_links($args = array(), $echo = true)
+	function avia_social_share_links($args = array(), $options = false, $title = false, $echo = true)
 	{
-		$icons = new avia_social_share_links($args);
+		$icons = new avia_social_share_links($args, $options, $title);
 		
 		if($echo) 
 		{	

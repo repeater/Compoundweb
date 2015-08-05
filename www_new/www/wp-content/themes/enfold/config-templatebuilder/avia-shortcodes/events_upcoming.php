@@ -120,17 +120,22 @@ if ( !class_exists( 'avia_sc_upcoming_events' ) )
 			$entries= $posts->posts;
 			
 			if (!empty($entries))
-			{	
+			{	global $post;
+				
+				$default_id = $post->ID;
 				$output .= "<div class='av-upcoming-events ".$meta['el_class']."'>";
 				foreach($entries as $entry)
-				{
+				{	
 					$class  = "av-upcoming-event-entry";
 					$image  = get_the_post_thumbnail($entry->ID, 'square', array( 'class' => 'av-upcoming-event-image' ));
 					$class .= empty($image) ? " av-upcoming-event-with-image" : " av-upcoming-event-without-image";
 					$title  = get_the_title($entry->ID);
 					$link	= get_permalink($entry->ID);
+					
+					$post->ID = $entry->ID; //temp set of the post id so that tribe fetches the correct price symbol
 					$price  = tribe_get_cost( $entry->ID, true );
 					$venue  = tribe_get_venue( $entry->ID );
+					$post->ID = $default_id;
 					
 					$output .= "<a href='{$link}' class='{$class}'>";
 					
@@ -188,7 +193,7 @@ if ( !class_exists( 'avia_sc_upcoming_events' ) )
 			}
 			else
 			{
-				$query = array(	'paged'=> $page, 'posts_per_page' => $params['items'], 'eventDisplay' => 'upcoming');
+				$query = array(	'paged'=> $page, 'posts_per_page' => $params['items'], 'eventDisplay' => 'list');
 			}
 
 			$query = apply_filters('avia_tribe_events_upcoming', $query, $params);

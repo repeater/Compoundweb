@@ -23,6 +23,8 @@
 			{
 				echo avia_title(array('heading'=>'strong', 'title' => $title, 'link' => $t_link, 'subtitle' => $t_sub));
 			}
+			
+			do_action( 'ava_after_main_title' );
 	?>
 
 

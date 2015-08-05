@@ -468,6 +468,83 @@ array(
 										"type" 	=> "close_div",
 										'nodescription' => true
 									),
+								
+								
+								array(
+										"type" 	=> "tab",
+										"name"  => __("Slide Overlay" , 'avia_framework'),
+										'nodescription' => true
+									),
+					
+								array(	
+										"name" 	=> __("Enable Overlay?", 'avia_framework' ),
+										"desc" 	=> __("Check if you want to display a transparent color and/or pattern overlay above your slideshow image/video", 'avia_framework' ),
+										"id" 	=> "overlay_enable",
+										"std" 	=> "",
+										"type" 	=> "checkbox"),
+								
+								 array(
+									"name" 	=> __("Overlay Opacity",'avia_framework' ),
+									"desc" 	=> __("Set the opacity of your overlay: 0.1 is barely visible, 1.0 is opaque ", 'avia_framework' ),
+									"id" 	=> "overlay_opacity",
+									"type" 	=> "select",
+									"std" 	=> "0.5",
+			                        "required" => array('overlay_enable','not',''),
+									"subtype" => array(   __('0.1','avia_framework' )=>'0.1',
+									                      __('0.2','avia_framework' )=>'0.2',
+									                      __('0.3','avia_framework' )=>'0.3',
+									                      __('0.4','avia_framework' )=>'0.4',
+									                      __('0.5','avia_framework' )=>'0.5',
+									                      __('0.6','avia_framework' )=>'0.6',
+									                      __('0.7','avia_framework' )=>'0.7',
+									                      __('0.8','avia_framework' )=>'0.8',
+									                      __('0.9','avia_framework' )=>'0.9',
+									                      __('1.0','avia_framework' )=>'1',
+									                      )
+							  		),
+							  		
+							  	array(
+										"name" 	=> __("Overlay Color", 'avia_framework' ),
+										"desc" 	=> __("Select a custom  color for your overlay here. Leave empty if you want no color overlay", 'avia_framework' ),
+										"id" 	=> "overlay_color",
+										"type" 	=> "colorpicker",
+			                        	"required" => array('overlay_enable','not',''),
+										"std" 	=> "",
+									),
+							  	
+							  	array(
+			                        "required" => array('overlay_enable','not',''),
+									"id" 	=> "overlay_pattern",
+									"name" 	=> __("Background Image", 'avia_framework'),
+									"desc" 	=> __("Select an existing or upload a new background image", 'avia_framework'),
+									"type" 	=> "select",
+									"subtype" => array(__('No Background Image', 'avia_framework')=>'',__('Upload custom image', 'avia_framework')=>'custom'),
+									"std" 	=> "",
+									"folder" => "images/background-images/",
+									"folderlabel" => "",
+									"group" => "Select predefined pattern",
+									"exclude" => array('fullsize-', 'gradient')
+								),
+							  	
+							  	
+							  	array(
+										"name" 	=> __("Custom Pattern",'avia_framework' ),
+										"desc" 	=> __("Upload your own seamless pattern",'avia_framework' ),
+										"id" 	=> "overlay_custom_pattern",
+										"type" 	=> "image",
+										"fetch" => "url",
+										"secondary_img"=>true,
+			                        	"required" => array('overlay_pattern','equals','custom'),
+										"title" => __("Insert Pattern",'avia_framework' ),
+										"button" => __("Insert",'avia_framework' ),
+										"std" 	=> ""),
+								
+								array(
+										"type" 	=> "close_div",
+										'nodescription' => true
+									),
+								
+								
 									
 								array(
 										"type" 	=> "close_div",
@@ -518,7 +595,7 @@ array(
 						"type" 	=> "select",
 						"std" 	=> "5",
 						"subtype" => 
-						array('2'=>'2','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10','15'=>'15','20'=>'20','30'=>'30','40'=>'40','60'=>'60','100'=>'100')),
+						array('1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10','15'=>'15','20'=>'20','30'=>'30','40'=>'40','60'=>'60','100'=>'100')),
 					
 					array(	
 						"name" 	=> __("Slideshow control styling?",'avia_framework' ),

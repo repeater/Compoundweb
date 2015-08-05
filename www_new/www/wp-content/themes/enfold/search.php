@@ -6,9 +6,15 @@ global $avia_config;
 	 * get_header is a basic wordpress function, used to retrieve the header.php file in your theme directory.
 	 */
 	 get_header();
+	 
+	 //	allows to customize the layout
+	 do_action( 'ava_search_after_get_header' );
+
 
 	 $results = avia_which_archive();
 	 echo avia_title(array('title' => $results ));
+	 
+	 do_action( 'ava_after_main_title' );
 	 ?>
 
 		<div class='container_wrap container_wrap_first main_color <?php avia_layout_class( 'main' ); ?>'>

@@ -32,7 +32,7 @@ body {direction: rtl;unicode-bidi: embed;}
 .avia_ajax_form .form_element_fourth{float:right; margin-right: 1%;margin-left:auto; clear:none;}
 .avia_ajax_form .form_element_three_fourth{float:right; margin-right: 1%;margin-left:auto; clear:none;}
 .avia_ajax_form .first_form{clear:both;margin-right:0;}
-.avia_ajax_form p{float:right:}
+.avia_ajax_form p{float:right;}
 .avia-slider-testimonials .avia-testimonial-arrow-wrap{right: 14px;left:auto;}
 .avia-slider-testimonials .avia-testimonial-meta .avia-testimonial-image{margin: 0 0 0 10px;}
 #js_sort_items a,#js_sort_items .text-sep{float:right;}
@@ -102,7 +102,7 @@ div .product-sorting ul, div .product-sorting li{margin: 0 0 0 2px;}
 .page-heading-container .author_description{padding-right: 10px;}
 .sidebar_left .inner_sidebar{ margin-right: 30px;}
 .avia_partner_widget a, .avia_partner_widget a:hover{float:right;}
-.widget_product_categories li a{background: url("config-woocommerce/images/rtl-bullet_grey.png") no-repeat scroll right center transparent;padding: 0 9px 0 0;}
+.widget_product_categories li a{background: url("../config-woocommerce/images/rtl-bullet_grey.png") no-repeat scroll right center transparent;padding: 0 9px 0 0;}
 div .widget_shopping_cart .button.checkout{float:left;}
 div .widget_price_filter .price_slider_wrapper .price_label{float:left;}
 .sidebar_left .widget_nav_menu ul:first-child > .current-menu-item, .sidebar_left .widget_nav_menu ul:first-child > .current_page_item, .sidebar_left .widget_nav_menu ul:first-child > .current-menu-ancestor{padding-left: 49px; padding-right: 3px;}
@@ -172,3 +172,10 @@ body .av-special-heading.blockquote > * {float: none;}
 .rtl .title_container .breadcrumb { left: 45px; }
 .rtl .avia-menu.av_menu_icon_beside { border-right: none; border-left: solid 1px #e2e2e2;
 margin-left: 25px; padding-left: 25px; margin-right: 0; padding-right: 0; }
+.avia-slideshow-controls.avia-slideshow-dots { direction: initial;}
+.rtl img.aviaccordion-image {
+left: 0;
+}
+.rtl .aviaccordion-preview {
+left: 0!important;
+}

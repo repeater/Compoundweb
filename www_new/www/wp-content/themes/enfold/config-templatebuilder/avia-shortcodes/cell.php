@@ -262,13 +262,14 @@ if ( !class_exists( 'avia_sc_cell' ) )
 				
 				if(!empty($atts['color']))
 				{
-					$extraClass .= "av_inherit_color";
+					$extraClass .= " av_inherit_color";
 				}
 				
 				if($atts['background_repeat'] == "stretch")
 				{
-					$extraClass .= "avia-full-stretch";
+					$extraClass .= " avia-full-stretch";
 				}
+				
 				
 				$explode_padding = explode(',',$atts['padding']);
 				if(count($explode_padding) > 1)
@@ -281,18 +282,23 @@ if ( !class_exists( 'avia_sc_cell' ) )
 					}
 				}
 				
+				if($atts['padding'] == "0px" || $atts['padding'] == "0" || $atts['padding'] == "0%")
+				{
+					$extraClass .= " av-zero-padding";
+				}
+				
 				
 				if(!empty($atts['fetch_image']))
 				{
-					$outer_style .= $this->style_string($atts, 'fetch_image', 'background-image');
-					$outer_style .= $this->style_string($atts, 'background_position', 'background-position');
-					$outer_style .= $this->style_string($atts, 'background_repeat', 'background-repeat');
-					$outer_style .= $this->style_string($atts, 'background_attachment', 'background-attachment');
+					$outer_style .= AviaHelper::style_string($atts, 'fetch_image', 'background-image');
+					$outer_style .= AviaHelper::style_string($atts, 'background_position', 'background-position');
+					$outer_style .= AviaHelper::style_string($atts, 'background_repeat', 'background-repeat');
+					$outer_style .= AviaHelper::style_string($atts, 'background_attachment', 'background-attachment');
 				}
 				
-				$outer_style .= $this->style_string($atts, 'vertical_align', 'vertical-align');
-				$outer_style .= $this->style_string($atts, 'padding');
-				$outer_style .= $this->style_string($atts, 'background_color', 'background-color');
+				$outer_style .= AviaHelper::style_string($atts, 'vertical_align', 'vertical-align');
+				$outer_style .= AviaHelper::style_string($atts, 'padding');
+				$outer_style .= AviaHelper::style_string($atts, 'background_color', 'background-color');
 				
 				
 				$shortcodename = str_replace('av_cell_', 'av_', $shortcodename);
@@ -315,24 +321,6 @@ if ( !class_exists( 'avia_sc_cell' ) )
 				return $output;
 			}
 			
-			function style_string($atts, $key, $new_key = false)
-			{
-				$style_string = "";
-				if(empty($new_key)) $new_key = $key;
-				
-				if(isset($atts[$key]) && $atts[$key] !== "")
-				{
-					switch($new_key)
-					{
-						case "background-image": $style_string = $new_key.":url(".$atts[$key].");"; break;
-						case "background-repeat": if($atts[$key] == "stretch") $atts[$key] = "no-repeat"; $style_string = $new_key.":".$atts[$key].";"; break;
-						default: $style_string = $new_key.":".$atts[$key].";"; break;
-					}
-				}
-				
-				
-				return $style_string;
-			}
 	}
 }
 

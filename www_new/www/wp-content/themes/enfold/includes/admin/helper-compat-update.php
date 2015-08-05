@@ -153,5 +153,145 @@ function avia_update_grid_system($prev_version, $new_version)
  
  
  
+ /*
+ *
+ * update for version 3.1: updates the main menu seperator setting in case a user had a bottom nav main menu
+ * also adds the values for meta and heading to the theme options array so they can be set manually
+ *
+ */
+ 
+add_action('ava_trigger_updates', 'avia_update_seperator_main',12,2);
+
+function avia_update_seperator_main($prev_version, $new_version)
+{	
+	//if the previous theme version is equal or bigger to 3.1 we don't need to update
+	if(version_compare($prev_version, 3.1, ">=")) return; 
+	
+	//set global options
+	global $avia, $avia_config;
+	$theme_options = $avia->options['avia'];
+
+	
+	//if one of those settings is not available the user has never saved the theme options. No need to change anything
+	if(empty( $theme_options )) return;
+	if(strpos($theme_options['header_layout'],'bottom_nav_header') !== false) 
+	{
+		$theme_options['header_menu_border'] = "seperator_big_border";
+	}
+	
+	//removes the old calculated meta and heading colors and changes it to a custom color that can be set by the user
+	$colorsets = $avia_config['color_sets'];
+	if(!empty($colorsets))
+	{
+		foreach($colorsets as $set_key => $set_value)
+		{
+			if(isset($avia_config['backend_colors']['color_set'][$set_key]))
+			{
+				if(isset($avia_config['backend_colors']['color_set'][$set_key]['meta']))
+				{
+					$theme_options["colorset-$set_key-meta"] = $avia_config['backend_colors']['color_set'][$set_key]['meta'];
+				}
+				
+				if(isset($avia_config['backend_colors']['color_set'][$set_key]['heading']))
+				{
+					$new_heading = $avia_config['backend_colors']['color_set'][$set_key]['heading'];
+					
+					if('footer_color' == $set_key)
+					{
+						$new_heading = $avia_config['backend_colors']['color_set'][$set_key]['meta'];
+					}
+					
+					$theme_options["colorset-$set_key-heading"] = $new_heading;
+				}
+		
+			}
+		}
+	}
+
+ 	
+ 	//replace existing options with the new options
+	$avia->options['avia'] = $theme_options;
+	update_option($avia->option_prefix, $avia->options);
+ }
+ 
+ 
+ 
+ /*
+ *
+ * update for version 3.1.4: update the widget locations to avoid error notice in 4.2 and to prevent the sorting bugs
+ *
+ */
+ 
+add_action('ava_trigger_updates', 'avia_update_widget',13,2);
+
+function avia_update_widget($prev_version, $new_version)
+{	
+	//if the previous theme version is equal or bigger to 3.1 we don't need to update
+	if(version_compare($prev_version, '3.1.4', ">=")) return; 
+	
+	$map = array('av_everywhere', 'av_blog', 'av_pages');
+	
+	if(class_exists( 'woocommerce' ))
+	{
+		$map[] = 'av_shop_overview';
+		$map[] = 'av_shop_single';
+	}
+	
+	for ($i = 1; $i <= avia_get_option('footer_columns','5'); $i++)
+	{
+		$map[] = 'av_footer_'.$i;
+	}
+	
+	if(class_exists( 'bbPress' ))
+	{
+		$map[] = 'av_forum';
+	}
+	
+	$dynamic = get_option('avia_sidebars');
+	if(is_array($dynamic) && !empty($dynamic))
+	{
+		foreach($dynamic as $key => $value)
+		{
+			$map[] = avia_backend_safe_string($value,'-'); 
+		}
+	}
+	
+	$current_sidebars = get_option('sidebars_widgets');
+	
+	if(!empty($current_sidebars) && isset($current_sidebars['sidebar-1']))
+	{
+		$new_sidebars = array('wp_inactive_widgets' => $current_sidebars['wp_inactive_widgets']);
+		
+		foreach($map as $key => $sidebar)
+		{	
+			if( isset( $current_sidebars['sidebar-'. ($key + 1)] ) )
+			{
+				$new_sidebars[ $sidebar ] = $current_sidebars['sidebar-'. ($key + 1)];
+			}
+		}
+		
+		update_option('sidebars_widgets', $new_sidebars);
+	}
+	
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  

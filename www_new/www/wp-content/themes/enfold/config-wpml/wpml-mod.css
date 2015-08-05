@@ -8,7 +8,7 @@ z-index: 151;
 -webkit-backface-visibility: hidden;
 top:-2px;
 right:0;
-
+overflow: hidden;
 }
 
 .sub_menu ul{float:left;}
